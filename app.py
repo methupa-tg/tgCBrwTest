@@ -232,6 +232,10 @@ def admin_session(session_id):
     rows = "".join(f"<tr><td>{role}</td><td>{content}</td><td>{ts}</td></tr>" for role, content, ts in messages)
     return f"<a href='/admin'>← Back</a><br><br><table border=1 cellpadding=6><tr><th>Role</th><th>Message</th><th>Time</th></tr>{rows}</table>"
 
+@app.route("/widget.js")
+def widget():
+    return send_from_directory(".", "widget.js")
+
 if __name__ == "__main__":
     app.run(debug=os.getenv("FLASK_DEBUG", "false").lower() == "true",
             port=int(os.getenv("PORT", 5000))
