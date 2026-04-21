@@ -81,7 +81,9 @@ app = Flask(__name__, static_folder="ui")
 CORS(app, origins=[
     "https://thyaga.lk",
     "http://127.0.0.1:5000",
-    "http://localhost:5000"      
+    "http://localhost:5000",
+    "https://tgcbrwtest-production.up.railway.app",
+    "null"    
 ])
 
 limiter = Limiter(get_remote_address, app=app)

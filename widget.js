@@ -42,7 +42,7 @@
 
   // Load your chatbot inside an iframe
   const iframe = document.createElement("iframe");
-  iframe.src = "https://your-server-url.com";  // your Flask app URL
+  iframe.src = "https://tgcbrwtest-production.up.railway.app";
   iframe.style.cssText = "width: 100%; height: 100%; border: none;";
   container.appendChild(iframe);
 
