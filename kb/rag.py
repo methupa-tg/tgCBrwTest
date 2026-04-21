@@ -1,0 +1,222 @@
+import cohere
+import os
+import csv
+import re
+import numpy as np
+import faiss
+from dotenv import load_dotenv
+import pickle
+
+load_dotenv()
+co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
+
+def _strip_html(text):
+    return re.sub(r"<[^>]+>", " ", text or "").strip()
+
+def load_voucher_catalog(filepath):
+    chunks = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row.get("published", "1") == "0":
+                continue
+            chunk = (
+                f"Voucher Name: {row['title']}\n"
+                f"Slug: {row['slug']}\n"
+                f"Category: {row['category']}\n"
+                f"Occasion: {row.get('occasion', '')}\n"
+                f"Best for: {row.get('recipient', '')}\n"
+                f"Tone: {row.get('tone', '')}\n"
+                f"Image: {row.get('image_front', '')}\n"
+                f"Description: {_strip_html(row['description'])}\n"
+                f"Keywords: {row.get('keywords', '')}"
+            )
+            chunks.append(chunk)
+    return chunks
+
+def load_faq(filepath):
+    chunks = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            chunk = (
+                f"Q: {row['Question'].strip()}\n"
+                f"A: {row['Answer'].strip()}\n"
+                f"Category: {row.get('Category', '').strip()}"
+            )
+            chunks.append(chunk)
+    return chunks
+
+def load_how_to(filepath):
+    chunks = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            chunk = (
+                f"How to {row['How'].strip()}:\n"
+                f"{row['Steps'].strip()}"
+            )
+            chunks.append(chunk)
+    return chunks
+
+def load_links(filepath):
+    chunks = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            chunk = (
+                f"title: {row['title'].strip()}\n"
+                f"url: {row['url'].strip()}\n"
+                f"description: {row.get('description', '').strip()}"
+            )
+            chunks.append(chunk)
+    return chunks
+
+def load_merchants_loc(filepath):
+    chunks = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            chunk = (
+                f"Merchant: {row['merchant_name'].strip()}\n"
+                f"City: {row['City'].strip()}\n"
+                f"Final City: {row['Final City'].strip()}\n"
+                f"Status: {row.get('Status', '').strip()}\n"
+                f"Category: {row.get('Category', '').strip()}"
+            )
+            chunks.append(chunk)
+    return chunks
+
+def load_thyaga_info(filepath):
+    chunks = []
+    current = []
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+        for line in f:
+            line = line.rstrip()
+            if not line:
+                continue
+            if line.startswith("*") and current:
+                chunks.append("\n".join(current))
+                current = [line]
+            else:
+                current.append(line)
+    if current:
+        chunks.append("\n".join(current))
+    return chunks
+
+def load_corporate_info(filepath):
+    chunks = []
+    current = []
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+        for line in f:
+            line = line.rstrip()
+            if not line:
+                continue
+            if line.startswith("*") and current:
+                chunks.append("\n".join(current))
+                current = [line]
+            else:
+                current.append(line)
+    if current:
+        chunks.append("\n".join(current))
+    return chunks
+
+def load_for_merchants(filepath):
+    chunks = []
+    current = []
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+        for line in f:
+            line = line.rstrip()
+            if not line:
+                continue
+            if line.startswith("*") and current:
+                chunks.append("\n".join(current))
+                current = [line]
+            else:
+                current.append(line)
+    if current:
+        chunks.append("\n".join(current))
+    return chunks
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def load_all_documents():
+    chunks = []
+    chunks += load_voucher_catalog(os.path.join(BASE_DIR, "product (1).csv"))
+    chunks += load_faq(os.path.join(BASE_DIR, "faq.csv"))
+    chunks += load_how_to(os.path.join(BASE_DIR, "how_to.csv"))
+    chunks += load_links(os.path.join(BASE_DIR, "links - Sheet1.csv"))
+    chunks += load_merchants_loc(os.path.join(BASE_DIR, "Merchants426.csv"))
+    chunks += load_thyaga_info(os.path.join(BASE_DIR, "thyagaInfo.txt"))
+    chunks += load_corporate_info(os.path.join(BASE_DIR, "corporates.txt"))
+    chunks += load_for_merchants(os.path.join(BASE_DIR, "forMer.txt"))
+    return chunks
+
+CACHE_DIR = os.path.join(BASE_DIR, "cache")
+INDEX_FILE = os.path.join(CACHE_DIR, "faiss_index.bin")
+CHUNKS_FILE = os.path.join(CACHE_DIR, "chunks.pkl")
+
+def save_cache(index, chunks):
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    faiss.write_index(index, INDEX_FILE)
+    with open(CHUNKS_FILE, "wb") as f:
+        pickle.dump(chunks, f)
+    print("Cache saved.")
+
+def load_cache():
+    if os.path.exists(INDEX_FILE) and os.path.exists(CHUNKS_FILE):
+        print("Loading index from cache...")
+        index = faiss.read_index(INDEX_FILE)
+        with open(CHUNKS_FILE, "rb") as f:
+            chunks = pickle.load(f)
+        print(f"Loaded {index.ntotal} vectors from cache.")
+        return index, chunks
+    return None, None
+
+def build_index(chunks):
+    cached_index, cached_chunks = load_cache()
+    if cached_index is not None:
+        return cached_index, cached_chunks
+
+    print(f"Embedding {len(chunks)} chunks... (first time only)")
+
+    all_embeddings = []
+    batch_size = 90
+    for i in range(0, len(chunks), batch_size):
+        batch = chunks[i:i + batch_size]
+        response = co.embed(
+            texts=batch,
+            model="embed-v4.0",
+            input_type="search_document",
+            embedding_types=["float"]
+        )
+        all_embeddings.extend(response.embeddings.float)
+
+    embeddings = np.array(all_embeddings, dtype="float32")
+    dimension = embeddings.shape[1]
+    index = faiss.IndexFlatIP(dimension)
+    faiss.normalize_L2(embeddings)
+    index.add(embeddings)
+
+    save_cache(index, chunks)
+    print(f"Index built with {index.ntotal} vectors.")
+    return index, chunks
+
+def retrieve(query, index, chunks, top_k=8):
+    response = co.embed(
+        texts=[query],
+        model="embed-v4.0",
+        input_type="search_query",
+        embedding_types=["float"]
+    )
+
+    query_vec = np.array(response.embeddings.float, dtype="float32")
+    faiss.normalize_L2(query_vec)
+
+    distances, indices = index.search(query_vec, top_k)
+
+    results = []
+    for idx in indices[0]:
+        if idx != -1:
+            results.append(chunks[idx])
+    return results

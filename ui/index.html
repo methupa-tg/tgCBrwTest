@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thyaga Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="header-avatar"><img src="Screenshot_2026-04-06_100840-removebg-preview.png" alt="thyaga"></div>
+      <div class="header-info">
+        <h1>Thyaga Assistant</h1>
+        <span class="status">One Voucher, Unlimited Choices</span>
+      </div>
+    </header>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        <div class="bubble">
+          Hi! I'm the Thyaga Gifting Assistant. How can I help you with your gifting needs today?
+        </div>
+      </div>
+    </div>
+
+    <!--suggestion buttons-->
+    <div class="suggestions" id="suggestions">
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">🎁 Gift ideas for a birthday</button>
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">💍 Best voucher for a wedding</button>
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">❓ How do vouchers work?</button>
+      <button class="suggestion-btn" onclick="sendSuggestion(this)">💳 How can I Top Up?</button>
+    </div>
+
+    <div class="chat-input-area">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Ask about voucher suggestions or anything else!"
+        autocomplete="off"
+      />
+      <button id="sendBtn" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

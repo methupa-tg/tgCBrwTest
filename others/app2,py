@@ -1,0 +1,108 @@
+import cohere
+import os
+import re
+from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
+from dotenv import load_dotenv
+from rag import load_all_documents, build_index, retrieve
+
+load_dotenv()
+
+api_key = os.getenv("COHERE_API_KEY")
+if not api_key:
+    raise EnvironmentError("COHERE_API_KEY is not set.")
+
+co = cohere.ClientV2(api_key)
+
+print("Loading knowledge base...")
+all_chunks = load_all_documents()
+faiss_index, chunk_store = build_index(all_chunks)
+print("Ready!\n")
+
+SYSTEM_PROMPT = (
+    "You are the Customer Support Assistant of Thyaga.lk. "
+    "Answer using ONLY information from the provided context. "
+    "Keep all answers short and conversational. "
+    "If a question is unrelated to Thyaga, say: 'Sorry, I can only help with Thyaga vouchers and information.' "
+    "If the context doesn't have enough info, say so honestly. "
+
+    "VOUCHER RECOMMENDATIONS — follow this format exactly:\n"
+    "One short sentence answering the user.\n"
+    "Then list each voucher like this:\n"
+    "🎁 Voucher Name — one short phrase describing the vibe\n"
+    "👉 https://thyaga.lk/buy-voucher/[category]/[slug]\n"
+    "Show max 4 vouchers. No bullet points. No categories. No long descriptions. No 'Best for' or 'Tone' labels."
+)
+
+app = Flask(__name__, static_folder=".")
+CORS(app)
+
+@app.route("/")
+def index():
+    return send_from_directory(".", "index.html")
+
+@app.route("/<path:filename>")
+def static_files(filename):
+    return send_from_directory(".", filename)
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.get_json()
+    history = data.get("history", [])
+    user_message = data.get("message", "").strip()
+
+    if not user_message:
+        return jsonify({"error": "Empty message"}), 400
+
+    relevant_chunks = retrieve(user_message, faiss_index, chunk_store, top_k=8)
+
+    # Build slug -> image map from retrieved chunks BEFORE stripping images
+    slug_to_image = {}
+    for chunk in relevant_chunks:
+        slug_match = re.search(r'^Slug: (.+)$', chunk, re.MULTILINE)
+        img_match = re.search(r'^Image: (.+)$', chunk, re.MULTILINE)
+        if slug_match and img_match:
+            slug_to_image[slug_match.group(1).strip()] = img_match.group(1).strip()
+
+    # Strip images from context sent to AI
+    clean_chunks = []
+    for chunk in relevant_chunks:
+        chunk = re.sub(r"^Image: .+\n", "", chunk, flags=re.MULTILINE)
+        clean_chunks.append(chunk)
+
+    context = "\n\n".join(clean_chunks)
+    augmented_message = (
+        f"Context from Thyaga knowledge base:\n{context}\n\n"
+        f"User question: {user_message}"
+    )
+
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    for msg in history:
+        messages.append({"role": msg["role"], "content": msg["content"]})
+    messages.append({"role": "user", "content": augmented_message})
+
+    response = co.chat(
+        model="command-a-03-2025",
+        messages=messages,
+        temperature=0.25,
+        max_tokens=300,
+        frequency_penalty=0.4
+    )
+
+    reply = response.message.content[0].text
+
+    # Extract full URLs and slugs from the AI reply
+    url_slug_matches = re.findall(r'(https://thyaga\.lk/buy-voucher/[\w\-]+/([\w\-]+))', reply)
+
+    # Build voucher cards: {image, url} in order, deduped by slug
+    vouchers = []
+    seen = set()
+    for full_url, slug in url_slug_matches:
+        if slug in slug_to_image and slug not in seen:
+            vouchers.append({"image": slug_to_image[slug], "url": full_url})
+            seen.add(slug)
+
+    return jsonify({"reply": reply, "vouchers": vouchers})
+
+if __name__ == "__main__":
+    app.run(debug=False, port=5000)
