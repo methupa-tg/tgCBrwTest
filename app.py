@@ -77,7 +77,7 @@ SYSTEM_PROMPT = (
     "Do NOT add [NO_VOUCHER] for any other situation."
 )
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="ui")
 CORS(app, origins=[
     "https://thyaga.lk",
     "http://127.0.0.1:5000",
@@ -102,12 +102,12 @@ def authenticate():
 def ratelimit_handler(e):
     return jsonify({"error": "Rate limit exceeded"}), 429
 
-#@app.route("/")
-#def index():
+@app.route("/")
+def index():
     return send_from_directory("ui", "index.html")
 
-#@app.route("/<path:filename>")
-#def static_files(filename):
+@app.route("/<path:filename>")
+def static_files(filename):
     return send_from_directory("ui", filename)
 
 @app.route("/chat", methods=["POST"])
