@@ -41,7 +41,7 @@ GENERAL_LINKS = [f"https://thyaga.lk/buy-voucher/General/{s}" for s in GENERAL_S
 
 print("Ready!\n")
 
-#init_db()
+init_db()
 
 SYSTEM_PROMPT = (
     "You are the Customer Support Assistant of Thyaga.lk. "
