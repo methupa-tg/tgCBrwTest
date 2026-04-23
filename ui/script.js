@@ -37,7 +37,7 @@ function sendMessage() {
       typingEl.remove();
       if (data.session_id) sessionId = data.session_id;
       const reply = data.reply || "Sorry, something went wrong.";
-      appendMessage("bot", reply, data.images || [], data.links || [], data.page_links || [], data.show_browse || false, data.show_merchant_btns || false, data.show_contact_btns || false);
+      appendMessage("bot", reply, data.images || [], data.links || [], data.page_links || [], data.show_browse || false, data.show_merchant_btns || false, data.show_contact_btns || false, data.cta_button || null);
       history.push({ role: "assistant", content: reply });
     })
     .catch(() => {
@@ -47,7 +47,7 @@ function sendMessage() {
     .finally(() => setLoading(false));
 }
 
-function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [], showBrowse = false, showMerchantBtns = false, showContactBtns = false) {
+function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [], showBrowse = false, showMerchantBtns = false, showContactBtns = false, ctaButton = null) {
   const msg = document.createElement("div");
   msg.classList.add("message", role);
 
@@ -127,6 +127,19 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
       contactRow.appendChild(btn);
     });
     bubble.appendChild(contactRow);
+  }
+
+  if (role === "bot" && ctaButton) {
+    const ctaRow = document.createElement("div");
+    ctaRow.classList.add("page-link-buttons");
+    const btn = document.createElement("a");
+    btn.classList.add("page-link-btn");
+    btn.href = ctaButton.url;
+    btn.target = "_blank";
+    btn.rel = "noopener noreferrer";
+    btn.textContent = ctaButton.label;
+    ctaRow.appendChild(btn);
+    bubble.appendChild(ctaRow);
   }
 
   if (role === "bot" && pageLinks.length > 0) {
