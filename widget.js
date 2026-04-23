@@ -46,53 +46,6 @@
   iframe.style.cssText = "width: 100%; height: 100%; border: none;";
   container.appendChild(iframe);
 
-// Refresh button — reloads the iframe with animation
-const refreshBtn = document.createElement("button");
-refreshBtn.title = "Start a new chat";
-refreshBtn.innerHTML = "↻";
-
-refreshBtn.style.cssText = `
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  z-index: 10000;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.25);
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
-  transition: background 0.2s ease, transform 0.3s ease;
-`;
-
-// Hover effect
-refreshBtn.onmouseover = () => {
-  refreshBtn.style.background = "rgba(255,255,255,0.4)";
-};
-
-refreshBtn.onmouseout = () => {
-  refreshBtn.style.background = "rgba(255,255,255,0.25)";
-};
-
-// Click animation + reload
-refreshBtn.onclick = () => {
-  refreshBtn.style.transform = "rotate(360deg)";
-  
-  // Wait for animation to feel natural before reload
-  setTimeout(() => {
-    iframe.src = iframe.src;
-    refreshBtn.style.transform = "rotate(0deg)";
-  }, 300);
-};
-
-container.appendChild(refreshBtn);
-
   // Toggle open/close
   btn.onclick = () => {
     const isOpen = container.style.display === "block";
