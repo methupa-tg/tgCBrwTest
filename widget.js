@@ -47,22 +47,35 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     background: rgba(255,255,255,0.15);
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 50%;
+    font-size: 15px;
     cursor: pointer;
     z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1;
+    transition: background 0.15s, transform 0.15s;
   `;
   refreshBtn.title = "Refresh";
-  refreshBtn.onclick = () => { iframe.src = iframe.src; };
+  refreshBtn.onmousedown = () => {
+    refreshBtn.style.transform = "scale(0.82)";
+    refreshBtn.style.background = "rgba(255,255,255,0.32)";
+  };
+  refreshBtn.onmouseup = () => {
+    refreshBtn.style.transform = "scale(1)";
+    refreshBtn.style.background = "rgba(255,255,255,0.15)";
+    iframe.src = iframe.src;
+  };
+  refreshBtn.onmouseleave = () => {
+    refreshBtn.style.transform = "scale(1)";
+    refreshBtn.style.background = "rgba(255,255,255,0.15)";
+  };
   container.appendChild(refreshBtn);
 
   // Load your chatbot inside an iframe
