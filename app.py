@@ -81,7 +81,6 @@ SYSTEM_PROMPT = (
     "Do NOT add [CONTACT] for general FAQs, voucher recommendations, or merchant location queries."
 )
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 gemini_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 app = Flask(__name__, static_folder="ui")
