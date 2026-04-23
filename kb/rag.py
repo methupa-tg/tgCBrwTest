@@ -181,7 +181,7 @@ def build_index(chunks):
     print(f"Embedding {len(chunks)} chunks... (first time only)")
 
     all_embeddings = []
-    batch_size = 100
+    batch_size = 90
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i:i + batch_size]
         response = co.embed(
