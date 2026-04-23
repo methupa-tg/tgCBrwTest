@@ -67,15 +67,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.15s, transform 0.2s;
+    transition: background 0.15s;
   `;
   refreshBtn.onmouseover = () => refreshBtn.style.background = "rgba(255,255,255,0.38)";
   refreshBtn.onmouseout  = () => refreshBtn.style.background = "rgba(255,255,255,0.22)";
-  refreshBtn.onclick = () => {
-    iframe.src = iframe.src;
-    refreshBtn.style.transform = "rotate(360deg)";
-    setTimeout(() => refreshBtn.style.transform = "rotate(0deg)", 400);
-  };
+  refreshBtn.onclick = () => { iframe.src = iframe.src; };
   container.appendChild(refreshBtn);
 
   // Toggle open/close
