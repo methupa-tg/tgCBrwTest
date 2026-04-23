@@ -160,6 +160,7 @@ def chat():
             frequency_penalty=0.4
         )
         reply = response.message.content[0].text
+        original_reply = reply
 
     except Exception as e:
         print(f"Cohere API error: {e}")
@@ -209,7 +210,7 @@ def chat():
         if chunk.startswith("title:"):
             title_match = re.search(r'^title: (.+)$', chunk, re.MULTILINE)
             url_match = re.search(r'^url: (.+)$', chunk, re.MULTILINE)
-            if title_match and url_match:
+            if title_match and url_match and url_match.group(1).strip() in original_reply:
                 page_links.append({
                     "title": title_match.group(1).strip(),
                     "url": url_match.group(1).strip()
