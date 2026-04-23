@@ -40,6 +40,31 @@
     overflow: hidden;
   `;
 
+  // Refresh button
+  const refreshBtn = document.createElement("button");
+  refreshBtn.innerHTML = "⟳";
+  refreshBtn.style.cssText = `
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  `;
+  refreshBtn.title = "Refresh";
+  refreshBtn.onclick = () => { iframe.src = iframe.src; };
+  container.appendChild(refreshBtn);
+
   // Load your chatbot inside an iframe
   const iframe = document.createElement("iframe");
   iframe.src = "https://tgcbrwtest-production.up.railway.app";
