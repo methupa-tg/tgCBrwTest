@@ -37,7 +37,7 @@ function sendMessage() {
       typingEl.remove();
       if (data.session_id) sessionId = data.session_id;
       const reply = data.reply || "Sorry, something went wrong.";
-      appendMessage("bot", reply, data.images || [], data.links || [], data.page_links || [], data.show_browse || false, data.show_merchant_btns || false);
+      appendMessage("bot", reply, data.images || [], data.links || [], data.page_links || [], data.show_browse || false, data.show_merchant_btns || false, data.show_contact_btns || false);
       history.push({ role: "assistant", content: reply });
     })
     .catch(() => {
@@ -47,7 +47,7 @@ function sendMessage() {
     .finally(() => setLoading(false));
 }
 
-function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [], showBrowse = false, showMerchantBtns = false) {
+function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [], showBrowse = false, showMerchantBtns = false, showContactBtns = false) {
   const msg = document.createElement("div");
   msg.classList.add("message", role);
 
@@ -113,6 +113,20 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
       merchantRow.appendChild(btn);
     });
     bubble.appendChild(merchantRow);
+  }
+
+  if (role === "bot" && showContactBtns) {
+    const contactRow = document.createElement("div");
+    contactRow.classList.add("page-link-buttons");
+    [{ label: "📞 Call Us", url: "tel:+94750100500" },
+     { label: "✉️ Email Us", url: "mailto:info@thyaga.lk" }].forEach(({ label, url }) => {
+      const btn = document.createElement("a");
+      btn.classList.add("page-link-btn", "contact-btn");
+      btn.href = url;
+      btn.textContent = label;
+      contactRow.appendChild(btn);
+    });
+    bubble.appendChild(contactRow);
   }
 
   if (role === "bot" && pageLinks.length > 0) {

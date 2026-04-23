@@ -75,6 +75,15 @@ SYSTEM_PROMPT = (
     "say something like: 'We don't have [X] vouchers at the moment.' Keep it short and friendly. "
     "Then add [NO_VOUCHER] on a new line at the very end of your response. "
     "Do NOT add [NO_VOUCHER] for any other situation."
+
+    "CONTACT US — add [CONTACT] on a new line at the very end of your response (and nowhere else) when the user's request requires human support. "
+    "This includes: bulk or large-quantity voucher purchases, corporate gifting orders, "
+    "refund or dispute requests, a voucher that was not delivered or is not working, "
+    "account or login issues, complaints about a merchant, and any other situation "
+    "where you cannot resolve the issue through the knowledge base alone. "
+    "When adding [CONTACT], always include a short friendly line telling the user to reach out — "
+    "for example: 'For this, it's best to contact our team directly.' "
+    "Do NOT add [CONTACT] for general FAQs, voucher recommendations, or merchant location queries."
 )
 
 app = Flask(__name__, static_folder="ui")
@@ -161,7 +170,8 @@ def chat():
             "page_links": [],
             "session_id": session_id,
             "show_browse": False,
-            "show_merchant_btns": False
+            "show_merchant_btns": False,
+            "show_contact_btns": False
         })
 
     show_browse = False
@@ -173,6 +183,11 @@ def chat():
     if '[MERCHANT]' in reply:
         reply = reply.replace('[MERCHANT]', '').strip()
         show_merchant_btns = True
+
+    show_contact_btns = False
+    if '[CONTACT]' in reply:
+        reply = reply.replace('[CONTACT]', '').strip()
+        show_contact_btns = True
 
     recommended_slugs = re.findall(r'thyaga\.lk/buy-voucher/[^/\s]+/([\w\-]+)', reply)
     recommended_links = re.findall(r'(https://thyaga\.lk/buy-voucher/[^\s\n]+)', reply)
@@ -209,7 +224,7 @@ def chat():
     save_message(session_id, "user", user_message)
     save_message(session_id, "assistant", reply)
 
-    return jsonify({"reply": reply, "images": images, "links": recommended_links, "page_links": page_links, "session_id": session_id, "show_browse": show_browse, "show_merchant_btns": show_merchant_btns})
+    return jsonify({"reply": reply, "images": images, "links": recommended_links, "page_links": page_links, "session_id": session_id, "show_browse": show_browse, "show_merchant_btns": show_merchant_btns, "show_contact_btns": show_contact_btns})
 
 @app.route("/admin")
 def admin():
