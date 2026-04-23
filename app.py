@@ -217,9 +217,12 @@ def chat():
 
     button_urls = {link["url"] for link in page_links}
     for url in button_urls:
+        reply = re.sub(r'\[[^\]]*\]\(' + re.escape(url) + r'\)', '', reply)
         reply = reply.replace(url, "")
+    reply = re.sub(r'\[[^\]]*\]\(\s*\)', '', reply)
     reply = re.sub(r':\s*\n', '\n', reply)
     reply = re.sub(r'\bvisit:\s*', '', reply, flags=re.IGNORECASE)
+    reply = re.sub(r'\s*:\s*$', '', reply)
     reply = re.sub(r' {2,}', ' ', reply).strip()
 
     save_message(session_id, "user", user_message)
