@@ -1,4 +1,4 @@
-import cohere
+import google.generativeai as genai
 import os
 import re
 from flask import Flask, request, jsonify, send_from_directory
@@ -13,12 +13,6 @@ from flask_limiter.util import get_remote_address
 from flask import Response
 
 load_dotenv()
-
-api_key = os.getenv("COHERE_API_KEY")
-if not api_key:
-    raise EnvironmentError("COHERE_API_KEY is not set.")
-
-co = cohere.ClientV2(api_key)
 
 print("Loading knowledge base...")
 all_chunks = load_all_documents()
@@ -86,6 +80,16 @@ SYSTEM_PROMPT = (
     "Do NOT add [CONTACT] for general FAQs, voucher recommendations, or merchant location queries."
 )
 
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+gemini = genai.GenerativeModel(
+    model_name="gemini-2.5-flash",
+    system_instruction=SYSTEM_PROMPT,
+    generation_config=genai.GenerationConfig(
+        temperature=0.25,
+        max_output_tokens=300,
+    )
+)
+
 app = Flask(__name__, static_folder="ui")
 CORS(app, origins=[
     "https://thyaga.lk",
@@ -146,24 +150,19 @@ def chat():
         f"User question: {user_message}"
     )
 
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    contents = []
     for msg in history:
-        messages.append({"role": msg["role"], "content": msg["content"]})
-    messages.append({"role": "user", "content": augmented_message})
+        role = "user" if msg["role"] == "user" else "model"
+        contents.append({"role": role, "parts": [{"text": msg["content"]}]})
+    contents.append({"role": "user", "parts": [{"text": augmented_message}]})
 
     try:
-        response = co.chat(
-            model="command-a-03-2025",
-            messages=messages,
-            temperature=0.25,
-            max_tokens=300,
-            frequency_penalty=0.4
-        )
-        reply = response.message.content[0].text
+        response = gemini.generate_content(contents)
+        reply = response.text
         original_reply = reply
 
     except Exception as e:
-        print(f"Cohere API error: {e}")
+        print(f"Gemini API error: {e}")
         return jsonify({
             "reply": "Sorry, I'm having trouble generating a response right now. Please try again later.",
             "images": [],
