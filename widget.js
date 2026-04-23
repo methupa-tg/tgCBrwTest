@@ -47,8 +47,8 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     background: rgba(255,255,255,0.15);
     color: white;
     border: none;
