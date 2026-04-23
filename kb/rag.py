@@ -9,7 +9,10 @@ from dotenv import load_dotenv
 import pickle
 
 load_dotenv()
-embedding_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+embedding_client = genai.Client(
+    api_key=os.getenv("GOOGLE_API_KEY"),
+    http_options=types.HttpOptions(api_version="v1")
+)
 
 def _strip_html(text):
     return re.sub(r"<[^>]+>", " ", text or "").strip()
