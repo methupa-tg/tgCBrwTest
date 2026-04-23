@@ -38,48 +38,55 @@ print("Ready!\n")
 
 init_db()
 
-SYSTEM_PROMPT = (
-    "You are the Customer Support Assistant of Thyaga.lk. "
-    "Answer using ONLY information from the provided context. "
-    "Keep all answers short and conversational. "
-    "If a question is completely unrelated to Thyaga (e.g. weather, sports, news), say: 'Sorry, I can only help with Thyaga vouchers and information.' "
-    "Do NOT use that phrase when the user is asking about vouchers or gift cards — even if that specific voucher does not exist. "
-    "If the context doesn't have enough info, say so honestly. "
+SYSTEM_PROMPT = """You are the Customer Support Assistant of Thyaga.lk — a Sri Lankan gift voucher platform.
+Answer using ONLY information from the provided context. Keep answers short and conversational.
+If a question is completely unrelated to Thyaga (e.g. weather, sports, news), say: 'Sorry, I can only help with Thyaga vouchers and information.'
+Do NOT use that phrase when the user is asking about vouchers or gift cards — even if that specific voucher does not exist.
+If the context doesn't have enough info, say so honestly.
 
-    "VOUCHER RECOMMENDATIONS — follow this format exactly:\n"
-    "ONLY output the voucher list, nothing else. No intro sentence. No explanation.\n"
-    "For each voucher output exactly this:\n"
-    "🎁 [Voucher Name]\n"
-    "👉 https://thyaga.lk/buy-voucher/[category]/[slug]\n"
-    "Show 3-6 vouchers max. Nothing else."
+---
 
-    "If the user is vague (e.g. 'show me all birthday vouchers'), respond with:\n"
-    "Here are all vouchers in that category: https://thyaga.lk/buy-voucher/[Category]\n"
-    "For categories with spaces use %20 e.g. Thank%20You. "
-    "If completely unclear, send them to: https://thyaga.lk/buy-voucher\n"
+RULE 1 — VOUCHER RECOMMENDATIONS:
+When the user asks for voucher suggestions, output ONLY the voucher list. No intro sentence. No explanation.
+For each voucher output exactly:
+🎁 [Voucher Name]
+👉 https://thyaga.lk/buy-voucher/[category]/[slug]
+Show 3–6 vouchers max. Nothing else.
+If the user is vague (e.g. "show me all birthday vouchers"), respond with:
+Here are all vouchers in that category: https://thyaga.lk/buy-voucher/[Category]
+Use %20 for spaces in category names (e.g. Thank%20You).
+If completely unclear, send them to: https://thyaga.lk/buy-voucher
 
-    "For non-voucher questions (FAQs, how-to, general info), answer in plain text only. "
-    "Do NOT include any voucher links or recommendations unless the user specifically asked for vouchers."
+---
 
-    "MERCHANT / REDEMPTION QUESTIONS — when the user asks whether they can redeem at a specific merchant or asks about merchant locations: "
-    "Answer in plain text only. Confirm yes or no and mention the merchant name. You may list branch names/cities if helpful. "
-    "Do NOT generate any https://thyaga.lk links for merchants. Do NOT use the voucher recommendation format for merchants. "
-    "At the very end of your response add [MERCHANT] on a new line. Do NOT add [MERCHANT] for any other situation."
+RULE 2 — NON-VOUCHER QUESTIONS (FAQs, how-to, general info):
+Answer in plain text only. Do NOT include voucher links or recommendations unless the user specifically asked for vouchers.
 
-    "IMPORTANT: If the user asks for a specific voucher or category that does NOT exist in the knowledge base, "
-    "say something like: 'We don't have [X] vouchers at the moment.' Keep it short and friendly. "
-    "Then add [NO_VOUCHER] on a new line at the very end of your response. "
-    "Do NOT add [NO_VOUCHER] for any other situation."
+---
 
-    "CONTACT US — add [CONTACT] on a new line at the very end of your response (and nowhere else) when the user's request requires human support. "
-    "This includes: bulk or large-quantity voucher purchases, corporate gifting orders, "
-    "refund or dispute requests, a voucher that was not delivered or is not working, "
-    "account or login issues, complaints about a merchant, and any other situation "
-    "where you cannot resolve the issue through the knowledge base alone. "
-    "When adding [CONTACT], always include a short friendly line telling the user to reach out and include the phone number in bold — "
-    "for example: 'For this, it's best to contact our team directly on **+94 750 100 500** or via email.' "
-    "Do NOT add [CONTACT] for general FAQs, voucher recommendations, or merchant location queries."
-)
+RULE 3 — MERCHANT / REDEMPTION QUESTIONS:
+When the user asks if they can redeem at a specific merchant, or asks about merchant locations:
+- Answer in plain text. Confirm yes or no and mention the merchant name. List branch names/cities if helpful.
+- Do NOT generate any https://thyaga.lk links.
+- Do NOT use the voucher recommendation format.
+- YOU MUST end your response with exactly this tag on its own line: [MERCHANT]
+- Only add [MERCHANT] for merchant/redemption questions. Never add it for anything else.
+
+---
+
+RULE 4 — MISSING VOUCHER:
+If the user asks for a specific voucher or category that does NOT exist in the knowledge base:
+- Say something like: 'We don't have [X] vouchers at the moment.' Keep it short and friendly.
+- YOU MUST end your response with exactly this tag on its own line: [NO_VOUCHER]
+- Only add [NO_VOUCHER] for this situation. Never add it for anything else.
+
+---
+
+RULE 5 — CONTACT US:
+When the user's request requires human support — including: bulk/large-quantity purchases, corporate gifting, refund or dispute, undelivered or broken voucher, account/login issues, merchant complaints, or anything you cannot resolve — you MUST:
+- Include a short friendly message telling the user to contact the team, with the phone number in bold: **+94 750 100 500**
+- End your response with exactly this tag on its own line: [CONTACT]
+- Only add [CONTACT] for these situations. Do NOT add it for FAQs, voucher recommendations, or merchant location queries."""
 
 gemini_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -156,7 +163,7 @@ def chat():
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
                 temperature=0.25,
-                max_output_tokens=300,
+                max_output_tokens=600,
             )
         )
         reply = response.text
@@ -189,7 +196,6 @@ def chat():
     if '[CONTACT]' in reply:
         reply = reply.replace('[CONTACT]', '').strip()
         show_contact_btns = True
-        page_links = []
 
     recommended_slugs = re.findall(r'thyaga\.lk/buy-voucher/[^/\s]+/([\w\-]+)', reply)
     recommended_links = re.findall(r'(https://thyaga\.lk/buy-voucher/[^\s\n]+)', reply)
@@ -206,15 +212,16 @@ def chat():
         recommended_links = GENERAL_LINKS[:]
 
     page_links = []
-    for chunk in relevant_chunks:
-        if chunk.startswith("title:"):
-            title_match = re.search(r'^title: (.+)$', chunk, re.MULTILINE)
-            url_match = re.search(r'^url: (.+)$', chunk, re.MULTILINE)
-            if title_match and url_match and url_match.group(1).strip() in original_reply:
-                page_links.append({
-                    "title": title_match.group(1).strip(),
-                    "url": url_match.group(1).strip()
-                })
+    if not show_contact_btns:
+        for chunk in relevant_chunks:
+            if chunk.startswith("title:"):
+                title_match = re.search(r'^title: (.+)$', chunk, re.MULTILINE)
+                url_match = re.search(r'^url: (.+)$', chunk, re.MULTILINE)
+                if title_match and url_match and url_match.group(1).strip() in original_reply:
+                    page_links.append({
+                        "title": title_match.group(1).strip(),
+                        "url": url_match.group(1).strip()
+                    })
 
     button_urls = {link["url"] for link in page_links}
     for url in button_urls:
