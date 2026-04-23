@@ -81,8 +81,8 @@ SYSTEM_PROMPT = (
     "refund or dispute requests, a voucher that was not delivered or is not working, "
     "account or login issues, complaints about a merchant, and any other situation "
     "where you cannot resolve the issue through the knowledge base alone. "
-    "When adding [CONTACT], always include a short friendly line telling the user to reach out — "
-    "for example: 'For this, it's best to contact our team directly.' "
+    "When adding [CONTACT], always include a short friendly line telling the user to reach out and include the phone number in bold — "
+    "for example: 'For this, it's best to contact our team directly on **+94 750 100 500** or via email.' "
     "Do NOT add [CONTACT] for general FAQs, voucher recommendations, or merchant location queries."
 )
 
