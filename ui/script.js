@@ -180,6 +180,7 @@ function formatMessage(text) {
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.*?)\*/g, "<em>$1</em>")
     .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\n(\d+\.)( )/g, '<br><br><strong>$1</strong>$2')
     .replace(/\n/g, "<br>");
 }
 
