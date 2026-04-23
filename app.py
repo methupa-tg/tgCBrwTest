@@ -171,8 +171,7 @@ def chat():
             "session_id": session_id,
             "show_browse": False,
             "show_merchant_btns": False,
-            "show_contact_btns": False,
-            "cta_button": None
+            "show_contact_btns": False
         })
 
     show_browse = False
@@ -189,18 +188,7 @@ def chat():
     if '[CONTACT]' in reply:
         reply = reply.replace('[CONTACT]', '').strip()
         show_contact_btns = True
-
-    CTA_MAP = {
-        '[CTA_MERCHANTS]': {"label": "Explore Merchants", "url": "https://thyaga.lk/merchants"},
-        '[CTA_BUY]':       {"label": "Buy a Voucher",     "url": "https://thyaga.lk/buy-voucher"},
-        '[CTA_BALANCE]':   {"label": "Check Balance",     "url": "https://thyaga.lk/checkbalance"},
-    }
-    cta_button = None
-    for tag, btn in CTA_MAP.items():
-        if tag in reply:
-            reply = reply.replace(tag, '').strip()
-            cta_button = btn
-            break
+        page_links = []
 
     recommended_slugs = re.findall(r'thyaga\.lk/buy-voucher/[^/\s]+/([\w\-]+)', reply)
     recommended_links = re.findall(r'(https://thyaga\.lk/buy-voucher/[^\s\n]+)', reply)
@@ -217,16 +205,15 @@ def chat():
         recommended_links = GENERAL_LINKS[:]
 
     page_links = []
-    if not show_contact_btns and not cta_button:
-        for chunk in relevant_chunks:
-            if chunk.startswith("title:"):
-                title_match = re.search(r'^title: (.+)$', chunk, re.MULTILINE)
-                url_match = re.search(r'^url: (.+)$', chunk, re.MULTILINE)
-                if title_match and url_match:
-                    page_links.append({
-                        "title": title_match.group(1).strip(),
-                        "url": url_match.group(1).strip()
-                    })
+    for chunk in relevant_chunks:
+        if chunk.startswith("title:"):
+            title_match = re.search(r'^title: (.+)$', chunk, re.MULTILINE)
+            url_match = re.search(r'^url: (.+)$', chunk, re.MULTILINE)
+            if title_match and url_match:
+                page_links.append({
+                    "title": title_match.group(1).strip(),
+                    "url": url_match.group(1).strip()
+                })
 
     button_urls = {link["url"] for link in page_links}
     for url in button_urls:
@@ -238,7 +225,7 @@ def chat():
     save_message(session_id, "user", user_message)
     save_message(session_id, "assistant", reply)
 
-    return jsonify({"reply": reply, "images": images, "links": recommended_links, "page_links": page_links, "session_id": session_id, "show_browse": show_browse, "show_merchant_btns": show_merchant_btns, "show_contact_btns": show_contact_btns, "cta_button": cta_button})
+    return jsonify({"reply": reply, "images": images, "links": recommended_links, "page_links": page_links, "session_id": session_id, "show_browse": show_browse, "show_merchant_btns": show_merchant_btns, "show_contact_btns": show_contact_btns})
 
 @app.route("/admin")
 def admin():
