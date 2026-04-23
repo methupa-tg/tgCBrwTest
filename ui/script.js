@@ -121,7 +121,7 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
     [{ label: "📞 Call Us", url: "tel:+94750100500" },
      { label: "✉️ Email Us", url: "mailto:info@thyaga.lk" }].forEach(({ label, url }) => {
       const btn = document.createElement("a");
-      btn.classList.add("page-link-btn", "contact-btn");
+      btn.classList.add("page-link-btn");
       btn.href = url;
       btn.textContent = label;
       contactRow.appendChild(btn);

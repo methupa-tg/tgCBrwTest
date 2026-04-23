@@ -188,6 +188,7 @@ def chat():
     if '[CONTACT]' in reply:
         reply = reply.replace('[CONTACT]', '').strip()
         show_contact_btns = True
+        page_links = []
 
     recommended_slugs = re.findall(r'thyaga\.lk/buy-voucher/[^/\s]+/([\w\-]+)', reply)
     recommended_links = re.findall(r'(https://thyaga\.lk/buy-voucher/[^\s\n]+)', reply)
