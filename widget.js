@@ -52,7 +52,7 @@
     background: rgba(255,255,255,0.15);
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
     z-index: 10000;
