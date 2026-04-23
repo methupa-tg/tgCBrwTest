@@ -1,4 +1,5 @@
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import os
 import re
 from flask import Flask, request, jsonify, send_from_directory
@@ -81,14 +82,7 @@ SYSTEM_PROMPT = (
 )
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-gemini = genai.GenerativeModel(
-    model_name="gemini-2.5-flash",
-    system_instruction=SYSTEM_PROMPT,
-    generation_config=genai.GenerationConfig(
-        temperature=0.25,
-        max_output_tokens=300,
-    )
-)
+gemini_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 app = Flask(__name__, static_folder="ui")
 CORS(app, origins=[
@@ -157,7 +151,15 @@ def chat():
     contents.append({"role": "user", "parts": [{"text": augmented_message}]})
 
     try:
-        response = gemini.generate_content(contents)
+        response = gemini_client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=contents,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                temperature=0.25,
+                max_output_tokens=300,
+            )
+        )
         reply = response.text
         original_reply = reply
 
