@@ -1,5 +1,4 @@
-from google import genai
-from google.genai import types
+import cohere
 import os
 import csv
 import re
@@ -9,10 +8,7 @@ from dotenv import load_dotenv
 import pickle
 
 load_dotenv()
-embedding_client = genai.Client(
-    api_key=os.getenv("GOOGLE_API_KEY"),
-    http_options=types.HttpOptions(api_version="v1")
-)
+co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
 
 def _strip_html(text):
     return re.sub(r"<[^>]+>", " ", text or "").strip()
@@ -188,12 +184,13 @@ def build_index(chunks):
     batch_size = 100
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i:i + batch_size]
-        response = embedding_client.models.embed_content(
-            model="text-embedding-004",
-            contents=batch,
-            config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
+        response = co.embed(
+            texts=batch,
+            model="embed-v4.0",
+            input_type="search_document",
+            embedding_types=["float"]
         )
-        all_embeddings.extend([e.values for e in response.embeddings])
+        all_embeddings.extend(response.embeddings.float)
 
     embeddings = np.array(all_embeddings, dtype="float32")
     dimension = embeddings.shape[1]
@@ -206,13 +203,14 @@ def build_index(chunks):
     return index, chunks
 
 def retrieve(query, index, chunks, top_k=8):
-    response = embedding_client.models.embed_content(
-        model="text-embedding-004",
-        contents=query,
-        config=types.EmbedContentConfig(task_type="RETRIEVAL_QUERY")
+    response = co.embed(
+        texts=[query],
+        model="embed-v4.0",
+        input_type="search_query",
+        embedding_types=["float"]
     )
 
-    query_vec = np.array([response.embeddings[0].values], dtype="float32")
+    query_vec = np.array(response.embeddings.float, dtype="float32")
     faiss.normalize_L2(query_vec)
 
     distances, indices = index.search(query_vec, top_k)
