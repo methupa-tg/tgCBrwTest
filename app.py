@@ -19,7 +19,7 @@ if not api_key:
     raise EnvironmentError("GOOGLE_API_KEY is not set.")
 
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel("gemini-2.5-flash-preview-05-20")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 print("Loading knowledge base...")
 all_chunks = load_all_documents()
