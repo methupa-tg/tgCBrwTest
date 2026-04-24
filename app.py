@@ -205,12 +205,12 @@ def chat():
         recommended_links = GENERAL_LINKS[:]
 
     page_links = []
-    if not show_contact_btns:
+    if not show_contact_btns and not show_merchant_btns and not recommended_slugs:
         for chunk in relevant_chunks:
             if chunk.startswith("title:"):
                 title_match = re.search(r'^title: (.+)$', chunk, re.MULTILINE)
                 url_match = re.search(r'^url: (.+)$', chunk, re.MULTILINE)
-                if title_match and url_match and url_match.group(1).strip() in original_reply:
+                if title_match and url_match:
                     page_links.append({
                         "title": title_match.group(1).strip(),
                         "url": url_match.group(1).strip()
