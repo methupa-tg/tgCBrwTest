@@ -1,4 +1,4 @@
-import cohere
+import google.generativeai as genai
 import os
 import re
 from flask import Flask, request, jsonify, send_from_directory
@@ -14,11 +14,12 @@ from flask import Response
 
 load_dotenv()
 
-api_key = os.getenv("COHERE_API_KEY")
+api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
-    raise EnvironmentError("COHERE_API_KEY is not set.")
+    raise EnvironmentError("GOOGLE_API_KEY is not set.")
 
-co = cohere.ClientV2(api_key)
+genai.configure(api_key=api_key)
+model = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
 
 print("Loading knowledge base...")
 all_chunks = load_all_documents()
@@ -92,14 +93,14 @@ CORS(app, origins=[
     "http://127.0.0.1:5000",
     "http://localhost:5000",
     "https://tgcbrwtest-production.up.railway.app",
-    "null"    
+    "null"
 ])
 
 limiter = Limiter(get_remote_address, app=app)
 
 def check_auth(username, password):
     return (
-        username == os.getenv("ADMIN_USERNAME") and 
+        username == os.getenv("ADMIN_USERNAME") and
         password == os.getenv("ADMIN_PASSWORD")
     )
 
@@ -123,7 +124,6 @@ def static_files(filename):
 
 @app.route("/chat", methods=["POST"])
 @limiter.limit("10/minute, 30/hour")
-
 def chat():
     data = request.get_json()
     history = data.get("history", [])
@@ -146,24 +146,22 @@ def chat():
         f"User question: {user_message}"
     )
 
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    # Build conversation history for Gemini
+    gemini_history = []
     for msg in history:
-        messages.append({"role": msg["role"], "content": msg["content"]})
-    messages.append({"role": "user", "content": augmented_message})
+        gemini_history.append({
+            "role": "user" if msg["role"] == "user" else "model",
+            "parts": [msg["content"]]
+        })
 
     try:
-        response = co.chat(
-            model="command-a-03-2025",
-            messages=messages,
-            temperature=0.25,
-            max_tokens=300,
-            frequency_penalty=0.4
-        )
-        reply = response.message.content[0].text
-        original_reply = reply
+        chat_session = model.start_chat(history=gemini_history)
+        full_message = f"{SYSTEM_PROMPT}\n\n{augmented_message}"
+        response = chat_session.send_message(full_message)
+        reply = response.text
 
     except Exception as e:
-        print(f"Cohere API error: {e}")
+        print(f"Gemini API error: {e}")
         return jsonify({
             "reply": "Sorry, I'm having trouble generating a response right now. Please try again later.",
             "images": [],
@@ -229,14 +227,23 @@ def chat():
     save_message(session_id, "user", user_message)
     save_message(session_id, "assistant", reply)
 
-    return jsonify({"reply": reply, "images": images, "links": recommended_links, "page_links": page_links, "session_id": session_id, "show_browse": show_browse, "show_merchant_btns": show_merchant_btns, "show_contact_btns": show_contact_btns})
+    return jsonify({
+        "reply": reply,
+        "images": images,
+        "links": recommended_links,
+        "page_links": page_links,
+        "session_id": session_id,
+        "show_browse": show_browse,
+        "show_merchant_btns": show_merchant_btns,
+        "show_contact_btns": show_contact_btns
+    })
 
 @app.route("/admin")
 def admin():
     auth = request.authorization
     if not auth or not check_auth(auth.username, auth.password):
         return authenticate()
-    
+
     sessions = get_all_sessions()
     rows = "".join(
         f"<tr><td>{sid[:16]}...</td><td>{started}</td><td>{count}</td><td><a href='/admin/session/{sid}'>View</a></td></tr>"
@@ -259,6 +266,7 @@ def widget():
     return send_from_directory(".", "widget.js")
 
 if __name__ == "__main__":
-    app.run(debug=os.getenv("FLASK_DEBUG", "false").lower() == "true",
-            port=int(os.getenv("PORT", 5000))
+    app.run(
+        debug=os.getenv("FLASK_DEBUG", "false").lower() == "true",
+        port=int(os.getenv("PORT", 5000))
     )
