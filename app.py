@@ -1,3 +1,4 @@
+import cohere
 import google.generativeai as genai
 import os
 import re
@@ -20,6 +21,8 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.5-flash")
+
+co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
 
 print("Loading knowledge base...")
 all_chunks = load_all_documents()
@@ -154,24 +157,46 @@ def chat():
             "parts": [msg["content"]]
         })
 
+    served_by = None
     try:
         chat_session = model.start_chat(history=gemini_history)
         full_message = f"{SYSTEM_PROMPT}\n\n{augmented_message}"
         response = chat_session.send_message(full_message)
         reply = response.text
+        served_by = "gemini-2.5-flash"
 
-    except Exception as e:
-        print(f"Gemini API error: {e}")
-        return jsonify({
-            "reply": "Sorry, I'm having trouble generating a response right now. Please try again later.",
-            "images": [],
-            "links": [],
-            "page_links": [],
-            "session_id": session_id,
-            "show_browse": False,
-            "show_merchant_btns": False,
-            "show_contact_btns": False
-        })
+    except Exception as gemini_err:
+        print(f"[WARN] Gemini failed: {gemini_err} — falling back to Cohere")
+        try:
+            messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+            for msg in history:
+                messages.append({"role": msg["role"], "content": msg["content"]})
+            messages.append({"role": "user", "content": augmented_message})
+
+            cohere_response = co.chat(
+                model="command-a-03-2025",
+                messages=messages,
+                temperature=0.25,
+                max_tokens=300,
+                frequency_penalty=0.4
+            )
+            reply = cohere_response.message.content[0].text
+            served_by = "command-a-03-2025"
+
+        except Exception as cohere_err:
+            print(f"[ERROR] Cohere also failed: {cohere_err}")
+            return jsonify({
+                "reply": "Sorry, I'm having trouble generating a response right now. Please try again later.",
+                "images": [],
+                "links": [],
+                "page_links": [],
+                "session_id": session_id,
+                "show_browse": False,
+                "show_merchant_btns": False,
+                "show_contact_btns": False
+            })
+
+    print(f"[{session_id[:8]}] served by: {served_by}")
 
     show_browse = False
     if '[NO_VOUCHER]' in reply:
