@@ -29,7 +29,8 @@ def load_voucher_catalog(filepath):
                 f"Tone: {row.get('tone', '')}\n"
                 f"Image: {row.get('image_front', '')}\n"
                 f"Description: {_strip_html(row['description'])}\n"
-                f"Keywords: {row.get('keywords', '')}"
+                f"Keywords: {row.get('keywords', '')}\n"
+                f"Featured: {row.get('featured', '')}"
             )
             chunks.append(chunk)
     return chunks
@@ -142,7 +143,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_all_documents():
     chunks = []
-    chunks += load_voucher_catalog(os.path.join(BASE_DIR, "product (1).csv"))
+    chunks += load_voucher_catalog(os.path.join(BASE_DIR, "catog.csv"))
     chunks += load_faq(os.path.join(BASE_DIR, "faq.csv"))
     chunks += load_how_to(os.path.join(BASE_DIR, "how_to.csv"))
     chunks += load_links(os.path.join(BASE_DIR, "links - Sheet1.csv"))
