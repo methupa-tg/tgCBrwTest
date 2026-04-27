@@ -1,5 +1,6 @@
 import cohere
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import os
 import re
 from flask import Flask, request, jsonify, send_from_directory
@@ -19,9 +20,7 @@ api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
     raise EnvironmentError("GOOGLE_API_KEY is not set.")
 
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel("gemini-2.5-flash")
-
+gemini_client = genai.Client(api_key=api_key)
 co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
 
 print("Loading knowledge base...")
@@ -149,19 +148,23 @@ def chat():
         f"User question: {user_message}"
     )
 
-    # Build conversation history for Gemini
-    gemini_history = []
+    contents = []
     for msg in history:
-        gemini_history.append({
-            "role": "user" if msg["role"] == "user" else "model",
-            "parts": [msg["content"]]
-        })
+        role = "user" if msg["role"] == "user" else "model"
+        contents.append({"role": role, "parts": [{"text": msg["content"]}]})
+    contents.append({"role": "user", "parts": [{"text": augmented_message}]})
 
     served_by = None
     try:
-        chat_session = model.start_chat(history=gemini_history)
-        full_message = f"{SYSTEM_PROMPT}\n\n{augmented_message}"
-        response = chat_session.send_message(full_message)
+        response = gemini_client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=contents,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                temperature=0.25,
+                max_output_tokens=600,
+            )
+        )
         reply = response.text
         served_by = "gemini-2.5-flash"
 
