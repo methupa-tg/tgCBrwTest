@@ -157,7 +157,7 @@ def chat():
     served_by = None
     try:
         response = gemini_client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-2.0-flash",
             contents=contents,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
@@ -166,7 +166,7 @@ def chat():
             )
         )
         reply = response.text
-        served_by = "gemini-2.5-flash"
+        served_by = "gemini-2.0-flash"
 
     except Exception as gemini_err:
         print(f"[WARN] Gemini failed: {gemini_err} — falling back to Cohere")
@@ -176,12 +176,14 @@ def chat():
                 messages.append({"role": msg["role"], "content": msg["content"]})
             messages.append({"role": "user", "content": augmented_message})
 
+            from cohere import RequestOptions
             cohere_response = co.chat(
                 model="command-a-03-2025",
                 messages=messages,
                 temperature=0.25,
                 max_tokens=300,
-                frequency_penalty=0.4
+                frequency_penalty=0.4,
+                request_options=RequestOptions(timeout_in_seconds=60)
             )
             reply = cohere_response.message.content[0].text
             served_by = "command-a-03-2025"
