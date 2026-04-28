@@ -157,7 +157,7 @@ def chat():
     served_by = None
     try:
         response = gemini_client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-1.5-flash",
             contents=contents,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
@@ -166,7 +166,7 @@ def chat():
             )
         )
         reply = response.text
-        served_by = "gemini-2.5-flash"
+        served_by = "gemini-1.5-flash"
 
     except Exception as gemini_err:
         print(f"[WARN] Gemini failed: {gemini_err} — falling back to Cohere")
