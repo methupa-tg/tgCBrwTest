@@ -59,7 +59,12 @@ SYSTEM_PROMPT = (
     "For each voucher output exactly this:\n"
     "🎁 [Voucher Name]\n"
     "👉 https://thyaga.lk/buy-voucher/[category]/[slug]\n"
-    "Show 3-6 vouchers max. Nothing else."
+    "Show 3-6 vouchers max. Nothing else.\n"
+    "IMPORTANT: When the user mentions a specific recipient (e.g. wife, husband, girlfriend, friend, colleague), "
+    "use the 'Best for' field in the context to match vouchers suitable for that recipient. "
+    "Do NOT recommend vouchers explicitly labeled for a different recipient (e.g. do not recommend 'Best for: Mom' or 'Best for: Dad' when gifting a spouse or friend). "
+    "Also consider the 'Tone' field — prefer vouchers with a tone that fits the occasion (e.g. sentimental/loving for a spouse, fun/playful for a friend). "
+    "If no perfectly matching voucher exists, pick the most neutral/general birthday vouchers available."
 
     "If the user is vague (e.g. 'show me all birthday vouchers'), respond with:\n"
     "Here are all vouchers in that category: https://thyaga.lk/buy-voucher/[Category]\n"
