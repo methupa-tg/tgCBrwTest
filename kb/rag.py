@@ -81,7 +81,7 @@ def load_merchants_loc(filepath):
             chunk = (
                 f"Merchant: {row['merchant_name'].strip()}\n"
                 f"City: {row['City'].strip()}\n"
-                f"Final City: {row['Final City'].strip()}\n"
+                f"Location: {row['Location'].strip()}\n"
                 f"Status: {row.get('Status', '').strip()}\n"
                 f"Category: {row.get('Category', '').strip()}"
             )
@@ -160,6 +160,20 @@ def load_for_merchants(filepath):
         chunks.append("\n".join(current))
     return chunks
 
+def load_special_redemptions(filepath):
+    chunks = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            chunk = (
+                f"Special Redemption Instructions for: {row['Merchant'].strip()}\n"
+                f"Type: {row['type'].strip()}\n"
+                f"How to redeem at {row['Merchant'].strip()}:\n"
+                f"{row['redeem instructions'].strip()}"
+            )
+            chunks.append(chunk)
+    return chunks
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_all_documents():
@@ -167,6 +181,7 @@ def load_all_documents():
     chunks += load_voucher_catalog(os.path.join(BASE_DIR, "catog.csv"))
     chunks += load_faq(os.path.join(BASE_DIR, "faq.csv"))
     chunks += load_how_to(os.path.join(BASE_DIR, "how_to.csv"))
+    chunks += load_special_redemptions(os.path.join(BASE_DIR, "special_redemptions.csv"))
     chunks += load_links(os.path.join(BASE_DIR, "links - Sheet1.csv"))
     chunks += load_merchants_loc(os.path.join(BASE_DIR, "Merchants426.csv"))
     chunks += load_thyaga_info(os.path.join(BASE_DIR, "thyagaInfo.txt"))

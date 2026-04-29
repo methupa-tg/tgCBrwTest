@@ -1,94 +1,192 @@
-merchant_name,City,Final City,Status,Category
-Isso,Battaramulla,Battaramulla,Active,Food
-Isso,Colombo 02,Colombo 02,Active,Food
-Isso,Colombo 03,Colombo  03,Active,Food
-Isso,Negombo,Negambo,Active,Food
-Isso,Trincomalee,Trincomalee,Active,Food
-Sushi Kai,Colombo 05,Colombo 05,Active,Food
-Sushi Kai,Thalawathugoda,Thalawathugoda,Active,Food
-Mannat Couture,Colombo 06,Colombo 06,Active,Fashion
-The Factory Outlet,Colombo 05,Colombo 05,Active,Fashion
-The Factory Outlet,Galle,Galle,Active,Fashion
-Aviratï¿½,Colombo 07,Colombo 07,Active,Fashion
-Aviratï¿½,Kandy City Center,Kandy,Active,Fashion
-Seerock The King's Domain Hotel,"Indigaswewa, Sigiriya, Dambulla",Dambulla,Active,Hotel
+merchant_name,Location,City,Status,Category
+Absolute Basics,ONE GALLE FACE,Colombo,Active,Fashion
+Absolute Basics,Colpetty,Colombo,Active,Fashion
+Ahara by Amari,Colombo 3,Colombo,Active,Food
+Akarsha Jewellers,Taj Samudra Hotel ,Colombo,Active,Gems & Jewellery
+Akarsha Jewellers,MC,Colombo,Active,Gems & Jewellery
+AMBERRY,IN APP,In App,Active,Accessories
+AMBERRY,Facebook/ Instagram,Facebook/ Instagram,Active,Accessories
+Ancient Nutra,Havelock City,Colombo,Active,Personal Care
+Ancient Nutra,Wattala,Wattala,Active,Personal Care
+Apero,Colombo 03,Colombo,Active,Supermarkets
+Arienti,Colombo 03,Colombo,Active,Fashion
+Arienti,Negombo,Negombo,Active,Fashion
+Aroma Bliss Ceylon,Bambalapitiya,Colombo,Active,Personal Care
+Aroma Bliss Ceylon,Colombo 07,Colombo,Active,Personal Care
+Aroma Bliss Ceylon,Negombo,Negombo,Active,Personal Care
+Aroma Bliss Ceylon,Online,Online,Active,Personal Care
+Aroma Bliss Ceylon,Colombo 03,Colombo,Active,Personal Care
+Aroma Bliss Ceylon,Nugegoda,Nugegoda,Active,Personal Care
+Aroma Perfume,Dehiwela,Dehiwala,Active,Personal Care
+Aroma Perfume,Instagram ,Instagram ,Active,Personal Care
+Arpico Daily,Anuradhapuraya,Anuradhapura,Active,Supermarkets
+Arpico Daily,Athurugiriya,Athurugiriya,Active,Supermarkets
+Arpico Daily,Chilaw,Chilaw,Active,Supermarkets
+Arpico Daily,Wennapuwa,Chilaw,Active,Supermarkets
+Arpico Daily,Attidiya,Dehiwala,Active,Supermarkets
+Arpico Daily,Weliweriya,Gampaha,Active,Supermarkets
+Arpico Daily,Kaduwela,Kaduwela,Active,Supermarkets
+Arpico Daily,Kandana,Kandana,Active,Supermarkets
+Arpico Daily,Matthegoda,Kottawa,Active,Supermarkets
+Arpico Daily,Kuliyapitiya,Kuliyapitiya,Active,Supermarkets
+Arpico Daily,Meegoda,Meegoda,Active,Supermarkets
+Arpico Daily,Mulleriyawa,Mulleriyawa,Active,Supermarkets
+Arpico Daily,Wateraka,Padukka,Active,Supermarkets
+Arpico Daily,Pelmadulla,Pelmadulla,Active,Supermarkets
+Arpico Daily,Palanwatta,Piliyandala,Active,Supermarkets
+Arpico Daily,Ragama,Ragama,Active,Supermarkets
+Arpico Daily,Rathnapura,Rathnapura,Active,Supermarkets
+Arpico Daily,Wattala 2 AD,Wattala,Active,Supermarkets
+Arpico Daily,Gelioya,Kandy,Active,Supermarkets
+Arpico Daily,Haloluwa,Kandy,Active,Supermarkets
+Arpico Daily,Hettipola,Kandy,Active,Supermarkets
+Arpico Daily,Kiribathkumbura,Kandy,Active,Supermarkets
+Arpico Super Centre,Battaramulla SC,Battaramulla,Active,Supermarkets
+Arpico Super Centre,Borelasgamuwa SS,Borelasgamuwa,Active,Supermarkets
+Arpico Super Centre,Hyde Park SC,Colombo,Active,Supermarkets
+Arpico Super Centre,Dehiwala SC,Dehiwala,Active,Supermarkets
+Arpico Super Centre,Galle SC,Galle,Active,Supermarkets
+Arpico Super Centre,Gampaha SC,Gampaha,Active,Supermarkets
+Arpico Super Centre,Homagama SC,Homagama,Active,Supermarkets
+Arpico Super Centre,Kadawatha SC,Kadawatha,Active,Supermarkets
+Arpico Super Centre,Kalutara SS,Kalutara,Active,Supermarkets
+Arpico Super Centre,Kandy,Kandy,Active,Supermarkets
+Arpico Super Centre,Katukurunda SC,Katukurunda,Active,Supermarkets
+Arpico Super Centre,Seeduwa SC,Katunayake,Active,Supermarkets
+Arpico Super Centre,Kegalle SC,Kegalle,Active,Supermarkets
+Arpico Super Centre,Kiribathgoda SS,Kiribathgoda,Active,Supermarkets
+Arpico Super Centre,Kochchikade SC,Kochchikade,Active,Supermarkets
+Arpico Super Centre,Kohuwala SC,Kohuwala,Active,Supermarkets
+Arpico Super Centre,Kottawa SS,Kottawa,Active,Supermarkets
+Arpico Super Centre,Kurunegala SC,Kurunegala,Active,Supermarkets
+Arpico Super Centre,Malabe SS,Malabe,Active,Supermarkets
+Arpico Super Centre,Matara SC,Matara,Active,Supermarkets
+Arpico Super Centre,Minuwangoda SC,Minuwangoda,Active,Supermarkets
+Arpico Super Centre,Nawinna SC,Nawinna,Active,Supermarkets
+Arpico Super Centre,Negombo SC,Negombo,Active,Supermarkets
+Arpico Super Centre,Panadura SC,Panadura,Active,Supermarkets
+Arpico Super Centre,Piliyandala SS,Piliyandala,Active,Supermarkets
+Arpico Super Centre,Thalawathugoda SC,Thalawathugoda,Active,Supermarkets
+Arpico Super Centre,Wattala SC,Wattala,Active,Supermarkets
+Arpico Super Centre,Wellawatte SS,Wellawatte,Active,Supermarkets
+Arpico Super Centre,Yakkala SS,Yakkala,Active,Supermarkets
+Arpico Super Centre,Kundasala,Kandy,Active,Supermarkets
+Arpico Super Centre,Katugastota,Kandy,Active,Supermarkets
+Asics,One Galle Face,Colombo,Active,Fashion
+Asics,MBC Maitland Crescent ,Colombo,Active,Fashion
+Attanayake Opticians,Colombo 03,Colombo,Active,Opticians
+Attanayake Opticians,Dehiwala-Mount Lavinia,Mount Lavinia,Active,Opticians
+AVI,Colombo City Center ,Colombo,Active,Fashion
+AVI,MBC Maitland Crescent ,Colombo,Active,Fashion
+Aviraté,Colombo 07,Colombo,Active,Fashion
+Aviraté,Kandy City Center,Kandy,Active,Fashion
+Aviraté,Avirate-OGF,Colombo,Active,Fashion
+Aviraté,Colombo City Center,Colombo,Active,Fashion
+Ayvee,IN APP,IN APP,Active,Fashion
+Ayvee,Facebook/ Instagram,Facebook/ Instagram,Active,Fashion
+Barista,Athurugiriya,Athurugiriya,Active,Food
+Barista,Bandarawela,Bandarawela,Active,Food
+Barista,Battaramulla,Battaramulla,Active,Food
+Barista,Boralesgamuwa,Boralesgamuwa,Active,Food
+Barista,Wennapuwa,Chilaw,Active,Food
+Barista,Kohuwela,Nugegoda,Active,Food
+Barista,World Trade Center,Colombo,Active,Food
+Barista,Lady J Borella,Colombo,Active,Food
+Barista,Perahera Mawatha (NM),Colombo,Active,Food
+Barista,Nawam Mawatha,Colombo,Active,Food
+Barista,Port City,Colombo,Active,Food
+Barista,Staple Street,Colombo,Active,Food
+Barista,Kollupitiya,Colombo,Active,Food
+Barista,Bambalapitiya,Colombo,Active,Food
+Barista,Double XL,Colombo,Active,Food
+Barista,WSO2,Colombo,Active,Food
+Barista,Thimbirigasyaya,Colombo,Active,Food
+Barista,Narahenpita,Colombo,Active,Food
+Barista,Cool Planet Mall,Colombo,Active,Food
+Barista,Cafeâ€š Mocha by Barista,Colombo,Active,Food
+Barista,Wellawatta,Colombo,Active,Food
+Barista,Laksala,Colombo,Active,Food
+Barista,Horton Place,Colombo,Active,Food
+Barista,Trillium ,Colombo,Active,Food
+Barista,Orion City Dematagoda,Colombo,Active,Food
+Barista,Independence Square,Colombo,Active,Food
+Barista,Dehiwela,Dehiwala,Active,Food
+Barista,Galle Fort,Galle,Active,Food
+Barista,Galle Diner,Galle,Active,Food
+Barista,Unawatuna,Galle,Active,Food
+Barista,Ahangama,Galle,Active,Food
+Barista,Yakkala,Gampaha,Active,Food
+Barista,NSBM,Homagama,Active,Food
+Barista,Horana,Horana,Active,Food
+Barista,Ja-Ela,Ja Ela,Active,Food
+Barista,Jaffna,Jaffna,Active,Food
+Barista,Jaffna Diner,Jaffna,Active,Food
+Barista,jaffna,Jaffna,Active,Food
+Barista,Kadawatha,Kadawatha,Active,Food
+Barista,Kandy,Kandy,Active,Food
+Barista,Kandy Diner,Kandy,Active,Food
+Barista,Pasyala,Kandy,Active,Food
+Barista,Kandy City,Kandy,Active,Food
+Barista,Seeduwa,Katunayake,Active,Food
+Barista,Kiribathgoda,Kiribathgoda,Active,Food
+Barista,Kurunegala,Kurunegala,Active,Food
+Barista,"Dambulla Road, Kurunegala",Kurunegala,Active,Food
+Barista,Maharagama,Maharagama,Active,Food
+Barista,Malabe,Malabe,Active,Food
+Barista,Matara,Matara,Active,Food
+Barista,Mirissa,Mirissa,Active,Food
+Barista,Katubedda,Moratuwa,Active,Food
+Barista,Moratuwa,Moratuwa,Active,Food
+Barista,Mount Lavinia,Mount Lavinia,Active,Food
+Barista,Mulleriyawa,Mulleriyawa,Active,Food
+Barista,Nawala,Nawala,Active,Food
+Barista,Kochchikade,Negambo,Active,Food
+Barista,Negombo-Arpico-Express,Negambo ,Active,Food
+Barista,Negombo Diner,Negambo ,Active,Food
+Barista,Nugegoda,Nugegoda,Active,Food
+Barista,Nugegoda Diner,Nugegoda,Active,Food
+Barista,Pepiliyana,Dehiwala,Active,Food
+Barista,Mirihana,Nugegoda,Active,Food
+Barista,Delkanda,Nugegoda,Active,Food
+Barista,Ella,Nuwaraeliya,Active,Food
+Barista,Nuwara Eliya,Nuwaraeliya,Active,Food
+Barista,Shanthipura,Nuwaraeliya,Active,Food
+Barista,Panadura,Panadura,Active,Food
+Barista,Kottawa,Pannipitiya,Active,Food
+Barista,Piliyandala,Piliyandala,Active,Food
+Barista,Rajagiriya,Rajagiriya,Active,Food
+Barista,Kotte,Rajagiriya,Active,Food
+Barista,Sigiriya,Sigiriya,Active,Food
+Barista,Thalawathugoda,Thalawathugoda,Active,Food
+Barista,Udawalawe,Udawalawa,Active,Food
+Barista,Wattala,Wattala,Active,Food
+Barista,Wattala Diner,Wattala,Active,Food
+Barista,Wattala Kelly Felder,Wattala,Active,Food
+Barista,Southern Expressway A,Welipenna,Active,Food
+Barista,Southern Expressway B,Welipenna,Active,Food
+Barista,Dematagoda,Colombo,Active,Food
+Barista,Sujatha Express,,Active,Food
+Basilur (CCC),Colombo City Centre,Colombo,Active,Food
+BC Lifestyle Salon and Nail Studio,Mount Lavinia,Mount Lavinia,Active,Personal Care
+BC Nail Studio,One Galle Face Mall,Colombo,Active,Personal Care
+BC Nail Studio,Rajagiriya,Rajagiriya,Active,Personal Care
+Beauty & Body Care ,Colombo 05,Colombo,Active,Personal Care
+Beauty Quest International,Galle Face Hotel,Colombo,Active,Personal Care
+BLG Technologies,Colombo 4,Colombo,Active,Electronics
+Blink International,Bambalapitiya,Colombo,Active,Watches
+Blink International,KCC,Kandy,Active,Watches
+Bookholics,ECOMMERCE - Bookholics,,Active,Books & Stationery
+Bowl'd,"Sea View Avenue, Colombo 00300",Colombo,Active,Food
+British Cosmetics,ECOMMERCE - BRITISH COSMETICS,,Active,Personal Care
+Burning Bird,Colombo 07,Colombo,Active,Food
 Cafe Noirï¿½,Battaramulla,Battaramulla,Active,Food
-Cafe Noirï¿½,Alfred House Gardens,Colombo 03,Active,Food
-Cafe Noirï¿½,Thimbirigasyaya,Colombo 05,Active,Food
+Cafe Noirï¿½,Alfred House Gardens,Colombo,Active,Food
+Cafe Noirï¿½,Thimbirigasyaya,Colombo,Active,Food
 Cafe Noirï¿½,Pannipitiya,Pannipitiya,Active,Food
 Cafe Noirï¿½,Wattala,Wattala,Active,Food
-Strong.lk,Nugegoda,Nugegoda,Active,Fitness
-Strong.lk,Mount Lavinia,Mount Lavinia,Active,Fitness
-Kingsman Studio,Colombo 04,Colombo 04,Active,Fashion
-PREMIUM OIL STORE,Nugegoda,Nugegoda ,Active,Automobile
-Attanayake Opticians,Colombo 03,Colombo 03,Active,Opticians
-ME Colombo,Colombo 05,Colombo 05,Active,Hotel
-Tamarind Hill,"Dadella, Galle",Galle,Active,Hotel
-The Habitat,Kosgoda,Galle,Active,Hotel
-Le Grand Galle,Galle,Galle,Active,Hotel
-Tea Avenue,Colombo 02,Colombo 02,Active,Food
-Tea Avenue,Colombo 03,Colombo 03,Active,Food
-Tea Avenue,Colombo 05,Colombo 05,Active,Food
-Tea Avenue,Galle,Galle,Active,Food
-Tea Avenue,Malabe,Malabe,Active,Food
-Tea Avenue,"Pitakotte, Kotte",Sri Jayawardhanapura,Active,Food
-Tea Avenue,Pepiliyana,Pepiliyana,Active,Food
-Tea Avenue,Wattala,Wattala,Active,Food
-Cool Kidz,Colombo 04,Colombo 04,Active,Baby
-BC Lifestyle Salon and Nail Studio,Mount Lavinia,Mount Lavinia,Active,Personal Care
-BC Nail Studio,One Galle Face Mall,Colombo 02,Active,Personal Care
-BC Nail Studio,Rajagiriya,Rajagiriya,Active,Personal Care
-Hilldale Retreat,"Labookellie, Nuwara Eliya",Nuwara Eliya,Active,Hotel
-Spring and Summer,Maharagama,Maharagama,Active,Fashion
-Spring and Summer,Negombo,Negombo,Active,Fashion
-Spring and Summer,Nugegoda,Nugegoda,Active,Fashion
-Spring and Summer,Panadura,Panadura,Active,Fashion
-Spring and Summer,Wattala,Wattala,Active,Fashion
-Zigzag,Flagship Store,Colombo 03,Active,Fashion
-Zigzag,Negombo,Negombo,Active,Fashion
-Wimaladharma & Sons,Colombo 05,Colombo 05,Active,Watches
-Wimaladharma & Sons,Kotte,Sri Jayawardhanapura,Active,Watches
-Wimaladharma & Sons,Wattala,Wattala,Active,Watches
-The Sizzle,Colombo 03,Colombo 03,Active,Food
-Chola Authentic Indian Restaurant,One Galle Face,Colombo 02,Active,Food
-Chola Authentic Indian Restaurant,Colombo 00600,Colombo 06,Active,Food
-Chola Authentic Indian Restaurant,Kynsey Road,Colombo 07,Active,Food
-Chola Authentic Indian Restaurant,Thalawathugoda,Thalawathugoda,Active,Food
-Chola Authentic Indian Restaurant,Wattala,Wattala,Active,Food
-Jeya Book Center,Colombo 03,Colombo 03,Active,Books & Stationery
-Jeya Book Center,Colombo 11,Colombo 11,Active,Books & Stationery
-Jeya Book Center,Kandy,Kandy,Active,Books & Stationery
-Jeya Book Center,Nugegoda,Nugegoda,Active,Books & Stationery
-Jeya Book Center,Wattala,Wattala,Active,Books & Stationery
-Bowl'd,"30, Sea View Avenue, Colombo 00300",Colombo 03,Active,Food
-Peach Valley,"27 Flower Rd, Colombo 00700",Colombo 07,Active,Food
-The Vanta Studios,"355, R. A. De Mel Mawatha, Colombo 00500",Colombo 05,Active,Fashion
-Mimosa,One Galle Face - L2-21,Colombo 02,Active,Fashion
-Mimosa,Cinnamon Life,Colombo 02,Active,Fashion
-Mimosa,"355, R. A. De Mel Mawatha, Colombo 03",Colombo 03,Active,Fashion
-Mimosa,Havelock City Mall,Colombo 05,Active,Fashion
-Mimosa,Negambo,Negambo,Active,Fashion
-Dilly & Carlo,Colombo City Center,Colombo 02,Active,Fashion
-Dilly & Carlo,One Galle Face - L2-22,Colombo 02,Active,Fashion
-Dilly & Carlo,One Galle Face L - 4,Colombo 02,Active,Fashion
-Dilly & Carlo,"No. L 29 Crescat Boulevard, Galle Road, Colombo 03",Colombo 03,Active,Fashion
-Dilly & Carlo,"No. 38, Ground Floor, Liberty Plaza, Galle Road, Colombo 03",Colombo 03,Active,Fashion
-Dilly & Carlo,Havelock City Mall,Colombo 05,Active,Fashion
-Dilly & Carlo,"Flagship Store, Flower Road, Colombo 07",Colombo 07,Active,Fashion
-Aroma Bliss Ceylon,Bambalapitiya,Colombo 04,Active,Personal Care
-Aroma Bliss Ceylon,Colombo 07,Colombo 07,Active,Personal Care
-Aroma Bliss Ceylon,Negombo,Negombo,Active,Personal Care
-Mama Louie's,"49 Skelton Rd, Colombo 05",Colombo 05,Active,Food
-Mama Louie's,Kotte,Sri Jayawardhanapura,Active,Food
-PastaMania,One Galle Face,Colombo 02,Active,Food
-PastaMania,"502 R. A. De Mel Mawatha, Colombo 00300",Colombo 03,Active,Food
-Island Wraps,"22 Bagatelle Road, Colombo 00300",Colombo 02,Active,Food
-The Mango Tree,Colombo 03,Colombo 03,Active,Food
-The Mango Tree,Colombo 05,Colombo 05,Active,Food
-The Mango Tree,Colombo 06,Colombo 06,Active,Food
-The Mango Tree,Colombo 07,Colombo 07,Active,Food
-Made in Earth,Colombo 08,Colombo 08,Active,Groceries
-Chinese Dragon Cafe,Bambalapitiya,Colombo 04,Active,Food
+Chancellor by Amari,Colombo 03,Colombo,Active,Food
+Che Studio,Kirulapone,Nugegoda,Active,Studio
+Chinese Dragon Cafe,Bambalapitiya,Colombo,Active,Food
 Chinese Dragon Cafe,Jaffna,Jaffna,Active,Food
 Chinese Dragon Cafe,Kaduwela,Kaduwela,Active,Food
 Chinese Dragon Cafe,Kandana,Kandana,Active,Food
@@ -97,34 +195,24 @@ Chinese Dragon Cafe,Pelawatta,Battaramulla,Active,Food
 Chinese Dragon Cafe,Rajagiriya,Rajagiriya,Active,Food
 Chinese Dragon Cafe,Ratmalana,Ratmalana,Active,Food
 Chinese Dragon Cafe,Wattala,Wattala,Active,Food
-ShirtWorks,Colpetty SWX,Colombo 03,Active,Fashion
-ShirtWorks,Bambalapitiya SWX,Colombo 04,Active,Fashion
-ShirtWorks,Panadura SWX,Panadura,Active,Fashion
-Union Chemists,Colombo 02,Colombo 02,Active,Pharmacy
-Union Chemists,"Alfred Place, Colombo 03",Colombo 03,Active,Pharmacy
-Union Chemists,"Kirula Road, Colombo - 05",Colombo 05,Active,Pharmacy
-Union Chemists,"Castle Street, Colombo - 08",Colombo 08,Active,Pharmacy
-Union Chemists,"Deans Road, Colombo - 10",Colombo 10,Active,Pharmacy
-Union Chemists,"Hospital Street, Kalubowila",Dehiwala,Active,Pharmacy
-Union Chemists,Kalubowila,Dehiwala,Active,Pharmacy
-Union Chemists,Thalawathugoda,Thalawathugoda,Active,Pharmacy
-Union Chemists,"Negombo Road, Wattala",Wattala,Active,Pharmacy
-Stripes and Checks,One Galle Face,Colombo 02,Active,Fashion
-Stripes and Checks,Colombo City Center ,Colombo 02,Active,Fashion
-Stripes and Checks,Havelock Road,Colombo 05,Active,Fashion
-Stripes and Checks,Ward Place,Colombo 07,Active,Fashion
-Stripes and Checks,Mount Lavinia,Mount Lavinia,Active,Fashion
-THIRTEEN THIRTYONE,Colombo 05,Colombo 05,Active,Fashion
-TecRoot,Colombo 04,Colombo 04,Active,Games
-KOTTULABS,Kelaniya,Kelaniya,Active,Food
-KOTTULABS,Wattala,Wattala,Active,Food
-The English Cake Company,One Galle Face,Colombo 02,Active,Food
-The English Cake Company,Colombo 5,Colombo 05,Active,Food
-The English Cake Company,Havelock City Mall,Colombo 05,Active,Food
+Chinese Dragon Cafe,Fort,,Active,Food
+Chola Authentic Indian Restaurant,One Galle Face,Colombo,Active,Food
+Chola Authentic Indian Restaurant,Colombo 00600,Colombo,Active,Food
+Chola Authentic Indian Restaurant,Kynsey Road,Colombo,Active,Food
+Chola Authentic Indian Restaurant,Thalawathugoda,Thalawathugoda,Active,Food
+Chola Authentic Indian Restaurant,Wattala,Wattala,Active,Food
+Christell Crown,One Galle Face,Colombo,Active,Personal Care
+Christell Skin Clinic,Colombo 04,Colombo,Active,Personal Care
+Christell Wellness Villa,Lauries Road,Colombo,Active,Personal Care
+Colombo Jewellery Stores,One Galle Face,Colombo,Active,Gems & Jewellery
+Colombo Jewellery Stores,Colombo 03,Colombo,Active,Gems & Jewellery
+Cool Kidz,Colombo 04,Colombo,Active,Baby
+Cool Kidz,ECOMMERCE - COOL KIDS,,Active,Baby
+Cool Kidz,Cool Kidz,,Active,Baby
 Cool Planet,Pelawatte,Battaramulla,Active,Fashion
-Cool Planet,Exibit,Colombo 02,Active,Fashion
-Cool Planet,Colombo 05,Colombo 05,Active,Fashion
-Cool Planet,Havelock City Mall,Colombo 05,Active,Fashion
+Cool Planet,Exibit,Colombo,Active,Fashion
+Cool Planet,Colombo 05,Colombo,Active,Fashion
+Cool Planet,Havelock City Mall,Colombo,Active,Fashion
 Cool Planet,Kandy,Kandy,Active,Fashion
 Cool Planet,Exibit - KCC,Kandy,Active,Fashion
 Cool Planet,Malabe,Malabe,Active,Fashion
@@ -133,17 +221,311 @@ Cool Planet,Katubedda,Moratuwa,Active,Fashion
 Cool Planet,Kirula,Narhenpita,Active,Fashion
 Cool Planet,Nugegoda,Nugegoda,Active,Fashion
 Cool Planet,Wattala,Wattala,Active,Fashion
-Sarasavi Book Shop (Samudradevi Rd-Nugegoda Only),Samudra Devi Rd (Nugegoda),Nugegoda,Active,Books & Stationery
-Nil's Store,OGF Mall,Colombo 02,Active,Fashion
-Nil's Store,Galle,Galle,Active,Fashion
-Nil's Store,Kandy,Kandy,Active,Fashion
-Nil's Store,Kurunegala,Kurunegala,Active,Fashion
-Nil's Store,Maharagama,Maharagama,Active,Fashion
-Nil's Store,Nugegoda,Nugegoda,Active,Fashion
-Nil's Store,Panadura,Panadura,Active,Fashion
-Nil's Store,Thalawathugoda,Thalawathugoda,Active,Fashion
-Nil's Store,Wattala,Wattala,Active,Fashion
-Nil's Store,Mahabage,Wattala,Active,Fashion
+Diliganz,Marino Mall,Colombo,Active,Fashion
+Diliganz,"Toy Land, Marino Mall",Colombo,Active,Fashion
+Diliganz,Dehiwela,Dehiwala,Active,Fashion
+Diliganz,Gampaha,Gampaha,Active,Fashion
+Diliganz,Online,,Active,Fashion
+Dilly & Carlo,Colombo City Center,Colombo,Active,Fashion
+Dilly & Carlo,One Galle Face - L2-22,Colombo,Active,Fashion
+Dilly & Carlo,One Galle Face L - 4,Colombo,Active,Fashion
+Dilly & Carlo,Crescat Boulevard,Colombo,Active,Fashion
+Dilly & Carlo,Liberty Plaza,Colombo,Active,Fashion
+Dilly & Carlo,Havelock City Mall,Colombo,Active,Fashion
+Dilly & Carlo,"Flower Road, Colombo 07",Colombo,Active,Fashion
+Dinapala Online,Online,Online,Active,Mobiles & Electronics
+Domino's Pizza, Aluthgama,Aluthgama,Active,Food
+Domino's Pizza, Ambalangoda,Ambalangoda,Active,Food
+Domino's Pizza,Gothatuwa,Angoda,Active,Food
+Domino's Pizza,Anuradhapura,Anuradhapura,Active,Food
+Domino's Pizza,Athurugiriya,Athurugiriya,Active,Food
+Domino's Pizza,Boralesgamuwa,Boralesgamuwa,Active,Food
+Domino's Pizza,Wennappuwa ,Chilaw,Active,Food
+Domino's Pizza,Union Place,Colombo,Active,Food
+Domino's Pizza,Wellawatta,Colombo,Active,Food
+Domino's Pizza,Colombo 07,Colombo,Active,Food
+Domino's Pizza,Kotahena,Colombo,Active,Food
+Domino's Pizza, Dehiwela,Dehiwela,Active,Food
+Domino's Pizza,Galle,Galle,Active,Food
+Domino's Pizza,Gampaha,Gampaha,Active,Food
+Domino's Pizza,Homagama,Homagama,Active,Food
+Domino's Pizza,Jaffna,Jaffna,Active,Food
+Domino's Pizza,Kadawatha,Kadawatha,Active,Food
+Domino's Pizza,Kaduwela,Kaduwela,Active,Food
+Domino's Pizza, Kaluthara,Kaluthara,Active,Food
+Domino's Pizza, Kandy,Kandy,Active,Food
+Domino's Pizza, Kandy,Kandy,Active,Food
+Domino's Pizza, Katugastota,Katugastota,Active,Food
+Domino's Pizza,Kiribathgoda,Kiribathgoda,Active,Food
+Domino's Pizza,Kolonnawa,Kolonnawa,Active,Food
+Domino's Pizza,Kottawa,Kottawa,Active,Food
+Domino's Pizza, Kottawa ,Kottawa ,Active,Food
+Domino's Pizza, Kuliyapitiya,Kuliyapitiya,Active,Food
+Domino's Pizza, Kurunegala,Kurunegala,Active,Food
+Domino's Pizza,Maharagama,Maharagama,Active,Food
+Domino's Pizza, Malabe,Malabe,Active,Food
+Domino's Pizza,Matara,Matara,Active,Food
+Domino's Pizza,Matara,Matara,Active,Food
+Domino's Pizza,Mattakkuliya,Mattakkuliya,Active,Food
+Domino's Pizza,Minuwangoda,Minuwangoda,Active,Food
+Domino's Pizza,Moratuwa,Moratuwa,Active,Food
+Domino's Pizza,Negombo,Negombo,Active,Food
+Domino's Pizza, Nugegoda,Nugegoda,Active,Food
+Domino's Pizza, Sri Jayawardenepura Kotte, Sri Jayawardenepura ,Active,Food
+Domino's Pizza, Nuwara Eliya,Nuwara Eliya,Active,Food
+Domino's Pizza,Panadura,Panadura,Active,Food
+Domino's Pizza,Pelawatte,Pelawatte,Active,Food
+Domino's Pizza,Piliyandala,Piliyandala,Active,Food
+Domino's Pizza,Ragama,Ragama,Active,Food
+Domino's Pizza, Rajagiriya,Rajagiriya,Active,Food
+Domino's Pizza, Ratmalana.,Ratmalana,Active,Food
+Domino's Pizza,Ratnapura ,Ratnapura ,Active,Food
+Domino's Pizza,Seeduwa,Seeduwa,Active,Food
+Domino's Pizza, Wattala,Wattala,Active,Food
+Domino's Pizza (Online),Dehiwela,,Active,Food
+Domino's Pizza (Online),Nugegoda,,Active,Food
+Domino's Pizza (Online),Ratmalana,,Active,Food
+Domino's Pizza (Online),Rajagiriya,,Active,Food
+Domino's Pizza (Online),Union Place,,Active,Food
+Domino's Pizza (Online),Maharagama,,Active,Food
+Domino's Pizza (Online),Kiribathgoda,,Active,Food
+Domino's Pizza (Online),Malabe,,Active,Food
+Domino's Pizza (Online),Negombo,,Active,Food
+Domino's Pizza (Online),Kottawa,,Active,Food
+Domino's Pizza (Online),Kurunegala,,Active,Food
+Domino's Pizza (Online),Piliyandala,,Active,Food
+Domino's Pizza (Online),Gampaha,,Active,Food
+Domino's Pizza (Online),Havelock Road,,Active,Food
+Domino's Pizza (Online),Pelawatta,,Active,Food
+Domino's Pizza (Online),Galle,,Active,Food
+Domino's Pizza (Online),Kalutara,,Active,Food
+Domino's Pizza (Online),Kotahena,,Active,Food
+Domino's Pizza (Online),Boralesgamuwa,,Active,Food
+Domino's Pizza (Online),Athurugiriya,,Active,Food
+Domino's Pizza (Online),Aluthgama,,Active,Food
+Domino's Pizza (Online),Ragama,,Active,Food
+Domino's Pizza (Online),Kadawatha,,Active,Food
+Domino's Pizza (Online),Minuwangoda,,Active,Food
+Domino's Pizza (Online),Moratuwa,,Active,Food
+Domino's Pizza (Online),Homagama,,Active,Food
+Domino's Pizza (Online),Kolonnawa,,Active,Food
+Domino's Pizza (Online),kaduwela,,Active,Food
+Domino's Pizza (Online),Seeduwa,,Active,Food
+Domino's Pizza (Online),Pannipitiya,,Active,Food
+Domino's Pizza (Online),Gothatuwa,,Active,Food
+Domino's Pizza (Online),Wattala,,Active,Food
+Domino's Pizza (Online),Pita Kotte,,Active,Food
+Domino's Pizza (Online),Matara,,Active,Food
+Domino's Pizza (Online),Jaffna,,Active,Food
+Domino's Pizza (Online),Colombo 15,,Active,Food
+Domino's Pizza (Online),Independence Arcade,,Active,Food
+Domino's Pizza (Online),Rathnapura,,Active,Food
+Domino's Pizza (Online),Anuradhapura,,Active,Food
+Domino's Pizza (Online),Weligama,,Active,Food
+Domino's Pizza (Online),Ambalangoda,,Active,Food
+Domino's Pizza (Online),Kotugodella Veediya - Kandy,,Active,Food
+Domino's Pizza (Online),Peradeniya Rd. - Kandy,,Active,Food
+Domino's Pizza (Online),Katugastota Rd. - Kandy,,Active,Food
+Domino's Pizza (Online),Panadura,,Active,Food
+Domino's Pizza (Online),Wennappuwa,,Active,Food
+Domino's Pizza (Online),Kuliyapitiya,,Active,Food
+Domino's Pizza (Online),Nuwara Eliya,,Active,Food
+Domino's Pizza (Online),Online,,Active,Food
+DSI,AKURESSA,Akuressa,Active,Fashion
+DSI,ALAWWA,Alawwa,Active,Fashion
+DSI,ALUTHGAMA,Aluthgama,Active,Fashion
+DSI,AMBALANGODA,Ambalagoda,Active,Fashion
+DSI,AMPARA,Ampara,Active,Fashion
+DSI,ANURADHAPURA,Anuradhapra,Active,Fashion
+DSI,FACTORY OUTLET ANURADHAPURA,Anuradhapra,Active,Fashion
+DSI,ATHURUGIRIYA,Athurugiriya,Active,Fashion
+DSI,AVISSAWELLA,Avisswella,Active,Fashion
+DSI,AWARIWATTA,Awariwatta,Active,Fashion
+DSI,BADDEGAMA,Baddegama,Active,Fashion
+DSI,BADULLA,Badulla,Active,Fashion
+DSI,PASSARA,Badulla,Active,Fashion
+DSI,BALANGODA,Balagoda,Active,Fashion
+DSI,BANDARAWELA,Bandarawela,Active,Fashion
+DSI,BATTARAMULLA,Battaramulla,Active,Fashion
+DSI,BATTICALOA,Batticaloa,Active,Fashion
+DSI,BELIATTA,Beliatta,Active,Fashion
+DSI,BERUWALA,Beruwala,Active,Fashion
+DSI,BIBILA,Bibila,Active,Fashion
+DSI,WENNAPPUWA,Chilaw,Active,Fashion
+DSI,CHILAW,Chilaw,Active,Fashion
+DSI,KOLPITTY,Colombo,Active,Fashion
+DSI,WELLAWATTA,Colombo,Active,Fashion
+DSI,BORELLA,Colombo,Active,Fashion
+DSI,DEMATAGODA,Colombo,Active,Fashion
+DSI,MAIN STREET,Colombo,Active,Fashion
+DSI,OLCOTT MW,Colombo,Active,Fashion
+DSI,DAMBULLA,Dambulla,Active,Fashion
+DSI,DEHIWALA,Dehiwala,Active,Fashion
+DSI,DENIYAYA,Deniyaya,Active,Fashion
+DSI,DERANIYAGALA,Deraniyagala,Active,Fashion
+DSI,DIVULAPITIYA,Divulapitiya,Active,Fashion
+DSI,EHELIYAGODA,Eheliyagoda,Active,Fashion
+DSI,ELPITIYA,Elpitiya,Active,Fashion
+DSI,EMBILIPITIYA,Embilipitiya,Active,Fashion
+DSI,GALEWELA,Galewela,Active,Fashion
+DSI,GALLE,Galle,Active,Fashion
+DSI,FACTORY OUTLET - GALLE,Galle,Active,Fashion
+DSI,GAMPAHA,Gampaha,Active,Fashion
+DSI,GAMPOLA,Gampola,Active,Fashion
+DSI,GODAKAWELA,Godakawela,Active,Fashion
+DSI,HANWELLA,Hanwella,Active,Fashion
+DSI,HATTON,Hatton,Active,Fashion
+DSI,HIKKADUWA,Hikkaduwa,Active,Fashion
+DSI,HINGURAKGODA,Hingurangoda,Active,Fashion
+DSI,HOMAGAMA,Homagama,Active,Fashion
+DSI,HORANA,Horana,Active,Fashion
+DSI,JAELA,Ja Ela,Active,Fashion
+DSI,JAFFNA,Jaffna,Active,Fashion
+DSI,KIRINDIWELA,Kadawatha,Active,Fashion
+DSI,KADAWATHA,Kadawatha,Active,Fashion
+DSI,KADUWELA,Kaduwela,Active,Fashion
+DSI,KAHAWATTA,Kahawatta,Active,Fashion
+DSI,KALUTARA,Kalutara,Active,Fashion
+DSI,KANDANA,Kandana,Active,Fashion
+DSI,FACTORY OUTLET KANDANA,Kandana,Active,Fashion
+DSI,KANDY,Kandy,Active,Fashion
+DSI,KCC,Kandy,Active,Fashion
+DSI,KANTALE,Kantale,Active,Fashion
+DSI,KEGALLE,Kegalle,Active,Fashion
+DSI,KEKIRAWA,Kekirawa,Active,Fashion
+DSI,KILINOCHCHI,Kilinochch,Active,Fashion
+DSI,KIRIBATHGODA,Kiribathgoda,Active,Fashion
+DSI,KOCHCHIKADE,Kochhcikade,Active,Fashion
+DSI,KOTTAWA,Kottawa,Active,Fashion
+DSI,KULIYAPITIYA,Kuliyapitiya,Active,Fashion
+DSI,KURUNEGALA,Kurunegala,Active,Fashion
+DSI,MAHARAGAMA,Maharagama,Active,Fashion
+DSI,MAHIYANGANAYA,Mahiyanganaya,Active,Fashion
+DSI,MALABE,Malabe,Active,Fashion
+DSI,MARADANA,Maradana,Active,Fashion
+DSI,MATALE,Matale,Active,Fashion
+DSI,MATARA,Matara,Active,Fashion
+DSI,TOWNHALL,Matara,Active,Fashion
+DSI,MATHUGAMA,Mathugama,Active,Fashion
+DSI,MAWANELLA,Mawanella,Active,Fashion
+DSI,MAWATHAGAMA,Mawathagama,Active,Fashion
+DSI,MEDAWACHCHIYA,Medawachchiya,Active,Fashion
+DSI,MEERIGAMA,Meerigama,Active,Fashion
+DSI,MINUWANGODA,Minuwangoda,Active,Fashion
+DSI,MONARAGALA,Monaragala,Active,Fashion
+DSI,MORATUWA,Moratuwa,Active,Fashion
+DSI,MOUNT LAVINIA,Mount Lavinia,Active,Fashion
+DSI,MULLAITIVU,Mullaitivu,Active,Fashion
+DSI,NARAHENPITA,Narahenpita,Active,Fashion
+DSI,OUTLET STORE NAVINNA,Navinna,Active,Fashion
+DSI,FACTORY OUTLET NAVINNA,Navinna,Active,Fashion
+DSI,NAWALAPITIYA,Nawalapitiya,Active,Fashion
+DSI,NEGOMBO,Negambo,Active,Fashion
+DSI,NIKAWERATIYA,Nikaweratiya,Active,Fashion
+DSI,NITTAMBUWA,Nittambuwa,Active,Fashion
+DSI,NUGEGODA,Nugegoda,Active,Fashion
+DSI,NUWARAELIYA,Nuwara Eliya,Active,Fashion
+DSI,PADUKKA,Padukka,Active,Fashion
+DSI,PANADURA,Panadura,Active,Fashion
+DSI,PANADURA - AVI SIS,Panadura,Active,Fashion
+DSI,PELAWATTA,Pelawatta,Active,Fashion
+DSI,PELMADULLA,Pelmadulla,Active,Fashion
+DSI,PERADENIYA,Peradeniya,Active,Fashion
+DSI,PILIMATHALAWA,Pilimathalawa,Active,Fashion
+DSI,PILIYANDALA,Piliyandala,Active,Fashion
+DSI,POLONNARUWA,Polonnaruwa,Active,Fashion
+DSI,PUSSELLAWA,Pussellawa,Active,Fashion
+DSI,PUTHUKKUDIYIRUPU,Puthukkudiyirupu,Active,Fashion
+DSI,PUTTALAM,Puttalam,Active,Fashion
+DSI,RAGAMA,Ragama,Active,Fashion
+DSI,RATHNAPURA,Rahnapura,Active,Fashion
+DSI,RAMBUKKANA,Rambukkana,Active,Fashion
+DSI,RATHMALANA,Rathmalana,Active,Fashion
+DSI,RATHNAPURA - AVI SIS,Rathnapura,Active,Fashion
+DSI,RUWANWELLA,Ruwanwella,Active,Fashion
+DSI,TANGALLE,Tangalle,Active,Fashion
+DSI,THALAWAKELE,Thalawakele,Active,Fashion
+DSI,TISSAMAHARAMA,Tissamaharama,Active,Fashion
+DSI,VAVUNIYA,Vavuniya,Active,Fashion
+DSI,WALASMULLA,Walasmulla,Active,Fashion
+DSI,WARAKAPOLA,Warakapola,Active,Fashion
+DSI,WATTALA,Wattala,Active,Fashion
+DSI,WELIMADA,Welimada,Active,Fashion
+DSI,WELIWERIYA,Weliweriya,Active,Fashion
+DSI,WELLAWAYA,Wellawaya,Active,Fashion
+DSI,WARAKAPOLA,Wrakapola,Active,Fashion
+DSI,YATIYANTHOTA,Yatiyanthota,Active,Fashion
+Earth Unleashed,Online,,Active,Fashion
+Elegant Smockers,One Galle Face,Colombo,Active,Baby
+Elegant Smockers,Colombo 04,Colombo,Active,Baby
+Elegant Smockers,Odel Mall,Colombo,Active,Baby
+Elegant Smockers,Kandy City Centre ,Kandy,Active,Baby
+Elegant Smockers,Odel Mall Kandy,Kandy,Active,Baby
+Eliseo Aesthetics ,Colombo 05,Colombo,Active,Personal Care
+Envoy Mansion ,Bagatale Road,Colombo,Active,Fashion
+Eye Emporium ,Colombo 5,Colombo,Active,Opticians
+Eye Emporium ,Dharmapala Mawatha,Colombo,Active,Opticians
+Fashion Bug,Bandarawela,Bandarawela,Active,Fashion
+Fashion Bug,Colpetty,Colombo,Active,Fashion
+Fashion Bug,Wellawatta,Colombo,Active,Fashion
+Fashion Bug,Borella,Colombo,Active,Fashion
+Fashion Bug,Kotahena,Colombo,Active,Fashion
+Fashion Bug,Kandy - Dalada Veediya,Kandy,Active,Fashion
+Fashion Bug,Katugastota Rd,Kandy,Active,Fashion
+Fashion Bug,Kurunegala,Kurunegala,Active,Fashion
+Fashion Bug,Maharagama,Maharagama,Active,Fashion
+Fashion Bug,Matara,Matara,Active,Fashion
+Fashion Bug,Katubedda,Moratuwa,Active,Fashion
+Fashion Bug,Negombo,Negambo,Active,Fashion
+Fashion Bug,Nugegoda,Nugegoda,Active,Fashion
+Fashion Bug,Wattala,Wattala,Active,Fashion
+Fitness First,Maitland Crescent,Colombo,Active,Fitness
+Fitness First,WTC,Colombo,Active,Fitness
+Fitness First,Moors Sport Club,Colombo,Active,Fitness
+Fitness First,Kandana,Kandana,Active,Fitness
+Fitness Island (Currently Unavailable),ECOMMERCE - FITNESS ISLAND,,Active,Fitness
+Fitzky,Online,,Active,Fitness
+Fitzky,Online,Online,Active,Fitness
+Galleria Milano,Online,Online,Active,Fashion
+German Restaurant,Colombo 03,Colombo,Active,Food
+Glenross Living,Kalutara,Kalutara,Active,Hotel
+Hameedia Stores,Shangrila,Colombo,Active,Fashion
+Hameedia Stores,Envoy Mansion,Colombo,Active,Fashion
+Hameedia Stores,Havelock City,Colombo,Active,Fashion
+Hameedia Stores,Wellawatta,Colombo,Active,Fashion
+Hameedia Stores,Pettah,Colombo,Active,Fashion
+Hameedia Stores,Kandy City Center,Kandy,Active,Fashion
+Hameedia Stores,Kandy,Kandy,Active,Fashion
+Hameedia Stores,Kiribathgoda,Kiribathgoda,Active,Fashion
+Hameedia Stores,Kurunegala,Kurunegala,Active,Fashion
+Hameedia Stores,Negombo,Negombo,Active,Fashion
+Hameedia Stores,Nugegoda,Nugegoda,Active,Fashion
+Hameedia Stores,Pelawatta,Pelawatta,Active,Fashion
+Hameedia Stores,Rajagiriya,Rajagiriya,Active,Fashion
+Hameedia Stores,Wattala,Wattala,Active,Fashion
+Hameedia Stores,Physical,,Active,Fashion
+Happy Feet & Hand,Wattala,Wattala,Active,Personal Care
+Happy Feet & Hand,Colombo 05,Colombo,Active,Personal Care
+Hilldale Retreat,"Labookellie, Nuwara Eliya",Nuwara Eliya,Active,Hotel
+House of Wines,Colombo 07,Colombo,Active,Food
+H-Sports,Racecourse ,Colombo,Active,Fashion
+H-Sports,Kandy City Center,Kandy,Active,Fashion
+H-Sports,Pelawatta,Pelawatta,Active,Fashion
+Island Wraps,"Bagatelle Road, Colombo 00300",Colombo,Active,Food
+Isso,Battaramulla,Battaramulla,Active,Food
+Isso,Colombo 02,Colombo,Active,Food
+Isso,Colombo 03,Colombo,Active,Food
+Isso,Negombo,Negambo,Active,Food
+Isso,Trincomalee,Trincomalee,Active,Food
+Isso,Isso Ecommerce,Online,Active,Food
+Isso,Weligama,Weligama,Active,Food
+Jeya Book Center,Colombo 03,Colombo,Active,Books & Stationery
+Jeya Book Center,Colombo 11,Colombo,Active,Books & Stationery
+Jeya Book Center,Kandy,Kandy,Active,Books & Stationery
+Jeya Book Center,Nugegoda,Nugegoda,Active,Books & Stationery
+Jeya Book Center,Wattala,Wattala,Active,Books & Stationery
+Jollys at Nisaco Mall,Nisaco Mall,Athurugiriya,Active,Food
+Kashi Wellness ,Isipathana Mawatha,Colombo,Active,Personal Care
 Keells,Gothatuwa,Angoda,Active,Supermarkets
 Keells,Mulleriyawa,Angoda,Active,Supermarkets
 Keells,Anuradhapura,Anuradhpura,Active,Supermarkets
@@ -164,20 +546,20 @@ Keells,Arangala,Athurugiriya,Active,Supermarkets
 Keells,Attidiya 2,Dehiwala,Active,Supermarkets
 Keells,Athurugiriya 2,Athurugiriya,Active,Supermarkets
 Keells,Battaramulla,Battaramulla,Active,Supermarkets
-Keells,Shangri-La Mall,Colombo 02,Active,Supermarkets
-Keells,Union Place,Colombo 02,Active,Supermarkets
-Keells,Crescat,Colombo 03,Active,Supermarkets
-Keells,Marine Drive,Colombo 04,Active,Supermarkets
-Keells,Thimbirigasyaya,Colombo 05,Active,Supermarkets
-Keells,Thurstan ,Colombo 07,Active,Supermarkets
-Keells,Borella,Colombo 08,Active,Supermarkets
-Keells,Darley Road,Colombo 1,Active,Supermarkets
-Keells,Kotahena 1,Colombo 13,Active,Supermarkets
-Keells,Kotahena 2,Colombo 13,Active,Supermarkets
-Keells,Mattakkuliya,Colombo 15,Active,Supermarkets
-Keells,Duplication Road,Colombo 3,Active,Supermarkets
-Keells,Edmonton,Colombo 5,Active,Supermarkets
-Keells,Havelock Road,Colombo 5,Active,Supermarkets
+Keells,Shangri-La Mall,Colombo,Active,Supermarkets
+Keells,Union Place,Colombo,Active,Supermarkets
+Keells,Crescat,Colombo,Active,Supermarkets
+Keells,Marine Drive,Colombo,Active,Supermarkets
+Keells,Thimbirigasyaya,Colombo,Active,Supermarkets
+Keells,Thurstan ,Colombo,Active,Supermarkets
+Keells,Borella,Colombo,Active,Supermarkets
+Keells,Darley Road,Colombo,Active,Supermarkets
+Keells,Kotahena 1,Colombo,Active,Supermarkets
+Keells,Kotahena 2,Colombo,Active,Supermarkets
+Keells,Mattakkuliya,Colombo,Active,Supermarkets
+Keells,Duplication Road,Colombo,Active,Supermarkets
+Keells,Edmonton,Colombo,Active,Supermarkets
+Keells,Havelock Road,Colombo,Active,Supermarkets
 Keells,Dehiwala,Dehiwala,Active,Supermarkets
 Keells,Eheliyagoda,Eheliyagoda,Active,Supermarkets
 Keells,Embilipitiya,Embilipitiya,Active,Supermarkets
@@ -284,24 +666,154 @@ Keells,Mahabage 2,Wattala,Active,Supermarkets
 Keells,Wattala 2,Wattala,Active,Supermarkets
 Keells,Wellampitiya,Wellampitiya,Active,Supermarkets
 Keells,Divulapitiya,Divulapitiya,Active,Supermarkets
-Street Burger,Bambalapitiya,Colombo 04,Active,Food
-Street Burger,Galle,Galle,Active,Food
-Street Burger,Ja Ela,Ja Ela,Active,Food
-Street Burger,Maharagama,Maharagama,Active,Food
-Street Burger,Mount Lavinia,Mount Lavinia,Active,Food
-Street Burger,Nawala,Nawala,Active,Food
-Street Burger,Negombo,Negambo,Active,Food
-Street Burger,Kotte,Sri Jayawardhanapura,Active,Food
-Street Burger,Wattala,Wattala,Active,Food
+Kemi,Colombo 05,Colombo,Active,Baby
+Kids Unlimited,Dehiwela,Dehiwela,Active,Baby
+Kingsman Perennial,Colombo 04,Colombo,Active,Fashion
+Kingsman Studio,Colombo 04,Colombo,Active,Fashion
+KOTTULABS,Kelaniya,Kelaniya,Active,Food
+KOTTULABS,Wattala,Wattala,Active,Food
+Le Grand Galle,Galle,Galle,Active,Hotel
+Living Styles,Wellawatta,Colombo,Active,Homeware
+Luxeress,Dehiwela,Dehiwela,Active,Food
+M.D Gunasena,Avissawella,Awisswella,Active,Books & Stationery
+M.D Gunasena,Olcott Mawatha,Colombo,Active,Books & Stationery
+M.D Gunasena,Bambalapitiya,Colombo,Active,Books & Stationery
+M.D Gunasena,Visakha,Colombo,Active,Books & Stationery
+M.D Gunasena,Ladies College,Colombo,Active,Books & Stationery
+M.D Gunasena,Borella,Colombo,Active,Books & Stationery
+M.D Gunasena,Hulftsdorp,Colombo,Active,Books & Stationery
+M.D Gunasena,Pettah,Colombo,Active,Books & Stationery
+M.D Gunasena,Galle,Galle,Active,Books & Stationery
+M.D Gunasena,Gampaha,Gampaha,Active,Books & Stationery
+M.D Gunasena,Kalutara,Kalutara,Active,Books & Stationery
+M.D Gunasena,Kandy,Kandy,Active,Books & Stationery
+M.D Gunasena,Kiribathgoda,Kiribathgoda,Active,Books & Stationery
+M.D Gunasena,Kurunegala,Kurunegala,Active,Books & Stationery
+M.D Gunasena,Matara,Matara,Active,Books & Stationery
+M.D Gunasena,Negombo,Negambo,Active,Books & Stationery
+M.D Gunasena,Panadura,Panadura,Active,Books & Stationery
+Made in Earth,Colombo 08,Colombo,Active,Groceries
+Mama Louie's,"Skelton Rd, Colombo 05",Colombo,Active,Food
+Mama Louie's,Kotte,Sri Jayawardhanapura,Active,Food
+Mannat Couture,Colombo 06,Colombo,Active,Fashion
+Maqara,Maqara,Colombo,Active,Food
+ME Colombo,Colombo 05,Colombo,Active,Hotel
+Midnight Divas,Colombo,Colombo,Active,Fashion
+Midnight Divas,Stratford Avenue,Colombo,Active,Fashion
+Midnight Divas,Kandy,Kandy,Active,Fashion
+Midnight Divas,Negombo,Negambo,Active,Fashion
+Midnight Divas,Nawala,Nugegoda,Active,Fashion
+Mimosa,One Galle Face - L2-21,Colombo,Active,Fashion
+Mimosa,Cinnamon Life,Colombo,Active,Fashion
+Mimosa,"R. A. De Mel Mawatha, Colombo 03",Colombo,Active,Fashion
+Mimosa,Havelock City Mall,Colombo,Active,Fashion
+Mimosa,Negambo,Negambo,Active,Fashion
+Mimosa,E-COMMERCE,,Active,Fashion
+Mira Lounge by Amari,Colombo 03,Colombo,Active,Food
+Miris by Islandmom,Mount Lavinia,Mount Lavinia,Active,Fashion
+MirrorMirror.lk,MirrorMirror.lk,,Active,Fashion
+Mr. Burger,Bambalapitiya,Colombo,Active,Food
+Mr. Burger,Dehiwela,Dehiwela,Active,Food
+Mr. Burger,Rajagiriya,Rajagiriya,Active,Food
+Mr. Burger,Wattala,Wattala,Active,Food
+Nails with Tea,Borella,Colombo,Active,Personal Care
+Nailspa,Cinnamon Lakeside Hotel,Colombo,Active,Personal Care
+Nailspa,One Galle Face,Colombo,Active,Personal Care
+Nailspa,Colombo City Center,Colombo,Active,Personal Care
+Nailspa,Havelock City,Colombo,Active,Personal Care
+Nailspa,Odel Colombo 07,Colombo,Active,Personal Care
+Nesh Kids Store,Colombo 04,Colombo,Active,Baby
+Nil's Store,OGF Mall,Colombo,Active,Fashion
+Nil's Store,Galle,Galle,Active,Fashion
+Nil's Store,Kandy,Kandy,Active,Fashion
+Nil's Store,Kurunegala,Kurunegala,Active,Fashion
+Nil's Store,Maharagama,Maharagama,Active,Fashion
+Nil's Store,Nugegoda,Nugegoda,Active,Fashion
+Nil's Store,Panadura,Panadura,Active,Fashion
+Nil's Store,Thalawathugoda,Thalawathugoda,Active,Fashion
+Nil's Store,Wattala,Wattala,Active,Fashion
+Nil's Store,Mahabage,Wattala,Active,Fashion
+Ninda,Ninda- Online,,Active,Homeware
+Nisaco Mall,Athurugiriya,Athurugiriya,Active,Mall
+NOLIMIT,CCC,Colombo,Active,Fashion
+NOLIMIT,Wellawatte,Colombo,Active,Fashion
+NOLIMIT,Wellawatte Image,Colombo,Active,Fashion
+NOLIMIT,Borella,Colombo,Active,Fashion
+NOLIMIT,Dehiwala Ladies,Dehiwala,Active,Fashion
+NOLIMIT,Dehiwala Gents,Dehiwala,Active,Fashion
+NOLIMIT,Jaffna,Jaffna,Active,Fashion
+NOLIMIT,Kandy,Kandy,Active,Fashion
+NOLIMIT,Kegalle,Kegalle,Active,Fashion
+NOLIMIT,Kurunegala,Kurunegala,Active,Fashion
+NOLIMIT,Maharagama,Maharagama,Active,Fashion
+NOLIMIT,Ratmalana,Mount Lavinia,Active,Fashion
+NOLIMIT,Negombo Nolimit,Negambo,Active,Fashion
+NOLIMIT,Nugegoda,Nugegoda,Active,Fashion
+NOLIMIT,Panadura,Panadura,Active,Fashion
+NOLIMIT,Ratnapura,Rathnapura,Active,Fashion
+NOLIMIT,Wattala,Wattala,Active,Fashion
+NOLIMIT,Thihariya,Nittambuwa,Active,Fashion
+NOLIMIT,NOLIMIT Hydepark,Colombo,Active,Fashion
+NOLIMIT,NOLIMIT Kids - OGF,Colombo,Active,Fashion
+NOLIMIT,NOLIMIT Select - Wellawatta,Colombo,Active,Fashion
+NOLIMIT,NOLIMIT KCC,Kandy,Active,Fashion
+NOLIMIT,NOLIMIT Mount Lavinia,Mount Lavinia,Active,Fashion
+NOLIMIT,NOLIMIT Negombo,Negambo,Active,Fashion
+NOLIMIT,NOLIMIT Nugegoda,Nugegoda,Active,Fashion
+Online Kade,Bambalapitiya,Colombo,Active,Groceries
+Online Kade,Dehiwela,Dehiwela,Active,Groceries
+Online Kade,Rajagiriya,Rajagiriya,Active,Groceries
+Online Kade,Wattala,Wattala,Active,Groceries
+PastaMania,One Galle Face,Colombo,Active,Food
+PastaMania,"R. A. De Mel Mawatha, Colombo 00300",Colombo,Active,Food
+Peach Valley,"Flower Rd, Colombo 00700",Colombo,Active,Food
+Pepper Online,Colombo City Centre,Colombo,Active,Fashion
+Pepper Online,Kandy City Centre,Kandy,Active,Fashion
+Pepper Street,One Galle Face,Colombo,Active,Fashion
+Phoenix ,Battaramulla,Battaramulla,Active,Homeware
+Phoenix ,Panadura,Panadura,Active,Homeware
+Phoenix ,Welisara,Wattala,Active,Homeware
+Phoenix ,E commerce,,Active,Homeware
+Prego by Amari,Colombo 03,Colombo,Active,Food
+PREMIUM OIL STORE,Nugegoda,Nugegoda ,Active,Automobile
+Puma,One Galle Face,Colombo,Active,Fashion
+Puma,MBC Maitland Crescent ,Colombo,Active,Fashion
 Quantum Fitness,Battaramulla,Colombo,Active,Fitness
-Quantum Fitness,Colombo 04,Colombo 04,Active,Fitness
+Quantum Fitness,Colombo 04,Colombo,Active,Fitness
 Quantum Fitness,Galle,Galle,Active,Fitness
 Quantum Fitness,Kandy,Kandy,Active,Fitness
-House of Wines,Colombo 07,Colombo 03,Active,Food
-Theva Residency,Kandy,Kandy,Active,Hotel
-Water Garden Sigiriya,Sigiriya,Sigiriya,Active,Hotel
-The Blue Water Hotel and Spa,Kalutara,Kalutara,Active,Hotel
-Glenross Living,Kalutara,Kalutara,Active,Hotel
+Quantum Fitness,Colombo,,Active,Fitness
+Quantum Fitness,Colombo 5,,Active,Fitness
+Ragama Pharmacy,Ragama,Ragama,Active,Pharmacy
+Ragama Pharmacy,Kadawatha,Kadawatha,Active,Pharmacy
+Ragama Pharmacy,Mahara,Mahara,Active,Pharmacy
+Ragama Pharmacy,Kaduwela,Kaduwela,Active,Pharmacy
+Ramzi & Co. Jewelry,One Galle Face,Colombo,Active,Gems & Jewellery
+Reebok,One Galle Face,Colombo,Active,Fashion
+Reebok,MBC Maitland Crescent ,Colombo,Active,Fashion
+Richmass Fashion,Ragama,Ragama,Active,Fashion
+Ridmika Accessories,Nugegoda,Nugegoda,Active,Mobiles & Electronics
+Ridmika Mobile,Nugegoda,Nugegoda,Active,Mobiles & Electronics
+Samayawardhane Bookshop,Colombo- 01,Colombo,Active,Books & Stationery
+Sarasavi Book Shop (Samudradevi Rd-Nugegoda Only),Samudra Devi Rd (Nugegoda),Nugegoda,Active,Books & Stationery
+Sea Adventures LK,Online,,Active,Adventure
+Seerock The King's Domain Hotel,"Indigaswewa, Sigiriya, Dambulla",Dambulla,Active,Hotel
+ShirtWorks,Colpetty SWX,Colombo,Active,Fashion
+ShirtWorks,Bambalapitiya SWX,Colombo,Active,Fashion
+ShirtWorks,Panadura SWX,Panadura,Active,Fashion
+Signature,Anuradhapura,Anuradhapura,Active,Fashion
+Signature,Kalmunei,Batticaloa,Active,Fashion
+Signature,Chilaw,Chilaw,Active,Fashion
+Signature,Marino Mall,Colombo,Active,Fashion
+Signature,Duplication Rd,Colombo,Active,Fashion
+Signature,Havelock City,Colombo,Active,Fashion
+Signature,Jaffna,Jaffna,Active,Fashion
+Signature,Matale,Matale,Active,Fashion
+Signature,Matara,Matara,Active,Fashion
+Signature,Panadura,Panadura,Active,Fashion
+SimplyTek,Colombo 03,Colombo,Active,Mobiles & Electronics
+SimplyTek,Colombo 05,Colombo,Active,Mobiles & Electronics
+SimplyTek,Online,,Active,Mobiles & Electronics
 Singer,AGALAWATTA,AGALAWATTA,Active,Homeware
 Singer,AHANGAMA,AHANGAMA,Active,Homeware
 Singer,AKKARAIPATTU,AKKARAIPATTU,Active,Homeware
@@ -673,429 +1185,7 @@ Singer,WILGAMUWA,WILGAMUWA,Active,Homeware
 Singer,YAKKALA,YAKKALA,Active,Homeware
 Singer,YATAWATTE,YATAWATTE,Active,Homeware
 Singer,YATIYANTHOTA,YATIYANTHOTA,Active,Homeware
-Arpico Daily,Anuradhapuraya,Anuradhapura,Active,Supermarkets
-Arpico Daily,Athurugiriya,Athurugiriya,Active,Supermarkets
-Arpico Super Centre,Battaramulla SC,Battaramulla,Active,Supermarkets
-Arpico Super Centre,Borelasgamuwa SS,Borelasgamuwa,Active,Supermarkets
-Arpico Daily,Chilaw,Chilaw,Active,Supermarkets
-Arpico Daily,Wennapuwa,Chilaw,Active,Supermarkets
-Arpico Super Centre,Hyde Park SC,Colombo 02,Active,Supermarkets
-Arpico Super Centre,Dehiwala SC,Dehiwala,Active,Supermarkets
-Arpico Daily,Attidiya,Dehiwala,Active,Supermarkets
-Arpico Super Centre,Galle SC,Galle,Active,Supermarkets
-Arpico Super Centre,Gampaha SC,Gampaha,Active,Supermarkets
-Arpico Daily,Weliweriya,Gampaha,Active,Supermarkets
-Arpico Super Centre,Homagama SC,Homagama,Active,Supermarkets
-Arpico Super Centre,Kadawatha SC,Kadawatha,Active,Supermarkets
-Arpico Daily,Kaduwela,Kaduwela,Active,Supermarkets
-Arpico Super Centre,Kalutara SS,Kalutara,Active,Supermarkets
-Arpico Daily,Kandana,Kandana,Active,Supermarkets
-Arpico Super Centre,Kandy,Kandy,Active,Supermarkets
-Arpico Super Centre,Katukurunda SC,Katukurunda,Active,Supermarkets
-Arpico Super Centre,Seeduwa SC,Katunayake,Active,Supermarkets
-Arpico Super Centre,Kegalle SC,Kegalle,Active,Supermarkets
-Arpico Super Centre,Kiribathgoda SS,Kiribathgoda,Active,Supermarkets
-Arpico Super Centre,Kochchikade SC,Kochchikade,Active,Supermarkets
-Arpico Super Centre,Kohuwala SC,Kohuwala,Active,Supermarkets
-Arpico Super Centre,Kottawa SS,Kottawa,Active,Supermarkets
-Arpico Daily,Matthegoda,Kottawa,Active,Supermarkets
-Arpico Daily,Kuliyapitiya,Kuliyapitiya,Active,Supermarkets
-Arpico Super Centre,Kurunegala SC,Kurunegala,Active,Supermarkets
-Arpico Super Centre,Malabe SS,Malabe,Active,Supermarkets
-Arpico Super Centre,Matara SC,Matara,Active,Supermarkets
-Arpico Daily,Meegoda,Meegoda,Active,Supermarkets
-Arpico Super Centre,Minuwangoda SC,Minuwangoda,Active,Supermarkets
-Arpico Daily,Mulleriyawa,Mulleriyawa,Active,Supermarkets
-Arpico Super Centre,Nawinna SC,Nawinna,Active,Supermarkets
-Arpico Super Centre,Negombo SC,Negombo,Active,Supermarkets
-Arpico Daily,Wateraka,Padukka,Active,Supermarkets
-Arpico Super Centre,Panadura SC,Panadura,Active,Supermarkets
-Arpico Daily,Pelmadulla,Pelmadulla,Active,Supermarkets
-Arpico Super Centre,Piliyandala SS,Piliyandala,Active,Supermarkets
-Arpico Daily,Palanwatta,Piliyandala,Active,Supermarkets
-Arpico Daily,Ragama,Ragama,Active,Supermarkets
-Arpico Daily,Rathnapura,Rathnapura,Active,Supermarkets
-Arpico Super Centre,Thalawathugoda SC,Thalawathugoda,Active,Supermarkets
-Arpico Super Centre,Wattala SC,Wattala,Active,Supermarkets
-Arpico Daily,Wattala 2 AD,Wattala,Active,Supermarkets
-Arpico Super Centre,Wellawatte SS,Wellawatte,Active,Supermarkets
-Arpico Super Centre,Yakkala SS,Yakkala,Active,Supermarkets
-Arpico Super Centre,Kundasala,Kandy,Active,Supermarkets
-Arpico Super Centre,Katugastota,Kandy,Active,Supermarkets
-Arpico Daily,Gelioya,Kandy,Active,Supermarkets
-Arpico Daily,Haloluwa,Kandy,Active,Supermarkets
-Arpico Daily,Hettipola,Kandy,Active,Supermarkets
-Arpico Daily,Kiribathkumbura,Kandy,Active,Supermarkets
-Eye Emporium ,Colombo 5,Colombo 05,Active,Opticians
-Eye Emporium ,Dharmapala Mawatha,Colombo 07,Active,Opticians
-NOLIMIT,CCC,Colombo 02,Active,Fashion
-NOLIMIT,Wellawatte,Colombo 06,Active,Fashion
-NOLIMIT,Wellawatte Image,Colombo 06,Active,Fashion
-NOLIMIT,Borella,Colombo 08,Active,Fashion
-NOLIMIT,Dehiwala Ladies,Dehiwala,Active,Fashion
-NOLIMIT,Dehiwala Gents,Dehiwala,Active,Fashion
-NOLIMIT,Jaffna,Jaffna,Active,Fashion
-NOLIMIT,Kandy,Kandy,Active,Fashion
-NOLIMIT,Kegalle,Kegalle,Active,Fashion
-NOLIMIT,Kurunegala,Kurunegala,Active,Fashion
-NOLIMIT,Maharagama,Maharagama,Active,Fashion
-NOLIMIT,Ratmalana,Mount Lavinia,Active,Fashion
-NOLIMIT,Negombo Nolimit,Negambo,Active,Fashion
-NOLIMIT,Nugegoda,Nugegoda,Active,Fashion
-NOLIMIT,Panadura,Panadura,Active,Fashion
-NOLIMIT,Ratnapura,Rathnapura,Active,Fashion
-NOLIMIT,Wattala,Wattala,Active,Fashion
-NOLIMIT,Thihariya,Nittambuwa,Active,Fashion
-NOLIMIT,NOLIMIT Hydepark,Colombo 02,Active,Fashion
-NOLIMIT,NOLIMIT Kids - OGF,Colombo 02,Active,Fashion
-NOLIMIT,NOLIMIT Select - Wellawatta,Colombo 06,Active,Fashion
-NOLIMIT,NOLIMIT KCC,Kandy,Active,Fashion
-NOLIMIT,NOLIMIT Mount Lavinia,Mount Lavinia,Active,Fashion
-NOLIMIT,NOLIMIT Negombo,Negambo,Active,Fashion
-NOLIMIT,NOLIMIT Nugegoda,Nugegoda,Active,Fashion
-Barista,Athurugiriya,Athurugiriya,Active,Food
-Barista,Bandarawela,Bandarawela,Active,Food
-Barista,Battaramulla,Battaramulla,Active,Food
-Barista,Boralesgamuwa,Boralesgamuwa,Active,Food
-Barista,Wennapuwa,Chilaw,Active,Food
-Barista,Kohuwela,Nugegoda,Active,Food
-Barista,World Trade Center,Colombo 01,Active,Food
-Barista,Lady J Borella,Colombo 01,Active,Food
-Barista,Perahera Mawatha (NM),Colombo 02,Active,Food
-Barista,Nawam Mawatha,Colombo 02,Active,Food
-Barista,Port City,Colombo 02,Active,Food
-Barista,Staple Street,Colombo 02 ,Active,Food
-Barista,Kollupitiya,Colombo 03,Active,Food
-Barista,Bambalapitiya,Colombo 04,Active,Food
-Barista,Double XL,Colombo 04,Active,Food
-Barista,WSO2,Colombo 04,Active,Food
-Barista,Thimbirigasyaya,Colombo 05,Active,Food
-Barista,Narahenpita,Colombo 05,Active,Food
-Barista,Cool Planet Mall,Colombo 05,Active,Food
-Barista,Cafeâ€š Mocha by Barista,Colombo 06,Active,Food
-Barista,Wellawatta,Colombo 06,Active,Food
-Barista,Laksala,Colombo 07,Active,Food
-Barista,Horton Place,Colombo 07,Active,Food
-Barista,Trillium ,Colombo 07,Active,Food
-Barista,Orion City Dematagoda,Colombo 08,Active,Food
-Barista,Independence Square,Coombo 7,Active,Food
-Barista,Dehiwela,Dehiwala,Active,Food
-Barista,Galle Fort,Galle,Active,Food
-Barista,Galle Diner,Galle,Active,Food
-Barista,Unawatuna,Galle,Active,Food
-Barista,Ahangama,Galle,Active,Food
-Barista,Yakkala,Gampaha,Active,Food
-Barista,NSBM,Homagama,Active,Food
-Barista,Horana,Horana,Active,Food
-Barista,Ja-Ela,Ja Ela,Active,Food
-Barista,Jaffna,Jaffna,Active,Food
-Barista,Jaffna Diner,Jaffna,Active,Food
-Barista,jaffna,Jaffna,Active,Food
-Barista,Kadawatha,Kadawatha,Active,Food
-Barista,Kandy,Kandy,Active,Food
-Barista,Kandy Diner,Kandy,Active,Food
-Barista,Pasyala,Kandy,Active,Food
-Barista,Kandy City,Kandy,Active,Food
-Barista,Seeduwa,Katunayake,Active,Food
-Barista,Kiribathgoda,Kiribathgoda,Active,Food
-Barista,Kurunegala,Kurunegala,Active,Food
-Barista,"Dambulla Road, Kurunegala",Kurunegala,Active,Food
-Barista,Maharagama,Maharagama,Active,Food
-Barista,Malabe,Malabe,Active,Food
-Barista,Matara,Matara,Active,Food
-Barista,Mirissa,Mirissa,Active,Food
-Barista,Katubedda,Moratuwa,Active,Food
-Barista,Moratuwa,Moratuwa,Active,Food
-Barista,Mount Lavinia,Mount Lavinia,Active,Food
-Barista,Mulleriyawa,Mulleriyawa,Active,Food
-Barista,Nawala,Nawala,Active,Food
-Barista,Kochchikade,Negambo,Active,Food
-Barista,Negombo-Arpico-Express,Negambo ,Active,Food
-Barista,Negombo Diner,Negambo ,Active,Food
-Barista,Nugegoda,Nugegoda,Active,Food
-Barista,Nugegoda Diner,Nugegoda,Active,Food
-Barista,Pepiliyana,Dehiwala,Active,Food
-Barista,Mirihana,Nugegoda,Active,Food
-Barista,Delkanda,Nugegoda,Active,Food
-Barista,Ella,Nuwaraeliya,Active,Food
-Barista,Nuwara Eliya,Nuwaraeliya,Active,Food
-Barista,Shanthipura,Nuwaraeliya,Active,Food
-Barista,Panadura,Panadura,Active,Food
-Barista,Kottawa,Pannipitiya,Active,Food
-Barista,Piliyandala,Piliyandala,Active,Food
-Barista,Rajagiriya,Rajagiriya,Active,Food
-Barista,Kotte,Rajagiriya,Active,Food
-Barista,Sigiriya,Sigiriya,Active,Food
-Barista,Thalawathugoda,Thalawathugoda,Active,Food
-Barista,Udawalawe,Udawalawa,Active,Food
-Barista,Wattala,Wattala,Active,Food
-Barista,Wattala Diner,Wattala,Active,Food
-Barista,Wattala Kelly Felder,Wattala,Active,Food
-Barista,Southern Expressway A,Welipenna,Active,Food
-Barista,Southern Expressway B,Welipenna,Active,Food
-Barista,Dematagoda,Colombo 09,Active,Food
-Barista,Sujatha Express,,Active,Food
-Taco Bell,Colombo City Centre,Colombo 02,Active,Food
-Taco Bell,One Galle Face,Colombo 02,Active,Food
-Taco Bell,Havelock City Mall,Colombo 05,Active,Food
-Taco Bell,Horton place,Colombo 07,Active,Food
-Taco Bell,Kiribathgoda,Kiribathgoda,Active,Food
-Taco Bell,Kurunegala,Kurunegala,Active,Food
-Taco Bell,Mount lavinia,Mount lavinia,Active,Food
-Taco Bell,Negombo,Negambo,Active,Food
-Taco Bell,Nugegoda,Nugegoda,Active,Food
-Taco Bell,Kottawa,Pannipitiya,Active,Food
-Taco Bell,Piliyandala,Piliyandala,Active,Food
-Taco Bell,Rajagiriya,Rajagiriya,Active,Food
-Samayawardhane Bookshop,Colombo- 01,Colombo 01,Active,Books & Stationery
-The Convenience Store,Dehiwala,Dehiwala,Active,Supermarkets
-Maqara,Maqara,Colombo 01,Active,Food
-Xclusive Accessories,Colombo,Colombo 04,Active,Mobiles & Electronics
-Midnight Divas,Colombo,Colombo 05,Active,Fashion
-Midnight Divas,Stratford Avenue,Colombo 06,Active,Fashion
-Midnight Divas,Kandy,Kandy,Active,Fashion
-Midnight Divas,Negombo,Negambo,Active,Fashion
-Midnight Divas,Nawala,Nugegoda,Active,Fashion
-Nailspa,Cinnamon Lakeside Hotel,Colombo 02,Active,Personal Care
-Nailspa,One Galle Face,Colombo 02,Active,Personal Care
-Nailspa,Colombo City Center,Colombo 02,Active,Personal Care
-Nailspa,Havelock City,Colombo 05,Active,Personal Care
-Nailspa,Odel Colombo 07,Colombo 07,Active,Personal Care
-Che Studio,Kirulapone,Nugegoda,Active,Studio
-Basilur (CCC),Colombo City Centre,Colombo 02,Active,Food
-Diliganz,Marino Mall,Colombo 03,Active,Fashion
-Diliganz,"Toy Land, Marino Mall",Colombo 03,Active,Fashion
-Diliganz,Dehiwela,Dehiwala,Active,Fashion
-Diliganz,Gampaha,Gampaha,Active,Fashion
-Swastha,Maitland Crescent,Colombo 07,Active,Personal Care
-Apero,Colombo 03,Colombo 03,Active,Supermarkets
-German Restaurant,Colombo 03,Colombo 03,Active,Food
-Burning Bird,Colombo 07,Colombo 07,Active,Food
-Vijitha Yapa Bookshop (Pvt) Ltd,"5th Lane, Colombo 03",Colombo 03,Active,Books & Stationery
-Vijitha Yapa Bookshop (Pvt) Ltd,"Flower Road, Colombo 07",Colombo 07,Active,Books & Stationery
-Vijitha Yapa Bookshop (Pvt) Ltd,Galle,Galle,Active,Books & Stationery
-Vijitha Yapa Bookshop (Pvt) Ltd,Matara,Matara,Active,Books & Stationery
-Vijitha Yapa Bookshop (Pvt) Ltd,Nugegoda,Nugegoda,Active,Books & Stationery
-Absolute Basics,ONE GALLE FACE,Colombo 02,Active,Fashion
-Absolute Basics,Colpetty,Colombo 03,Active,Fashion
-DSI,DSI 2 AKURESSA,Akuressa,Active,Fashion
-DSI,DSI 3 AKURESSA,Akuressa,Active,Fashion
-DSI,DSI 2 ALAWWA,Alawwa,Active,Fashion
-DSI,DSI 2 ALUTHGAMA,Aluthgama,Active,Fashion
-DSI,DSI 2 AMBALANGODA,Ambalagoda,Active,Fashion
-DSI,DSI 1 AMBALANGODA,Ambalangoda,Active,Fashion
-DSI,DSI 1 AMBALANTOTA,Ambalantota,Active,Fashion
-DSI,DSI 1 AMPARA,Ampara,Active,Fashion
-DSI,DSI 3 ANURADHAPURA,Anuradhapra,Active,Fashion
-DSI,DSI 4 ANURADHAPURA,Anuradhapra,Active,Fashion
-DSI,DSI FACTORY OUTLET ANURADHAPURA,Anuradhapra,Active,Fashion
-DSI,DSI 2 ATHURUGIRIYA,Athurugiriya,Active,Fashion
-DSI,DSI 2 AVISSAWELLA,Avisswella,Active,Fashion
-DSI,DSI 2 AWARIWATTA,Awariwatta,Active,Fashion
-DSI,DSI 1 BADDEGAMA,Baddegama,Active,Fashion
-DSI,DSI 2 BADDEGAMA,Baddegama,Active,Fashion
-DSI,DSI 1 BADULLA,Badulla,Active,Fashion
-DSI,DSI 2 BADULLA,Badulla,Active,Fashion
-DSI,DSI 1 PASSARA,Badulla,Active,Fashion
-DSI,DSI 1 BALANGODA,Balagoda,Active,Fashion
-DSI,DSI 4 BAMBALAPITIYA,Bambalapitiya,Active,Fashion
-DSI,DSI 2 BANDARAWELA,Bandarawela,Active,Fashion
-DSI,DSI 3 BANDARAWELA,Bandarawela,Active,Fashion
-DSI,DSI 2 BATTARAMULLA,Battaramulla,Active,Fashion
-DSI,DSI 1 BATTARAMULLA,Battaramulla,Active,Fashion
-DSI,DSI 1 BATTICALOA,Batticaloa,Active,Fashion
-DSI,DSI 2 BATTICALOA,Batticaloa,Active,Fashion
-DSI,DSI 1 BELIATTA,Beliatta,Active,Fashion
-DSI,DSI 1 BERUWALA,Beruwala,Active,Fashion
-DSI,DSI 1 BIBILA,Bibila,Active,Fashion
-DSI,DSI 2 CHILAW,Chilaw,Active,Fashion
-DSI,DSI 3 WENNAPPUWA,Chilaw,Active,Fashion
-DSI,DSI 1 CHILAW,Chilaw,Active,Fashion
-DSI,DSI 5 KOLPITTY,Colombo 03,Active,Fashion
-DSI,DSI 1 WELLAWATTA,Colombo 06,Active,Fashion
-DSI,DSI 2 WELLAWATTA,Colombo 06,Active,Fashion
-DSI,DSI 2 BORELLA,Colombo 08,Active,Fashion
-DSI,DSI 3 BORELLA,Colombo 08,Active,Fashion
-DSI,DSI 1 DEMATAGODA,Colombo 09,Active,Fashion
-DSI,DSI 126 MAIN STREET,Colombo 11,Active,Fashion
-DSI,DSI 110 MAIN STREET,Colombo 11,Active,Fashion
-DSI,DSI 1 OLCOTT MW,Colombo 11,Active,Fashion
-DSI,DSI 4 MAIN STREET,Colombo 11,Active,Fashion
-DSI,DSI 3 DAMBULLA,Dambulla,Active,Fashion
-DSI,DSI 3 DEHIWALA,Dehiwala,Active,Fashion
-DSI,DSI 2 DENIYAYA,Deniyaya,Active,Fashion
-DSI,DSI 2 DERANIYAGALA,Deraniyagala,Active,Fashion
-DSI,DSI 1 DIVULAPITIYA,Divulapitiya,Active,Fashion
-DSI,DSI 3 EHELIYAGODA,Eheliyagoda,Active,Fashion
-DSI,DSI 2 ELPITIYA,Elpitiya,Active,Fashion
-DSI,DSI 1 EMBILIPITIYA,Embilipitiya,Active,Fashion
-DSI,DSI 3 EMBILIPITIYA,Embilipitiya,Active,Fashion
-DSI,DSI 1 GALEWELA,Galewela,Active,Fashion
-DSI,DSI 1 GALLE,Galle,Active,Fashion
-DSI,DSI 4 GALLE,Galle,Active,Fashion
-DSI,DSI 5 GALLE,Galle,Active,Fashion
-DSI,DSI 7 GALLE,Galle,Active,Fashion
-DSI,DSI 6 GALLE,Galle,Active,Fashion
-DSI,FACTORY OUTLET - GALLE,Galle,Active,Fashion
-DSI,DSI 1 GAMPAHA,Gampaha,Active,Fashion
-DSI,DSI 2 GAMPAHA,Gampaha,Active,Fashion
-DSI,DSI 3 GAMPAHA,Gampaha,Active,Fashion
-DSI,DSI 4 GAMPAHA,Gampaha,Active,Fashion
-DSI,DSI 2 GAMPOLA,Gampola,Active,Fashion
-DSI,DSI 3 GAMPOLA,Gampola,Active,Fashion
-DSI,DSI 1 GODAKAWELA,Godakawela,Active,Fashion
-DSI,DSI 1 HANWELLA,Hanwella,Active,Fashion
-DSI,DSI 2 HATTON,Hatton,Active,Fashion
-DSI,DSI 4 HATTON,Hatton,Active,Fashion
-DSI,DSI 1 HIKKADUWA,Hikkaduwa,Active,Fashion
-DSI,DSI 2 HINGURAKGODA,Hingurangoda,Active,Fashion
-DSI,DSI 1 HOMAGAMA,Homagama,Active,Fashion
-DSI,DSI 3 HOMAGAMA,Homagama,Active,Fashion
-DSI,DSI 2 HORANA,Horana,Active,Fashion
-DSI,DSI 3 HORANA,Horana,Active,Fashion
-DSI,DSI 3 JAELA,Ja Ela,Active,Fashion
-DSI,DSI 3 JAFFNA,Jaffna,Active,Fashion
-DSI,DSI 1 KIRINDIWELA,Kadawatha,Active,Fashion
-DSI,DSI 2 KADAWATHA,Kadawatha,Active,Fashion
-DSI,DSI 4 KADAWATHA,Kadawatha,Active,Fashion
-DSI,DSI 3 KADUWELA,Kaduwela,Active,Fashion
-DSI,DSI 2 KAHAWATTA,Kahawatta,Active,Fashion
-DSI,DSI 1 KALUTARA,Kalutara,Active,Fashion
-DSI,DSI 2 KALUTARA,Kalutara,Active,Fashion
-DSI,DSI 1 KANDANA,Kandana,Active,Fashion
-DSI,DSI FACTORY OUTLET KANDANA,Kandana,Active,Fashion
-DSI,DSI 3 KANDY,Kandy,Active,Fashion
-DSI,DSI 7 KANDY,Kandy,Active,Fashion
-DSI,DSI PREMIER KCC,Kandy,Active,Fashion
-DSI,DSI 9 KANDY,Kandy,Active,Fashion
-DSI,DSI PREMIER K,Kandy,Active,Fashion
-DSI,DSI 10 KANDY,Kandy,Active,Fashion
-DSI,DSI 11 KANDY,Kandy,Active,Fashion
-DSI,DSI 2 KANDY,Kandy,Active,Fashion
-DSI,DSI 1 KANTALE,Kantale,Active,Fashion
-DSI,DSI 2 KEGALLE,Kegalle,Active,Fashion
-DSI,DSI 3 KEGALLE,Kegalle,Active,Fashion
-DSI,DSI 1 KEKIRAWA,Kekirawa,Active,Fashion
-DSI,DSI 1 KILINOCHCHI,Kilinochch,Active,Fashion
-DSI,DSI 4 KIRIBATHGODA,Kiribathgoda,Active,Fashion
-DSI,DSI 6 KIRIBATHGODA,Kiribathgoda,Active,Fashion
-DSI,DSI 7 KIRIBATHGODA,Kiribathgoda,Active,Fashion
-DSI,DSI 1 KOCHCHIKADE,Kochhcikade,Active,Fashion
-DSI,DSI 2 KOTTAWA,Kottawa,Active,Fashion
-DSI,DSI 3 KOTTAWA,Kottawa,Active,Fashion
-DSI,DSI 1 KULIYAPITIYA,Kuliyapitiya,Active,Fashion
-DSI,DSI 2 KULIYAPITIYA,Kuliyapitiya,Active,Fashion
-DSI,DSI 1 KURUNEGALA,Kurunegala,Active,Fashion
-DSI,DSI 2 KURUNEGALA,Kurunegala,Active,Fashion
-DSI,DSI 4 KURUNEGALA,Kurunegala,Active,Fashion
-DSI,DSI 5 KURUNEGALA,Kurunegala,Active,Fashion
-DSI,DSI 1 MAHARAGAMA,Maharagama,Active,Fashion
-DSI,DSI 4 MAHARAGAMA,Maharagama,Active,Fashion
-DSI,DSI 1 MAHIYANGANAYA,Mahiyanganaya,Active,Fashion
-DSI,DSI 3 MALABE,Malabe,Active,Fashion
-DSI,DSI 2 MARADANA,Maradana,Active,Fashion
-DSI,DSI 1 MATALE,Matale,Active,Fashion
-DSI,DSI 3 MATALE,Matale,Active,Fashion
-DSI,DSI 1 MATARA,Matara,Active,Fashion
-DSI,DSI 1 TOWNHALL,Matara,Active,Fashion
-DSI,DSI 1 MATHUGAMA,Mathugama,Active,Fashion
-DSI,DSI 2 MAWANELLA,Mawanella,Active,Fashion
-DSI,DSI 1 MAWATHAGAMA,Mawathagama,Active,Fashion
-DSI,DSI 1 MEDAWACHCHIYA,Medawachchiya,Active,Fashion
-DSI,DSI 1 MEERIGAMA,Meerigama,Active,Fashion
-DSI,DSI 1 MINUWANGODA,Minuwangoda,Active,Fashion
-DSI,DSI 3 MONARAGALA,Monaragala,Active,Fashion
-DSI,DSI 1 MORATUWA,Moratuwa,Active,Fashion
-DSI,DSI 2 MORATUWA,Moratuwa,Active,Fashion
-DSI,DSI 2 MOUNT LAVINIA,Mount Lavinia,Active,Fashion
-DSI,DSI 1 MULLAITIVU,Mullaitivu,Active,Fashion
-DSI,DSI 1 NARAHENPITA,Narahenpita,Active,Fashion
-DSI,OUTLET STORE NAVINNA,Navinna,Active,Fashion
-DSI,DSI FACTORY OUTLET NAVINNA,Navinna,Active,Fashion
-DSI,DSI 2 NAWALAPITIYA,Nawalapitiya,Active,Fashion
-DSI,DSI 2 NEGOMBO,Negambo,Active,Fashion
-DSI,DSI 4 NEGOMBO,Negambo,Active,Fashion
-DSI,DSI 5 NEGOMBO,Negambo,Active,Fashion
-DSI,DSI 2 NIKAWERATIYA,Nikaweratiya,Active,Fashion
-DSI,DSI 2 NITTAMBUWA,Nittambuwa,Active,Fashion
-DSI,DSI 1 NUGEGODA,Nugegoda,Active,Fashion
-DSI,DSI 7 NUGEGODA,Nugegoda,Active,Fashion
-DSI,DSI 1 NUWARAELIYA,Nuwara Eliya,Active,Fashion
-DSI,DSI 3 NUWARAELIYA,Nuwara Eliya,Active,Fashion
-DSI,DSI 1 PADUKKA,Padukka,Active,Fashion
-DSI,DSI 2 PANADURA,Panadura,Active,Fashion
-DSI,DSI 1 PANADURA,Panadura,Active,Fashion
-DSI,DSI 3 PANADURA - AVI SIS,Panadura,Active,Fashion
-DSI,DSI 2 PELAWATTA,Pelawatta,Active,Fashion
-DSI,DSI 2 PELMADULLA,Pelmadulla,Active,Fashion
-DSI,DSI 1 PERADENIYA,Peradeniya,Active,Fashion
-DSI,DSI 1 PILIMATHALAWA,Pilimathalawa,Active,Fashion
-DSI,DSI 3 PILIYANDALA,Piliyandala,Active,Fashion
-DSI,DSI 5 PILIYANDALA,Piliyandala,Active,Fashion
-DSI,DSI 3 POLONNARUWA,Polonnaruwa,Active,Fashion
-DSI,DSI 4 POLONNARUWA,Polonnaruwa,Active,Fashion
-DSI,DSI 1 PUSSELLAWA,Pussellawa,Active,Fashion
-DSI,DSI PUTHUKKUDIYIRUPU,Puthukkudiyirupu,Active,Fashion
-DSI,DSI 1 PUTTALAM,Puttalam,Active,Fashion
-DSI,DSI 1 RAGAMA,Ragama,Active,Fashion
-DSI,DSI 2 RATHNAPURA,Rahnapura,Active,Fashion
-DSI,DSI 3 RAMBUKKANA,Rambukkana,Active,Fashion
-DSI,DSI 4 RATHMALANA,Rathmalana,Active,Fashion
-DSI,DSI 3 RATHNAPURA,Rathnapura,Active,Fashion
-DSI,DSI 4 RATHNAPURA - AVI SIS,Rathnapura,Active,Fashion
-DSI,DSI 1 RUWANWELLA,Ruwanwella,Active,Fashion
-DSI,DSI 1 TANGALLE,Tangalle,Active,Fashion
-DSI,DSI 2 TANGALLE,Tangalle,Active,Fashion
-DSI,DSI 2 THALAWAKELE,Thalawakele,Active,Fashion
-DSI,DSI 2 TISSAMAHARAMA,Tissamaharama,Active,Fashion
-DSI,DSI 1 VAVUNIYA,Vavuniya,Active,Fashion
-DSI,DSI 2 VAVUNIYA,Vavuniya,Active,Fashion
-DSI,DSI 2 WALASMULLA,Walasmulla,Active,Fashion
-DSI,DSI 2 WARAKAPOLA,Warakapola,Active,Fashion
-DSI,DSI 2 WATTALA,Wattala,Active,Fashion
-DSI,DSI 3 WATTALA,Wattala,Active,Fashion
-DSI,DSI 1 WELIMADA,Welimada,Active,Fashion
-DSI,DSI 1 WELIWERIYA,Weliweriya,Active,Fashion
-DSI,DSI 1 WELLAWAYA,Wellawaya,Active,Fashion
-DSI,DSI 1 WARAKAPOLA,Wrakapola,Active,Fashion
-DSI,DSI 1 YATIYANTHOTA,Yatiyanthota,Active,Fashion
-M.D Gunasena,Avissawella,Awisswella,Active,Books & Stationery
-M.D Gunasena,Olcott Mawatha,Colombo 01,Active,Books & Stationery
-M.D Gunasena,Bambalapitiya,Colombo 04,Active,Books & Stationery
-M.D Gunasena,Visakha,Colombo 04,Active,Books & Stationery
-M.D Gunasena,Ladies College,Colombo 07,Active,Books & Stationery
-M.D Gunasena,Borella,Colombo 08,Active,Books & Stationery
-M.D Gunasena,Hulftsdorp,Colombo 11,Active,Books & Stationery
-M.D Gunasena,Pettah,Colombo 11,Active,Books & Stationery
-M.D Gunasena,Galle,Galle,Active,Books & Stationery
-M.D Gunasena,Gampaha,Gampaha,Active,Books & Stationery
-M.D Gunasena,Kalutara,Kalutara,Active,Books & Stationery
-M.D Gunasena,Kandy,Kandy,Active,Books & Stationery
-M.D Gunasena,Kiribathgoda,Kiribathgoda,Active,Books & Stationery
-M.D Gunasena,Kurunegala,Kurunegala,Active,Books & Stationery
-M.D Gunasena,Matara,Matara,Active,Books & Stationery
-M.D Gunasena,Negombo,Negambo,Active,Books & Stationery
-M.D Gunasena,Panadura,Panadura,Active,Books & Stationery
-Ridmika Mobile,Nugegoda,Nugegoda,Active,Mobiles & Electronics
-Ridmika Accessories,Nugegoda,Nugegoda,Active,Mobiles & Electronics
-BLG Technologies,Colombo 4,Colombo 04,Active,Electronics
-Ancient Nutra,Havelock City,Colombo 05,Active,Personal Care
-Ancient Nutra,Wattala,Wattala,Active,Personal Care
-Eliseo Aesthetics ,Colombo 05,Colombo 05,Active,Personal Care
-US POLO,Colombo City Center,Colombo 02,Active,Fashion
-US POLO,One Galle Face,Colombo 02,Active,Fashion
-US POLO,Havelock City Mall,Colombo 05,Active,Fashion
-US POLO,MBC Maitland Crescent,Colombo 07,Active,Fashion
-US POLO,Kandy City Center,Kandy,Active,Fashion
-Puma,One Galle Face,Colombo 02,Active,Fashion
-Puma,MBC Maitland Crescent ,Colombo 07,Active,Fashion
-Reebok,One Galle Face,Colombo 02,Active,Fashion
-Reebok,MBC Maitland Crescent ,Colombo 07,Active,Fashion
-Asics,One Galle Face,Colombo 02,Active,Fashion
-Asics,MBC Maitland Crescent ,Colombo 07,Active,Fashion
-AVI,Colombo City Center ,Colombo 02,Active,Fashion
-AVI,MBC Maitland Crescent ,Colombo 07,Active,Fashion
-SPAR Sri Lanka,Union Place,Colombo 02,Active,Supermarkets
+SPAR Sri Lanka,Union Place,Colombo,Active,Supermarkets
 SPAR Sri Lanka,Kalubowila,Dehiwala,Active,Supermarkets
 SPAR Sri Lanka,Pepiliyana,Dehiwala,Active,Supermarkets
 SPAR Sri Lanka,Galle,Galle,Active,Supermarkets
@@ -1106,145 +1196,128 @@ SPAR Sri Lanka,Malabe,Malabe,Active,Supermarkets
 SPAR Sri Lanka,Negombo,Negombo,Active,Supermarkets
 SPAR Sri Lanka,Thalawathugoda,Thalawathugoda,Active,Supermarkets
 SPAR Sri Lanka,Wattala,Wattala,Active,Supermarkets
-SimplyTek,Colombo 03,Colombo 03,Active,Mobiles & Electronics
-SimplyTek,Colombo 05,Colombo 05,Active,Mobiles & Electronics
-Beauty & Body Care ,Colombo 05,Colombo 05,Active,Personal Care
-Kemi,Colombo 05,Colombo 05,Active,Baby
-Phoenix ,Battaramulla,Battaramulla,Active,Homeware
-Phoenix ,Panadura,Panadura,Active,Homeware
-Phoenix ,Welisara,Wattala,Active,Homeware
-Arienti,Colombo 03,Colombo 03,Active,Fashion
-Arienti,Negombo,Negombo,Active,Fashion
-Kids Unlimited,Dehiwela,Dehiwela,Active,Baby
-Hameedia Stores,Shangrila,Colombo 02,Active,Fashion
-Hameedia Stores,Envoy Mansion,Colombo 03,Active,Fashion
-Hameedia Stores,Havelock City,Colombo 05,Active,Fashion
-Hameedia Stores,Wellawatta,Colombo 06,Active,Fashion
-Hameedia Stores,Pettah,Colombo 11,Active,Fashion
-Hameedia Stores,Kandy City Center,Kandy,Active,Fashion
-Hameedia Stores,Kandy,Kandy,Active,Fashion
-Hameedia Stores,Kiribathgoda,Kiribathgoda,Active,Fashion
-Hameedia Stores,Kurunegala,Kurunegala,Active,Fashion
-Hameedia Stores,Negombo,Negombo,Active,Fashion
-Hameedia Stores,Nugegoda,Nugegoda,Active,Fashion
-Hameedia Stores,Pelawatta,Pelawatta,Active,Fashion
-Hameedia Stores,Rajagiriya,Rajagiriya,Active,Fashion
-Hameedia Stores,Wattala,Wattala,Active,Fashion
-Hameedia Stores,Physical,,Active,Fashion
-Envoy Mansion ,Bagatale Road,Colombo 03,Active,Fashion
-H-Sports,Racecourse ,Colombo 07,Active,Fashion
-H-Sports,Kandy City Center,Kandy,Active,Fashion
-H-Sports,Pelawatta,Pelawatta,Active,Fashion
-Tash Gem & Jewellery,colpetty,Colombo 03,Active,Gems & Jewellery
+Spring and Summer,Maharagama,Maharagama,Active,Fashion
+Spring and Summer,Negombo,Negombo,Active,Fashion
+Spring and Summer,Nugegoda,Nugegoda,Active,Fashion
+Spring and Summer,Panadura,Panadura,Active,Fashion
+Spring and Summer,Wattala,Wattala,Active,Fashion
+Sri Lanka Red Cross Society,Online,,Active,Donations
+Stand With Sri Lanka,Online,,Active,Donations
+Steel Active,E-Commerce ,,Active,Fashion
+Street Burger,Bambalapitiya,Colombo,Active,Food
+Street Burger,Galle,Galle,Active,Food
+Street Burger,Ja Ela,Ja Ela,Active,Food
+Street Burger,Maharagama,Maharagama,Active,Food
+Street Burger,Mount Lavinia,Mount Lavinia,Active,Food
+Street Burger,Nawala,Nawala,Active,Food
+Street Burger,Negombo,Negambo,Active,Food
+Street Burger,Kotte,Sri Jayawardhanapura,Active,Food
+Street Burger,Wattala,Wattala,Active,Food
+Stripes and Checks,One Galle Face,Colombo,Active,Fashion
+Stripes and Checks,Colombo City Center ,Colombo,Active,Fashion
+Stripes and Checks,Havelock Road,Colombo,Active,Fashion
+Stripes and Checks,Ward Place,Colombo,Active,Fashion
+Stripes and Checks,Mount Lavinia,Mount Lavinia,Active,Fashion
+Strong.lk,Nugegoda,Nugegoda,Active,Fitness
+Strong.lk,Mount Lavinia,Mount Lavinia,Active,Fitness
+Strong.lk,ECOMMERCE - STRONG.LK,,Active,Fitness
+Sushi Kai,Colombo 05,Colombo,Active,Food
+Sushi Kai,Thalawathugoda,Thalawathugoda,Active,Food
+Sushi Kai,INAPP,,Active,Food
+Swastha,Maitland Crescent,Colombo,Active,Personal Care
+Taco Bell,Colombo City Centre,Colombo,Active,Food
+Taco Bell,One Galle Face,Colombo,Active,Food
+Taco Bell,Havelock City Mall,Colombo,Active,Food
+Taco Bell,Horton place,Colombo,Active,Food
+Taco Bell,Kiribathgoda,Kiribathgoda,Active,Food
+Taco Bell,Kurunegala,Kurunegala,Active,Food
+Taco Bell,Mount lavinia,Mount lavinia,Active,Food
+Taco Bell,Negombo,Negambo,Active,Food
+Taco Bell,Nugegoda,Nugegoda,Active,Food
+Taco Bell,Kottawa,Pannipitiya,Active,Food
+Taco Bell,Piliyandala,Piliyandala,Active,Food
+Taco Bell,Rajagiriya,Rajagiriya,Active,Food
+TAG Heuer Boutique,One Galle Face,Colombo,Active,Watches
+Tamarind Hill,"Dadella, Galle",Galle,Active,Hotel
+Tash Gem & Jewellery,colpetty,Colombo,Active,Gems & Jewellery
 Tash Gem & Jewellery,Malabe,Malabe,Active,Gems & Jewellery
-Colombo Jewellery Stores,One Galle Face,Colombo 02,Active,Gems & Jewellery
-Colombo Jewellery Stores,Colombo 03,Colombo 03,Active,Gems & Jewellery
-TAG Heuer Boutique,One Galle Face,Colombo 02,Active,Watches
-Elegant Smockers,One Galle Face,Colombo 02,Active,Baby
-Elegant Smockers,Colombo 04,Colombo 04,Active,Baby
-Elegant Smockers,Odel Mall,Colombo 07,Active,Baby
-Elegant Smockers,Kandy City Centre ,Kandy,Active,Baby
-Elegant Smockers,Odel Mall Kandy,Kandy,Active,Baby
-Miris by Islandmom,Mount Lavinia,Mount Lavinia,Active,Fashion
-Nisaco Mall,Athurugiriya,Athurugiriya,Active,Mall
-Kashi Wellness ,Isipathana Mawatha,Colombo 05,Active,Personal Care
-Ramzi & Co. Jewelry,One Galle Face,Colombo 02,Active,Gems & Jewellery
-Pepper Street,One Galle Face,Colombo 02,Active,Fashion
-Pepper Online,Colombo City Centre,Colombo 02,Active,Fashion
-Pepper Online,Kandy City Centre,Kandy,Active,Fashion
-Nesh Kids Store,Colombo 04,Colombo 04,Active,Baby
-Aroma Perfume,Dehiwela,Dehiwala,Active,Personal Care
-Beauty Quest International,Galle Face Hotel,Colombo 02,Active,Personal Care
-Fashion Bug,Bandarawela,Bandarawela,Active,Fashion
-Fashion Bug,Colpetty,Colombo 03,Active,Fashion
-Fashion Bug,Wellawatta,Colombo 06,Active,Fashion
-Fashion Bug,Borella,Colombo 08,Active,Fashion
-Fashion Bug,Kotahena,Colombo 13,Active,Fashion
-Fashion Bug,Kandy - Dalada Veediya,Kandy,Active,Fashion
-Fashion Bug,Katugastota Rd,Kandy,Active,Fashion
-Fashion Bug,Kurunegala,Kurunegala,Active,Fashion
-Fashion Bug,Maharagama,Maharagama,Active,Fashion
-Fashion Bug,Matara,Matara,Active,Fashion
-Fashion Bug,Katubedda,Moratuwa,Active,Fashion
-Fashion Bug,Negombo,Negambo,Active,Fashion
-Fashion Bug,Nugegoda,Nugegoda,Active,Fashion
-Fashion Bug,Wattala,Wattala,Active,Fashion
-Nails with Tea,Borella,Colombo 08,Active,Personal Care
-Jollys at Nisaco Mall,Nisaco Mall,Athurugiriya,Active,Food
-Signature,Anuradhapura,Anuradhapura,Active,Fashion
-Signature,Kalmunei,Batticaloa,Active,Fashion
-Signature,Chilaw,Chilaw,Active,Fashion
-Signature,Marino Mall,Colombo 03,Active,Fashion
-Signature,Duplication Rd,Colombo 03,Active,Fashion
-Signature,Havelock City,Colombo 05,Active,Fashion
-Signature,Jaffna,Jaffna,Active,Fashion
-Signature,Matale,Matale,Active,Fashion
-Signature,Matara,Matara,Active,Fashion
-Signature,Panadura,Panadura,Active,Fashion
-Domino's Pizza, Aluthgama,Aluthgama,Active,Food
-Domino's Pizza, Ambalangoda,Ambalangoda,Active,Food
-Domino's Pizza,Gothatuwa,Angoda,Active,Food
-Domino's Pizza,Anuradhapura,Anuradhapura,Active,Food
-Domino's Pizza, Athurugiriya,Athurugiriya,Active,Food
-Domino's Pizza,Boralesgamuwa,Boralesgamuwa,Active,Food
-Domino's Pizza,Wennappuwa ,Chilaw,Active,Food
-Domino's Pizza,Union Place,Colombo 02,Active,Food
-Domino's Pizza,Wellawatta,Colombo 06,Active,Food
-Domino's Pizza,Colombo 07,Colombo 07,Active,Food
-Domino's Pizza,Kotahena,Colombo 13,Active,Food
-Domino's Pizza, Dehiwela,Dehiwela,Active,Food
-Domino's Pizza,Galle,Galle,Active,Food
-Domino's Pizza,Gampaha,Gampaha,Active,Food
-Domino's Pizza,Homagama,Homagama,Active,Food
-Domino's Pizza,Jaffna,Jaffna,Active,Food
-Domino's Pizza,Kadawatha,Kadawatha,Active,Food
-Domino's Pizza,Kaduwela,Kaduwela,Active,Food
-Domino's Pizza, Kaluthara,Kaluthara,Active,Food
-Domino's Pizza, Kandy,Kandy,Active,Food
-Domino's Pizza, Kandy,Kandy,Active,Food
-Domino's Pizza, Katugastota,Katugastota,Active,Food
-Domino's Pizza,Kiribathgoda,Kiribathgoda,Active,Food
-Domino's Pizza,Kolonnawa,Kolonnawa,Active,Food
-Domino's Pizza,Kottawa,Kottawa,Active,Food
-Domino's Pizza, Kottawa ,Kottawa ,Active,Food
-Domino's Pizza, Kuliyapitiya,Kuliyapitiya,Active,Food
-Domino's Pizza, Kurunegala,Kurunegala,Active,Food
-Domino's Pizza,Maharagama,Maharagama,Active,Food
-Domino's Pizza, Malabe,Malabe,Active,Food
-Domino's Pizza,Matara,Matara,Active,Food
-Domino's Pizza,Matara,Matara,Active,Food
-Domino's Pizza,Mattakkuliya,Mattakkuliya,Active,Food
-Domino's Pizza,Minuwangoda,Minuwangoda,Active,Food
-Domino's Pizza,Moratuwa,Moratuwa,Active,Food
-Domino's Pizza,Negombo,Negombo,Active,Food
-Domino's Pizza, Nugegoda,Nugegoda,Active,Food
-Domino's Pizza, Sri Jayawardenepura Kotte, Sri Jayawardenepura ,Active,Food
-Domino's Pizza, Nuwara Eliya,Nuwara Eliya,Active,Food
-Domino's Pizza,Panadura,Panadura,Active,Food
-Domino's Pizza,Pelawatte,Pelawatte,Active,Food
-Domino's Pizza,Piliyandala,Piliyandala,Active,Food
-Domino's Pizza,Ragama,Ragama,Active,Food
-Domino's Pizza, Rajagiriya,Rajagiriya,Active,Food
-Domino's Pizza, Ratmalana.,Ratmalana,Active,Food
-Domino's Pizza,Ratnapura ,Ratnapura ,Active,Food
-Domino's Pizza,Seeduwa,Seeduwa,Active,Food
-Domino's Pizza, Wattala,Wattala,Active,Food
-Vision Care Opticals (the 500 Boutique),Crescat,Colombo 02,Active,Opticians
-Vision Care Opticals (the 500 Boutique),Havelock City Mall,Colombo 05,Active,Opticians
+Tash Gem & Jewellery,Instagram,,Active,Gems & Jewellery
+Tea Avenue,Colombo 02,Colombo,Active,Food
+Tea Avenue,Colombo 03,Colombo,Active,Food
+Tea Avenue,Colombo 05,Colombo,Active,Food
+Tea Avenue,Galle,Galle,Active,Food
+Tea Avenue,Malabe,Malabe,Active,Food
+Tea Avenue,"Pitakotte, Kotte",Sri Jayawardhanapura,Active,Food
+Tea Avenue,Pepiliyana,Pepiliyana,Active,Food
+Tea Avenue,Wattala,Wattala,Active,Food
+Tea Tang,Beruwela,Beruwela,Active,Food
+Tea Tang,One Galle Face,Colombo,Active,Food
+Tea Tang,Liberty Plaza,Colombo,Active,Food
+Tea Tang,Havelock Road,Colombo,Active,Food
+TecRoot,Colombo 04,Colombo,Active,Games
+TecRoot,E-COMMERCE,,Active,Games
+Thambili Island,Colombo 04,Colombo,Active,Fashion
+The Blue Water Hotel and Spa,Kalutara,Kalutara,Active,Hotel
+The Convenience Store,Dehiwala,Dehiwala,Active,Supermarkets
+The English Cake Company,One Galle Face,Colombo,Active,Food
+The English Cake Company,Colombo 5,Colombo,Active,Food
+The English Cake Company,Havelock City Mall,Colombo,Active,Food
+The Factory Outlet,Colombo 05,Colombo,Active,Fashion
+The Factory Outlet,Galle,Galle,Active,Fashion
+The Factory Outlet,online,,Active,Fashion
+The Habitat,Kosgoda,Galle,Active,Hotel
+The Mango Tree,Colombo 03,Colombo,Active,Food
+The Mango Tree,Colombo 05,Colombo,Active,Food
+The Mango Tree,Colombo 06,Colombo,Active,Food
+The Mango Tree,Colombo 07,Colombo,Active,Food
+The Sizzle,Colombo 03,Colombo,Active,Food
+The Vanta Studios,"R. A. De Mel Mawatha, Colombo 00500",Colombo,Active,Fashion
+Theva Residency,Kandy,Kandy,Active,Hotel
+Thilakawardhana,Ja Ela,Ja Ela,Active,Fashion
+Thilakawardhana,Kandy,Kandy,Active,Fashion
+Thilakawardhana,Kiribathgoda,Kiribathgoda,Active,Fashion
+Thilakawardhana,Kurunegala,Kurunegala,Active,Fashion
+Thilakawardhana,Nittambuwa,Nittambuwa,Active,Fashion
+THIRTEEN THIRTYONE,Colombo 05,Colombo,Active,Fashion
+Tilapiya,Colombo 07,Colombo,Active,Food
+Union Chemists,Colombo 02,Colombo,Active,Pharmacy
+Union Chemists,"Alfred Place, Colombo 03",Colombo,Active,Pharmacy
+Union Chemists,"Kirula Road, Colombo - 05",Colombo,Active,Pharmacy
+Union Chemists,"Castle Street, Colombo - 08",Colombo,Active,Pharmacy
+Union Chemists,"Deans Road, Colombo - 10",Colombo,Active,Pharmacy
+Union Chemists,"Hospital Street, Kalubowila",Dehiwala,Active,Pharmacy
+Union Chemists,Kalubowila,Dehiwala,Active,Pharmacy
+Union Chemists,Thalawathugoda,Thalawathugoda,Active,Pharmacy
+Union Chemists,"Negombo Road, Wattala",Wattala,Active,Pharmacy
+Union Chemists,Online Pharmacy,,Active,Pharmacy
+Union Chemists,ONLINE,,Active,Pharmacy
+Union Chemists,Online,,Active,Pharmacy
+US POLO,Colombo City Center,Colombo,Active,Fashion
+US POLO,One Galle Face,Colombo,Active,Fashion
+US POLO,Havelock City Mall,Colombo,Active,Fashion
+US POLO,MBC Maitland Crescent,Colombo,Active,Fashion
+US POLO,Kandy City Center,Kandy,Active,Fashion
+Vijitha Yapa Bookshop (Pvt) Ltd,Colombo 03,Colombo,Active,Books & Stationery
+Vijitha Yapa Bookshop (Pvt) Ltd,"Flower Road, Colombo 07",Colombo,Active,Books & Stationery
+Vijitha Yapa Bookshop (Pvt) Ltd,Galle,Galle,Active,Books & Stationery
+Vijitha Yapa Bookshop (Pvt) Ltd,Matara,Matara,Active,Books & Stationery
+Vijitha Yapa Bookshop (Pvt) Ltd,Nugegoda,Nugegoda,Active,Books & Stationery
+Vision Care Optical Services,KDU Hospital,Boralesgamuwa,Active,Opticians
+Vision Care Optical Services,Union Place,Colombo,Active,Opticians
+Vision Care Optical Services,Cinnamon Life,Colombo,Active,Opticians
+Vision Care Optical Services,Colombo City Center,Colombo,Active,Opticians
+Vision Care Optical Services,Nawaloka Hospital,Colombo,Active,Opticians
+Vision Care Optical Services,One Galle Face,Colombo,Active,Opticians
+Vision Care Optical Services,Asiri Surgical,Colombo,Active,Opticians
+Vision Care Optical Services,Aselro- ENT Diagnostics,Colombo,Active,Opticians
+Vision Care Optical Services,Head Office,Colombo,Active,Opticians
+Vision Care Optical Services,Racecourse,Colombo,Active,Opticians
+Vision Care Optical Services,Kotahena,Colombo,Active,Opticians
+Vision Care Optical Services,Philip - Kalutara,Kalutara,Active,Opticians
+Vision Care Opticals (the 500 Boutique),Crescat,Colombo,Active,Opticians
+Vision Care Opticals (the 500 Boutique),Havelock City Mall,Colombo,Active,Opticians
 Vision Care Opticals (the 500 Boutique),Horana,Horana,Active,Opticians
 Vision Care Opticals (the 500 Boutique),Kapuwatta,Ja Ela,Active,Opticians
-Vision Care Optical Services,KDU Hospital,Boralesgamuwa,Active,Opticians
-Vision Care Optical Services,Union Place,Colombo 02,Active,Opticians
-Vision Care Optical Services,Cinnamon Life,Colombo 02,Active,Opticians
-Vision Care Optical Services,Colombo City Center,Colombo 02,Active,Opticians
-Vision Care Optical Services,Nawaloka Hospital,Colombo 02,Active,Opticians
-Vision Care Optical Services,One Galle Face,Colombo 02,Active,Opticians
-Vision Care Optical Services,Asiri Surgical,Colombo 05,Active,Opticians
-Vision Care Optical Services,Aselro- ENT Diagnostics,Colombo 06,Active,Opticians
-Vision Care Optical Services,Head Office,Colombo 07,Active,Opticians
-Vision Care Optical Services,Racecourse,Colombo 07,Active,Opticians
-Vision Care Optical Services,Kotahena,Colombo 13,Active,Opticians
-Vision Care Optical Services,Philip - Kalutara,Kalutara,Active,Opticians
 Vision Care Opticals Pvt Ltd,Aluthgama,Aluthgama,Active,Opticians
 Vision Care Opticals Pvt Ltd,Ambalangoda,Ambalangoda,Active,Opticians
 Vision Care Opticals Pvt Ltd,Ambalantota,Ambalantota,Active,Opticians
@@ -1257,9 +1330,9 @@ Vision Care Opticals Pvt Ltd,Bandarawela,Bandarawela,Active,Opticians
 Vision Care Opticals Pvt Ltd,batticaloa,Batticaloa,Active,Opticians
 Vision Care Opticals Pvt Ltd,Kalmunai,Batticaloa,Active,Opticians
 Vision Care Opticals Pvt Ltd,Wennappuwa,Chilaw,Active,Opticians
-Vision Care Opticals Pvt Ltd,The Central Hospital,Colombo  05,Active,Opticians
-Vision Care Opticals Pvt Ltd,Vision Care Express,Colombo 07,Active,Opticians
-Vision Care Opticals Pvt Ltd,Wellawatte,Coombo 06,Active,Opticians
+Vision Care Opticals Pvt Ltd,The Central Hospital,Colombo,Active,Opticians
+Vision Care Opticals Pvt Ltd,Vision Care Express,Colombo,Active,Opticians
+Vision Care Opticals Pvt Ltd,Wellawatte,Coombo,Active,Opticians
 Vision Care Opticals Pvt Ltd,Dambulla,Dambulla,Active,Opticians
 Vision Care Opticals Pvt Ltd,Embilipitiya,Embilipitiya,Active,Opticians
 Vision Care Opticals Pvt Ltd,Galle,Galle,Active,Opticians
@@ -1308,136 +1381,11 @@ Vision Care Opticals Pvt Ltd,Rathnapura,Rathnapura,Active,Opticians
 Vision Care Opticals Pvt Ltd,Thalawathugoda - Hemas Hospital ,Thalawathugoda,Active,Opticians
 Vision Care Opticals Pvt Ltd,Trincomalee,Trincomalee,Active,Opticians
 Vision Care Opticals Pvt Ltd,Wattala,Wattala,Active,Opticians
-Living Styles,Wellawatta,Colombo 06,Active,Homeware
-Tea Tang,Beruwela,Beruwela,Active,Food
-Tea Tang,One Galle Face,Colombo 02,Active,Food
-Tea Tang,Liberty Plaza,Colombo 03,Active,Food
-Tea Tang,Havelock Road,Colombo 05,Active,Food
-Ahara by Amari,Colombo 3,Colombo 3,Active,Food
-Mr. Burger,Bambalapitiya,Colombo 04,Active,Food
-Mr. Burger,Dehiwela,Dehiwela,Active,Food
-Mr. Burger,Rajagiriya,Rajagiriya,Active,Food
-Mr. Burger,Wattala,Wattala,Active,Food
-Luxeress,Dehiwela,Dehiwela,Active,Food
-Online Kade,Bambalapitiya,Colombo 04,Active,Groceries
-Online Kade,Dehiwela,Dehiwela,Active,Groceries
-Online Kade,Rajagiriya,Rajagiriya,Active,Groceries
-Online Kade,Wattala,Wattala,Active,Groceries
-Blink International,Bambalapitiya,Colombo 04,Active,Watches
-Blink International,KCC,Kandy,Active,Watches
-Isso,Isso Ecommerce,,Active,Food
-Isso,Weligama,,Active,Food
-Strong.lk,ECOMMERCE - STRONG.LK,,Active,Fitness
-Quantum Fitness,Colombo,,Active,Fitness
-Quantum Fitness,Colombo 5,,Active,Fitness
-Diliganz,Online,,Active,Fashion
-AMBERRY,INAPP,,Active,Accessories
-AMBERRY,Facebook/ Instagram,,Active,Accessories
-MirrorMirror.lk,MirrorMirror.lk,,Active,Fashion
-SimplyTek,Online,,Active,Mobiles & Electronics
-Sushi Kai,INAPP,,Active,Food
-Phoenix ,E commerce,,Active,Homeware
-Steel Active,E-Commerce ,,Active,Fashion
-Sea Adventures LK,Online,,Active,Adventure
-Tash Gem & Jewellery,Instagram,,Active,Gems & Jewellery
-Aroma Perfume,Instagram ,,Active,Personal Care
-Domino's Pizza (Online),Dehiwela,,Active,Food
-Domino's Pizza (Online),Nugegoda,,Active,Food
-Domino's Pizza (Online),Ratmalana,,Active,Food
-Domino's Pizza (Online),Rajagiriya,,Active,Food
-Domino's Pizza (Online),Union Place,,Active,Food
-Domino's Pizza (Online),Maharagama,,Active,Food
-Domino's Pizza (Online),Kiribathgoda,,Active,Food
-Domino's Pizza (Online),Malabe,,Active,Food
-Domino's Pizza (Online),Negombo,,Active,Food
-Domino's Pizza (Online),Kottawa,,Active,Food
-Domino's Pizza (Online),Kurunegala,,Active,Food
-Domino's Pizza (Online),Piliyandala,,Active,Food
-Domino's Pizza (Online),Gampaha,,Active,Food
-Domino's Pizza (Online),Havelock Road,,Active,Food
-Domino's Pizza (Online),Pelawatta,,Active,Food
-Domino's Pizza (Online),Galle,,Active,Food
-Domino's Pizza (Online),Kalutara,,Active,Food
-Domino's Pizza (Online),Kotahena,,Active,Food
-Domino's Pizza (Online),Boralesgamuwa,,Active,Food
-Domino's Pizza (Online),Athurugiriya,,Active,Food
-Domino's Pizza (Online),Aluthgama,,Active,Food
-Domino's Pizza (Online),Ragama,,Active,Food
-Domino's Pizza (Online),Kadawatha,,Active,Food
-Domino's Pizza (Online),Minuwangoda,,Active,Food
-Domino's Pizza (Online),Moratuwa,,Active,Food
-Domino's Pizza (Online),Homagama,,Active,Food
-Domino's Pizza (Online),Kolonnawa,,Active,Food
-Domino's Pizza (Online),kaduwela,,Active,Food
-Domino's Pizza (Online),Seeduwa,,Active,Food
-Domino's Pizza (Online),Pannipitiya,,Active,Food
-Domino's Pizza (Online),Gothatuwa,,Active,Food
-Domino's Pizza (Online),Wattala,,Active,Food
-Domino's Pizza (Online),Pita Kotte,,Active,Food
-Domino's Pizza (Online),Matara,,Active,Food
-Domino's Pizza (Online),Jaffna,,Active,Food
-Domino's Pizza (Online),Colombo 15,,Active,Food
-Domino's Pizza (Online),Independence Arcade,,Active,Food
-Domino's Pizza (Online),Rathnapura,,Active,Food
-Domino's Pizza (Online),Anuradhapura,,Active,Food
-Domino's Pizza (Online),Weligama,,Active,Food
-Domino's Pizza (Online),Ambalangoda,,Active,Food
-Domino's Pizza (Online),Kotugodella Veediya - Kandy,,Active,Food
-Domino's Pizza (Online),Peradeniya Rd. - Kandy,,Active,Food
-Domino's Pizza (Online),Katugastota Rd. - Kandy,,Active,Food
-Domino's Pizza (Online),Panadura,,Active,Food
-Domino's Pizza (Online),Wennappuwa,,Active,Food
-Domino's Pizza (Online),Kuliyapitiya,,Active,Food
-Domino's Pizza (Online),Nuwara Eliya,,Active,Food
-Domino's Pizza (Online),Online,,Active,Food
-Sri Lanka Red Cross Society,Online,,Active,Donations
-Stand With Sri Lanka,Online,,Active,Donations
-Fitzky,Online,,Active,Fitness
-Cool Kidz,ECOMMERCE - COOL KIDS,,Active,Baby
-Cool Kidz,Cool Kidz,,Active,Baby
-Ninda,Ninda- Online,,Active,Homeware
-Ayvee,INAPP,,Active,Fashion
-Ayvee,Facebook/ Instagram,,Active,Fashion
-British Cosmetics,ECOMMERCE - BRITISH COSMETICS,,Active,Personal Care
-The Factory Outlet,online,,Active,Fashion
-Mimosa,E-COMMERCE,,Active,Fashion
-Aroma Bliss Ceylon,Online,,Active,Personal Care
-Fitness Island (Currently Unavailable),ECOMMERCE - FITNESS ISLAND,,Active,Fitness
-Bookholics,ECOMMERCE - Bookholics,,Active,Books & Stationery
-Chinese Dragon Cafe,Fort,,Active,Food
-Union Chemists,Online Pharmacy,,Active,Pharmacy
-Union Chemists,ONLINE,,Active,Pharmacy
-Union Chemists,Online,,Active,Pharmacy
-TecRoot,E-COMMERCE,,Active,Games
-Earth Unleashed,Online,,Active,Fashion
-Wristlab,One Galle Face,Colombo 02,Active,Watches
-Chancellor by Amari,Colombo 03,Colombo 03,Active,Food
-Mira Lounge by Amari,Colombo 03,Colombo 03,Active,Food
-Prego by Amari,Colombo 03,Colombo 03,Active,Food
-Thilakawardhana,Ja Ela,Ja Ela,Active,Fashion
-Thilakawardhana,Kandy,Kandy,Active,Fashion
-Thilakawardhana,Kiribathgoda,Kiribathgoda,Active,Fashion
-Thilakawardhana,Kurunegala,Kurunegala,Active,Fashion
-Thilakawardhana,Nittambuwa,Nittambuwa,Active,Fashion
-Christell Skin Clinic,Colombo 04,Colombo 04,Active,Personal Care
-Christell Wellness Villa,Lauries Road,Colombo 04,Active,Personal Care
-Christell Crown,One Galle Face,Colombo 02,Active,Personal Care
-Fitzky,Online,Online,Active,Fitness
-Ragama Pharmacy,Ragama,Ragama,Active,Pharmacy
-Ragama Pharmacy,Kadawatha,Kadawatha,Active,Pharmacy
-Ragama Pharmacy,Mahara,Mahara,Active,Pharmacy
-Ragama Pharmacy,Kaduwela,Kaduwela,Active,Pharmacy
-Richmass Fashion,Ragama,Ragama,Active,Fashion
-Galleria Milano,Online,Online,Active,Fashion
-Fitness First,Maitland Crescent,Colombo 07,Active,Fitness
-Fitness First,WTC,Colombo 02,Active,Fitness
-Fitness First,Moors Sport Club,Colombo 02,Active,Fitness
-Fitness First,Kandana,Kandana,Active,Fitness
-Akarsha Jewellers,Taj Samudra Hotel ,Colombo 03,Active,Gems & Jewellery
-Akarsha Jewellers,MC,Colombo 04,Active,Gems & Jewellery
-Thambili Island,Colombo 04,Colombo 04,Active,Fashion
-Tilapiya,Colombo 07,Colombo 07,Active,Food
-Kingsman Perennial,Colombo 04,Colombo 04,Active,Fashion
-Happy Feet & Hand,Wattala,Wattala,Active,Personal Care
-Happy Feet & Hand,Colombo 05,Colombo 05,Active,Personal Care
-Dinapala Online,Online,Online,Active,Mobiles & Electronics
+Water Garden Sigiriya,Sigiriya,Sigiriya,Active,Hotel
+Wimaladharma & Sons,Colombo 05,Colombo,Active,Watches
+Wimaladharma & Sons,Kotte,Sri Jayawardhanapura,Active,Watches
+Wimaladharma & Sons,Wattala,Wattala,Active,Watches
+Wristlab,One Galle Face,Colombo,Active,Watches
+Xclusive Accessories,Colombo,Colombo,Active,Mobiles & Electronics
+Zigzag,Flagship Store,Colombo,Active,Fashion
+Zigzag,Negombo,Negombo,Active,Fashion
