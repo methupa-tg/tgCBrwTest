@@ -15,7 +15,7 @@ def _strip_html(text):
 
 def load_voucher_catalog(filepath):
     chunks = []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
         reader = csv.DictReader(f)
         for row in reader:
             if row.get("published", "1") == "0":
@@ -37,7 +37,7 @@ def load_voucher_catalog(filepath):
 
 def load_faq(filepath):
     chunks = []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
         reader = csv.DictReader(f)
         for row in reader:
             chunk = (
@@ -50,7 +50,7 @@ def load_faq(filepath):
 
 def load_how_to(filepath):
     chunks = []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
         reader = csv.DictReader(f)
         for row in reader:
             chunk = (
@@ -62,7 +62,7 @@ def load_how_to(filepath):
 
 def load_links(filepath):
     chunks = []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
         reader = csv.DictReader(f)
         for row in reader:
             chunk = (
@@ -75,7 +75,7 @@ def load_links(filepath):
 
 def load_merchants_loc(filepath):
     chunks = []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace", errors="replace") as f:
         reader = csv.DictReader(f)
         for row in reader:
             chunk = (
@@ -109,7 +109,7 @@ def _split_large_chunk(chunk, max_chars=700):
 def load_thyaga_info(filepath):
     chunks = []
     current = []
-    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace", errors="replace") as f:
         for line in f:
             line = line.rstrip()
             if not line:
@@ -129,7 +129,7 @@ def load_thyaga_info(filepath):
 def load_corporate_info(filepath):
     chunks = []
     current = []
-    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace", errors="replace") as f:
         for line in f:
             line = line.rstrip()
             if not line:
@@ -146,7 +146,7 @@ def load_corporate_info(filepath):
 def load_for_merchants(filepath):
     chunks = []
     current = []
-    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace", errors="replace") as f:
         for line in f:
             line = line.rstrip()
             if not line:
@@ -162,7 +162,7 @@ def load_for_merchants(filepath):
 
 def load_special_redemptions(filepath):
     chunks = []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8", errors="replace") as f:
         reader = csv.DictReader(f)
         for row in reader:
             chunk = (
