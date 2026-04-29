@@ -10,6 +10,7 @@ from kb.rag import load_all_documents, build_index, retrieve
 from db.database import init_db, save_message, get_all_sessions, get_session_messages
 import uuid
 import pickle
+import time
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask import Response
@@ -21,7 +22,7 @@ if not api_key:
     raise EnvironmentError("GOOGLE_API_KEY is not set.")
 
 gemini_client = genai.Client(api_key=api_key)
-co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
+co = cohere.ClientV2(os.getenv("COHERE_API_KEY"), timeout=90)
 
 print("Loading knowledge base...")
 all_chunks = load_all_documents()
@@ -166,21 +167,31 @@ def chat():
     contents.append({"role": "user", "parts": [{"text": augmented_message}]})
 
     served_by = None
-    try:
-        response = gemini_client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=contents,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
-                temperature=0.4,
-                max_output_tokens=800,
-            )
-        )
-        reply = response.text
-        served_by = "gemini-2.5-flash"
+    reply = None
+    last_gemini_err = None
 
-    except Exception as gemini_err:
-        print(f"[WARN] Gemini failed: {gemini_err} — falling back to Cohere")
+    for attempt in range(3):
+        try:
+            response = gemini_client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=contents,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    temperature=0.4,
+                    max_output_tokens=800,
+                )
+            )
+            reply = response.text
+            served_by = "gemini-2.5-flash"
+            break
+        except Exception as e:
+            last_gemini_err = e
+            if attempt < 2:
+                print(f"[WARN] Gemini attempt {attempt + 1} failed: {e} — retrying in 2s")
+                time.sleep(2)
+
+    if reply is None:
+        print(f"[WARN] Gemini failed after 3 attempts: {last_gemini_err} — falling back to Cohere")
         try:
             messages = [{"role": "system", "content": SYSTEM_PROMPT}]
             for msg in history:
@@ -191,7 +202,7 @@ def chat():
                 model="command-a-03-2025",
                 messages=messages,
                 temperature=0.25,
-                max_tokens=300,
+                max_tokens=600,
                 frequency_penalty=0.4
             )
             reply = cohere_response.message.content[0].text
