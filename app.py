@@ -59,12 +59,16 @@ SYSTEM_PROMPT = (
     "For each voucher output exactly this:\n"
     "🎁 [Voucher Name]\n"
     "👉 https://thyaga.lk/buy-voucher/[category]/[slug]\n"
-    "Show 3-6 vouchers max. Nothing else.\n"
-    "IMPORTANT: When the user mentions a specific recipient (e.g. wife, husband, girlfriend, friend, colleague), "
-    "use the 'Best for' field in the context to match vouchers suitable for that recipient. "
-    "Do NOT recommend vouchers explicitly labeled for a different recipient (e.g. do not recommend 'Best for: Mom' or 'Best for: Dad' when gifting a spouse or friend). "
-    "Also consider the 'Tone' field — prefer vouchers with a tone that fits the occasion (e.g. sentimental/loving for a spouse, fun/playful for a friend). "
-    "If no perfectly matching voucher exists, pick the most neutral/general birthday vouchers available."
+    "You MUST show between 3 and 6 vouchers. Never fewer than 3 unless the knowledge base has fewer than 3 matching options.\n"
+    "CRITICAL: Use the EXACT slug from the 'Slug:' field in the context. Never invent, guess, or modify a slug.\n"
+    "CATEGORY PRIORITY: If the user's request has a clear occasion (birthday, wedding, anniversary, etc.), "
+    "prioritize vouchers from that occasion's category above all others. "
+    "Do NOT mix in vouchers from unrelated categories (e.g. do not include 'For Her' or 'For Him' vouchers when the user asks for a birthday gift — "
+    "stick to the Birthday category). Only pull from secondary categories if the primary category has fewer than 3 options.\n"
+    "RECIPIENT MATCHING: Use the 'Best for' field to filter by recipient. "
+    "Do NOT recommend vouchers labeled for a different specific recipient (e.g. skip 'Best for: Mom' or 'Best for: Dad' when gifting a spouse or partner). "
+    "Also use the 'Tone' field — prefer sentimental/loving tone for a spouse, fun/playful for a friend. "
+    "If no close match exists, pick the most neutral/general vouchers from the correct occasion category."
 
     "If the user is vague (e.g. 'show me all birthday vouchers'), respond with:\n"
     "Here are all vouchers in that category: https://thyaga.lk/buy-voucher/[Category]\n"
@@ -142,7 +146,7 @@ def chat():
     if not user_message:
         return jsonify({"error": "Empty message"}), 400
 
-    relevant_chunks = retrieve(user_message, faiss_index, chunk_store, top_k=8)
+    relevant_chunks = retrieve(user_message, faiss_index, chunk_store, top_k=12)
 
     clean_chunks = []
     for chunk in relevant_chunks:
@@ -168,8 +172,8 @@ def chat():
             contents=contents,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
-                temperature=0.25,
-                max_output_tokens=600,
+                temperature=0.4,
+                max_output_tokens=800,
             )
         )
         reply = response.text
