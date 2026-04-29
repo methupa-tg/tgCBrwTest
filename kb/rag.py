@@ -88,6 +88,24 @@ def load_merchants_loc(filepath):
             chunks.append(chunk)
     return chunks
 
+def _split_large_chunk(chunk, max_chars=700):
+    """Split a chunk that's too large by grouping its numbered/bulleted lines."""
+    if len(chunk) <= max_chars:
+        return [chunk]
+    lines = chunk.split("\n")
+    header = lines[0]
+    result = []
+    batch = [header]
+    for line in lines[1:]:
+        if re.match(r'^\d+\.', line.strip()) and len("\n".join(batch)) > 400:
+            result.append("\n".join(batch))
+            batch = [header, line]
+        else:
+            batch.append(line)
+    if batch:
+        result.append("\n".join(batch))
+    return result
+
 def load_thyaga_info(filepath):
     chunks = []
     current = []
@@ -103,7 +121,10 @@ def load_thyaga_info(filepath):
                 current.append(line)
     if current:
         chunks.append("\n".join(current))
-    return chunks
+    result = []
+    for chunk in chunks:
+        result.extend(_split_large_chunk(chunk))
+    return result
 
 def load_corporate_info(filepath):
     chunks = []
