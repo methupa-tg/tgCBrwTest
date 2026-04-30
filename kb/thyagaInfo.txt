@@ -66,3 +66,18 @@ o Corporate Gifting: We’ve got you covered with bulk & branded options
 o Currently for Bulk purchases or buying multiple vouchers at once requires contacting Thyaga hotline and requesting from them
 o Thyaga office open hours: Monday-Saturday from 9am to 6pm, closed on Sundays
 o Thyaga vouchers do not offer any discounts. For any inquiries about discounts for Corporates, contact Thyaga
+
+* Physical Vouchers:
+o When a physical voucher is bought, a message is NOT sent to the recipient unless the SMS option is specifically chosen
+o Two delivery options are available: Send via Courier, or Pickup at Office (2A, Suleiman Terrace, Colombo 05)
+o Send via Courier: Delivery cost is LKR 550. Orders placed on or for weekends and mercantile holidays may experience slight delays
+o Pickup at Office: Not available during weekends and mercantile holidays
+
+* Payment Methods:
+o Available payment methods for all voucher types (SMS and Physical): Online Bank Transfer, WEBXPAY, Stripe
+
+* Contact and Office Hours:
+o Office hours: Monday to Saturday, 9am to 6pm. Office is closed on Sundays
+o Thyaga hotline is available all 7 days from 9am to 11:30pm (including Sundays)
+o Hotline: +94 750 100 500
+o If calling outside office hours (after 6pm on weekdays, or on Sundays), the hotline is still reachable until 11:30pm
