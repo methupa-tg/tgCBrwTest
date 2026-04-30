@@ -83,7 +83,8 @@ def load_merchants_loc(filepath):
                 f"City: {row['City'].strip()}\n"
                 f"Location: {row['Location'].strip()}\n"
                 f"Status: {row.get('Status', '').strip()}\n"
-                f"Category: {row.get('Category', '').strip()}"
+                f"Category: {row.get('Category', '').strip()}\n"
+                f"Type: {row.get('type', '').strip()}"
             )
             chunks.append(chunk)
     return chunks
