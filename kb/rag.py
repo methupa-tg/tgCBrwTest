@@ -1,4 +1,3 @@
-import cohere
 import os
 import csv
 import re
@@ -6,9 +5,11 @@ import numpy as np
 import faiss
 from dotenv import load_dotenv
 import pickle
+from google import genai
+from google.genai import types
 
 load_dotenv()
-co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
+_google_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def _strip_html(text):
     return re.sub(r"<[^>]+>", " ", text or "").strip()
@@ -219,16 +220,15 @@ def build_index(chunks):
     print(f"Embedding {len(chunks)} chunks... (first time only)")
 
     all_embeddings = []
-    batch_size = 90
+    batch_size = 100
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i:i + batch_size]
-        response = co.embed(
-            texts=batch,
-            model="embed-v4.0",
-            input_type="search_document",
-            embedding_types=["float"]
+        response = _google_client.models.embed_content(
+            model="models/text-embedding-004",
+            contents=batch,
+            config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
         )
-        all_embeddings.extend(response.embeddings.float)
+        all_embeddings.extend([e.values for e in response.embeddings])
 
     embeddings = np.array(all_embeddings, dtype="float32")
     dimension = embeddings.shape[1]
@@ -241,14 +241,13 @@ def build_index(chunks):
     return index, chunks
 
 def retrieve(query, index, chunks, top_k=8):
-    response = co.embed(
-        texts=[query],
-        model="embed-v4.0",
-        input_type="search_query",
-        embedding_types=["float"]
+    response = _google_client.models.embed_content(
+        model="models/text-embedding-004",
+        contents=[query],
+        config=types.EmbedContentConfig(task_type="RETRIEVAL_QUERY")
     )
 
-    query_vec = np.array(response.embeddings.float, dtype="float32")
+    query_vec = np.array([response.embeddings[0].values], dtype="float32")
     faiss.normalize_L2(query_vec)
 
     distances, indices = index.search(query_vec, top_k)
