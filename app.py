@@ -4,11 +4,11 @@ from google.genai import types
 import os
 import re
 import logging
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template, redirect
 from flask_cors import CORS
 from dotenv import load_dotenv
 from kb.rag import load_all_documents, build_index, retrieve
-from db.database import init_db, save_message, get_all_sessions, get_session_messages
+from db.database import init_db, save_message, get_all_sessions, get_session_messages, delete_session
 import uuid
 import pickle
 import time
@@ -116,7 +116,7 @@ SYSTEM_PROMPT = (
     "Do NOT add [CONTACT] for general FAQs, voucher recommendations, or merchant location queries."
 )
 
-app = Flask(__name__, static_folder="ui")
+app = Flask(__name__, static_folder="ui", template_folder="admin")
 CORS(app, origins=[
     "https://thyaga.lk",
     "http://127.0.0.1:5000",
@@ -322,23 +322,24 @@ def admin():
     auth = request.authorization
     if not auth or not check_auth(auth.username, auth.password):
         return authenticate()
-
     sessions = get_all_sessions()
-    rows = "".join(
-        f"<tr><td>{sid[:16]}...</td><td>{started}</td><td>{count}</td><td><a href='/admin/session/{sid}'>View</a></td></tr>"
-        for sid, started, count in sessions
-    )
-    return f"<h2>Conversation History</h2><table border=1 cellpadding=6><tr><th>Session</th><th>Started</th><th>Messages</th><th></th></tr>{rows}</table>"
+    return render_template("admin.html", sessions=sessions, total=len(sessions))
 
 @app.route("/admin/session/<session_id>")
 def admin_session(session_id):
     auth = request.authorization
     if not auth or not check_auth(auth.username, auth.password):
         return authenticate()
-
     messages = get_session_messages(session_id)
-    rows = "".join(f"<tr><td>{role}</td><td>{content}</td><td>{ts}</td></tr>" for role, content, ts in messages)
-    return f"<a href='/admin'>← Back</a><br><br><table border=1 cellpadding=6><tr><th>Role</th><th>Message</th><th>Time</th></tr>{rows}</table>"
+    return render_template("admin_session.html", messages=messages, session_id=session_id)
+
+@app.route("/admin/session/<session_id>/delete", methods=["POST"])
+def admin_delete_session(session_id):
+    auth = request.authorization
+    if not auth or not check_auth(auth.username, auth.password):
+        return authenticate()
+    delete_session(session_id)
+    return redirect("/admin")
 
 @app.route("/widget.js")
 def widget():

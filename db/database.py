@@ -64,3 +64,11 @@ def get_session_messages(session_id):
     cursor.close()
     conn.close()
     return rows
+
+def delete_session(session_id):
+    conn = get_conn()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM messages WHERE session_id = %s", (session_id,))
+    conn.commit()
+    cursor.close()
+    conn.close()
