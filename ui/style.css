@@ -49,9 +49,9 @@ body {
 }
 
 .header-avatar img {
-  width: 75%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .header-info h1 {
