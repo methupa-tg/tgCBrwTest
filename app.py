@@ -107,7 +107,6 @@ CORS(app, origins=[
     "http://127.0.0.1:5000",
     "http://localhost:5000",
     "https://tgcbrwtest-production.up.railway.app",
-    "null"
 ])
 
 limiter = Limiter(get_remote_address, app=app)
@@ -146,6 +145,9 @@ def chat():
 
     if not user_message:
         return jsonify({"error": "Empty message"}), 400
+
+    if len(user_message) > 500:
+        return jsonify({"error": "Message too long. Please keep your message under 500 characters."}), 400
 
     relevant_chunks = retrieve(user_message, faiss_index, chunk_store, top_k=12)
 

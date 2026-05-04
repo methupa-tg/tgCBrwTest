@@ -319,3 +319,20 @@ body {
   margin-bottom: 4px;
 }
 
+
+
+.privacy-notice {
+  font-size: 11px;
+  color: #9ca3af;
+  text-align: center;
+  padding: 6px 16px 4px;
+}
+
+.privacy-notice a {
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+.privacy-notice a:hover {
+  text-decoration: underline;
+}
