@@ -336,3 +336,24 @@ body {
 .privacy-notice a:hover {
   text-decoration: underline;
 }
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.char-count {
+  position: absolute;
+  right: 10px;
+  font-size: 11px;
+  color: #9ca3af;
+  pointer-events: none;
+  user-select: none;
+}

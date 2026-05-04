@@ -39,12 +39,17 @@
     </div>
 
     <div class="chat-input-area">
+      <div class="input-wrapper">
       <input
         type="text"
         id="userInput"
         placeholder="Ask about voucher suggestions or anything else!"
         autocomplete="off"
+        maxlength="500"
+        oninput="updateCharCount()"
       />
+      <span class="char-count" id="charCount">500</span>
+      </div>
       <button id="sendBtn" onclick="sendMessage()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="22" y1="2" x2="11" y2="13"></line>

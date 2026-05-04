@@ -27,13 +27,14 @@
   // Create iframe container
   const container = document.createElement("div");
   container.id = "thyaga-chat-container";
+  const isMobile = window.innerWidth <= 480;
   container.style.cssText = `
     position: fixed;
-    bottom: 90px;
-    right: 24px;
-    width: 420px;
-    height: 620px;
-    border-radius: 16px;
+    bottom: ${isMobile ? "0" : "90px"};
+    right: ${isMobile ? "0" : "24px"};
+    width: ${isMobile ? "100vw" : "420px"};
+    height: ${isMobile ? "100dvh" : "620px"};
+    border-radius: ${isMobile ? "0" : "16px"};
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     display: none;
     z-index: 9998;

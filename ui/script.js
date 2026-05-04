@@ -19,6 +19,7 @@ function sendMessage() {
   if (!text) return;
 
   document.getElementById("suggestions").style.display = "none";
+  document.getElementById("privacyNotice").style.display = "none";
 
   appendMessage("user", text);
   history.push({ role: "user", content: text });
@@ -189,4 +190,11 @@ function sendSuggestion(btn) {
   document.getElementById("suggestions").style.display = "none";
   userInput.value = text;
   sendMessage();
+}
+
+function updateCharCount() {
+  const remaining = 500 - userInput.value.length;
+  const counter = document.getElementById("charCount");
+  counter.textContent = remaining;
+  counter.style.color = remaining < 50 ? "#ef4444" : "#9ca3af";
 }
