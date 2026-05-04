@@ -79,7 +79,7 @@ AVI,Colombo City Center ,Colombo,Active,Fashion,Physical Store
 AVI,MBC Maitland Crescent ,Colombo,Active,Fashion,Physical Store
 Aviraté,Colombo 07,Colombo,Active,Fashion,Physical Store
 Aviraté,Kandy City Center,Kandy,Active,Fashion,Physical Store
-Aviraté,Avirate-OGF,Colombo,Active,Fashion,Physical Store
+Aviraté,OGF,Colombo,Active,Fashion,Physical Store
 Aviraté,Colombo City Center,Colombo,Active,Fashion,Physical Store
 Ayvee,Facebook/ Instagram,Facebook/ Instagram,Active,Fashion,Instagram/ Facebook store
 Barista,Athurugiriya,Athurugiriya,Active,Food,Physical Store
@@ -101,7 +101,7 @@ Barista,WSO2,Colombo,Active,Food,Physical Store
 Barista,Thimbirigasyaya,Colombo,Active,Food,Physical Store
 Barista,Narahenpita,Colombo,Active,Food,Physical Store
 Barista,Cool Planet Mall,Colombo,Active,Food,Physical Store
-Barista,Cafeâ€š Mocha by Barista,Colombo,Active,Food,Physical Store
+Barista,Cafe Mocha by Barista,Colombo,Active,Food,Physical Store
 Barista,Wellawatta,Colombo,Active,Food,Physical Store
 Barista,Laksala,Colombo,Active,Food,Physical Store
 Barista,Horton Place,Colombo,Active,Food,Physical Store
@@ -128,7 +128,7 @@ Barista,Kandy City,Kandy,Active,Food,Physical Store
 Barista,Seeduwa,Katunayake,Active,Food,Physical Store
 Barista,Kiribathgoda,Kiribathgoda,Active,Food,Physical Store
 Barista,Kurunegala,Kurunegala,Active,Food,Physical Store
-Barista,"Dambulla Road, Kurunegala",Kurunegala,Active,Food,Physical Store
+Barista,Kurunegala,Kurunegala,Active,Food,Physical Store
 Barista,Maharagama,Maharagama,Active,Food,Physical Store
 Barista,Malabe,Malabe,Active,Food,Physical Store
 Barista,Matara,Matara,Active,Food,Physical Store
@@ -285,7 +285,7 @@ DSI,ALUTHGAMA,Aluthgama,Active,Fashion,Physical Store
 DSI,AMBALANGODA,Ambalagoda,Active,Fashion,Physical Store
 DSI,AMPARA,Ampara,Active,Fashion,Physical Store
 DSI,ANURADHAPURA,Anuradhapra,Active,Fashion,Physical Store
-DSI,FACTORY OUTLET ANURADHAPURA,Anuradhapra,Active,Fashion,Physical Store
+DSI,ANURADHAPURA,Anuradhapra,Active,Fashion,Physical Store
 DSI,ATHURUGIRIYA,Athurugiriya,Active,Fashion,Physical Store
 DSI,AVISSAWELLA,Avisswella,Active,Fashion,Physical Store
 DSI,AWARIWATTA,Awariwatta,Active,Fashion,Physical Store
@@ -490,7 +490,7 @@ Keells,Wennappuwa,chilaw,Active,Supermarkets,Physical Store
 Keells,Akuregoda,Hokandara,Active,Supermarkets,Physical Store
 Keells,Arangala,Athurugiriya,Active,Supermarkets,Physical Store
 Keells,Attidiya 2,Dehiwala,Active,Supermarkets,Physical Store
-Keells,Athurugiriya 2,Athurugiriya,Active,Supermarkets,Physical Store
+Keells,Athurugiriya,Athurugiriya,Active,Supermarkets,Physical Store
 Keells,Battaramulla,Battaramulla,Active,Supermarkets,Physical Store
 Keells,Shangri-La Mall,Colombo,Active,Supermarkets,Physical Store
 Keells,Union Place,Colombo,Active,Supermarkets,Physical Store
@@ -510,8 +510,8 @@ Keells,Dehiwala,Dehiwala,Active,Supermarkets,Physical Store
 Keells,Eheliyagoda,Eheliyagoda,Active,Supermarkets,Physical Store
 Keells,Embilipitiya,Embilipitiya,Active,Supermarkets,Physical Store
 Keells,Ambalangoda,Ambalangoda,Active,Supermarkets,Physical Store
-Keells,Galle 1,Galle,Active,Supermarkets,Physical Store
-Keells,Galle 2 (Kalegana),Galle,Active,Supermarkets,Physical Store
+Keells,Galle,Galle,Active,Supermarkets,Physical Store
+Keells,Kalegana,Galle,Active,Supermarkets,Physical Store
 Keells,Karapitiya,Galle,Active,Supermarkets,Physical Store
 Keells,Gampaha 2,Gampaha,Active,Supermarkets,Physical Store
 Keells,Gamsabha,Gampaha,Active,Supermarkets,Physical Store
@@ -602,9 +602,9 @@ Keells,Rajagiriya 2,Rajagiriya,Active,Supermarkets,Physical Store
 Keells,Rathnapura,Rathnapura,Active,Supermarkets,Physical Store
 Keells,Rathnapura 2,Rathnapura,Active,Supermarkets,Physical Store
 Keells,Tangalle,Tangalle,Active,Supermarkets,Physical Store
-Keells,Thalawathugoda 1 (Capital Mall,Thalawathugoda,Active,Supermarkets,Physical Store
-Keells,Thalawathugoda 2,Thalawathugoda,Active,Supermarkets,Physical Store
-Keells,Thalawathugoda 3,Thalawathugoda,Active,Supermarkets,Physical Store
+Keells,Thalawathugoda,Thalawathugoda,Active,Supermarkets,Physical Store
+Keells,Thalawathugoda,Thalawathugoda,Active,Supermarkets,Physical Store
+Keells,Thalawathugoda,Thalawathugoda,Active,Supermarkets,Physical Store
 Keells,Wadduwa,Wadduwa,Active,Supermarkets,Physical Store
 Keells,Enderamulla,Wattala,Active,Supermarkets,Physical Store
 Keells,Kerawalapitiya,Wattala,Active,Supermarkets,Physical Store
@@ -732,9 +732,9 @@ Reebok,One Galle Face,Colombo,Active,Fashion,Physical Store
 Reebok,MBC Maitland Crescent ,Colombo,Active,Fashion,Physical Store
 Ridmika Mobile,Nugegoda,Nugegoda,Active,Mobiles & Electronics,Physical Store
 Samayawardhane Bookshop,Colombo- 01,Colombo,Active,Books & Stationery,Physical Store
-Sarasavi Book Shop (Samudradevi Rd-Nugegoda Only),Samudra Devi Rd (Nugegoda),Nugegoda,Active,Books & Stationery,Physical Store
+Sarasavi Book Shop (Samudradevi Rd-Nugegoda Only),Nugegoda,Nugegoda,Active,Books & Stationery,Physical Store
 Sea Adventures LK,Online,Online,Active,Adventure,Instagram/ Facebook store
-Seerock The King's Domain Hotel,"Indigaswewa, Sigiriya, Dambulla",Dambulla,Active,Hotel,Physical Store
+Seerock The King's Domain Hotel,Sigiriya,Dambulla,Active,Hotel,Physical Store
 ShirtWorks,Colpetty,Colombo,Active,Fashion,Physical Store
 ShirtWorks,Bambalapitiya,Colombo,Active,Fashion,Physical Store
 ShirtWorks,Panadura,Panadura,Active,Fashion,Physical Store
@@ -1080,7 +1080,7 @@ Stripes and Checks,Ward Place,Colombo,Active,Fashion,Physical Store
 Stripes and Checks,Mount Lavinia,Mount Lavinia,Active,Fashion,Physical Store
 Strong.lk,Nugegoda,Nugegoda,Active,Fitness,Physical Store
 Strong.lk,Mount Lavinia,Mount Lavinia,Active,Fitness,Physical Store
-Strong.lk,ECOMMERCE - STRONG.LK,online,Active,Fitness,Ecommerce store
+Strong.lk,ECOMMERCE,online,Active,Fitness,Ecommerce store
 Sushi Kai,Colombo 05,Colombo,Active,Food,Physical Store
 Sushi Kai,Thalawathugoda,Thalawathugoda,Active,Food,Physical Store
 Sushi Kai,INAPP,online,Active,Food,Ecommerce store
@@ -1098,7 +1098,7 @@ Taco Bell,Kottawa,Pannipitiya,Active,Food,Physical Store
 Taco Bell,Piliyandala,Piliyandala,Active,Food,Physical Store
 Taco Bell,Rajagiriya,Rajagiriya,Active,Food,Physical Store
 TAG Heuer Boutique,One Galle Face,Colombo,Active,Watches,Physical Store
-Tamarind Hill,"Dadella, Galle",Galle,Active,Hotel,Physical Store
+Tamarind Hill,Dadella,Galle,Active,Hotel,Physical Store
 Tash Gem & Jewellery,colpetty,Colombo,Active,Gems & Jewellery,Physical Store
 Tash Gem & Jewellery,Malabe,Malabe,Active,Gems & Jewellery,Physical Store
 Tash Gem & Jewellery,Athurugiriya,Malabe,Active,Gems & Jewellery,Physical Store
@@ -1269,3 +1269,29 @@ The Elemente Gallery,Colombo 05,Colombo ,Active,Books & Stationery,Physical Stor
 RunRabbit,Ward Place,Colombo,Active,Personal Care,Physical Store
 Moon Child,Colombo 02,Colombo,Active,Fashion,Physical Store
 Magic Touch,Nugegoda,Nugegoda,Active,Automobile,Physical Store
+Bentota Bliss,Bentota,Bentota,Active,Villa,Physical Store
+Karmel Villa Ahangama,Ahangama,Ahangama,Active,Villa,Physical Store
+Lily Pod Bologda,Bolgoda,Bolgoda,Active,Villa,Physical Store
+Magalla Casa Galle,Galle,Galle,Active,Villa,Physical Store
+Ocean Villa Habraduwa,Habraduwa,Habraduwa,Active,Villa,Physical Store
+On The Rocks Unawatuna,Unawatuna,Unawatuna,Active,Villa,Physical Store
+Sangria Sun Wadduwa,Wadduwa,Wadduwa,Active,Villa,Physical Store
+Talpe Beach House,Talpe,Talpe,Active,Villa,Physical Store
+Villa Maggona,Maggona,Maggona,Active,Villa,Physical Store
+Villa Merak Digana,Digana,Digana,Active,Villa,Physical Store
+Villa Salt - Talpe,Talpe,Talpe,Active,Villa,Physical Store
+Villa Tres Matara,Matara,Matara,Active,Villa,Physical Store
+Jetwing Beach,Negambo,Negambo,,,
+Jetwing Blue,Negambo,Negambo,,,
+Jetwing Colombo Seven,Ward Place,Colombo,,,
+Jetwing Jaffna,Jaffna,Jaffna,,,
+Jetwing Kanduruketha,Wellawaya,Wellawaya,,,
+Jetwing Kandy Gallery,Kandy,Kandy,,,
+Jetwing Kurulubedda,Galle,Galle,,,
+Jetwing Lagoon wellness,Negambo,Negambo,,,
+Jetwing Lake,Dambulla,Dambulla,,,
+Jetwing Lighthouse,Dadella,Galle,,,
+Jetwing St. Andrews,Nuwara Eliya,Nuwara Eliya,,,
+Jetwing Surf & Safari,Pottuvil,Pottuvil,,,
+Jetwing Vil Uyana,Sigiriya,Sigiriya,,,
+Jetwing Yala,Kirinda,Kirinda,,,

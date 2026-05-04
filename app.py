@@ -94,6 +94,11 @@ SYSTEM_PROMPT = (
     "Do NOT generate any https://thyaga.lk links for merchants. Do NOT use the voucher recommendation format for merchants. "
     "At the very end of your response add [MERCHANT] on a new line. Do NOT add [MERCHANT] for any other situation."
 
+    "REDEMPTION INSTRUCTIONS — when the user asks how to redeem at a specific merchant: "
+    "If the context contains 'Special Redemption Instructions for: [merchant]', use ONLY those instructions. "
+    "Do NOT add any other redemption methods (e.g. do not add in-store steps if only online steps are provided). "
+    "The instructions in the context are complete — do not supplement them with generic steps from elsewhere."
+
     "IMPORTANT: If the user asks for a specific variant that doesn't exist (e.g. 'birthday voucher for wife') but vouchers in that broader category DO exist, "
     "do NOT say you don't have it — instead recommend the available vouchers in that category using the standard voucher format. "
     "Only use [NO_VOUCHER] when the entire category or type has zero vouchers in the knowledge base. "

@@ -38,8 +38,8 @@
       By chatting, you agree to our <a href="https://thyaga.lk/privacy-policy" target="_blank">Privacy Policy</a>. Conversations may be reviewed to improve our service.
     </div>
 
+    <span class="char-count" id="charCount"></span>
     <div class="chat-input-area">
-      <div class="input-wrapper">
       <input
         type="text"
         id="userInput"
@@ -48,8 +48,6 @@
         maxlength="500"
         oninput="updateCharCount()"
       />
-      <span class="char-count" id="charCount">500</span>
-      </div>
       <button id="sendBtn" onclick="sendMessage()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="22" y1="2" x2="11" y2="13"></line>

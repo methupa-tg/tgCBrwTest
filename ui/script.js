@@ -195,6 +195,6 @@ function sendSuggestion(btn) {
 function updateCharCount() {
   const remaining = 500 - userInput.value.length;
   const counter = document.getElementById("charCount");
-  counter.textContent = remaining;
+  counter.textContent = userInput.value.length > 0 ? `${remaining} chars left` : "";
   counter.style.color = remaining < 50 ? "#ef4444" : "#9ca3af";
 }
