@@ -2,7 +2,7 @@
   // Create floating button
   const btn = document.createElement("div");
   btn.id = "thyaga-chat-btn";
-  btn.innerHTML = `<img src="https://tgcbrwtest-production.up.railway.app/tglogo.png" style="width:36px;height:36px;object-fit:contain;" />`;
+  btn.innerHTML = "💬";
   btn.style.cssText = `
     position: fixed;
     bottom: 24px;
@@ -88,7 +88,7 @@
   btn.onclick = () => {
     const isOpen = container.style.display === "block";
     container.style.display = isOpen ? "none" : "block";
-    btn.innerHTML = isOpen ? `<img src="https://tgcbrwtest-production.up.railway.app/tglogo.png" style="width:36px;height:36px;object-fit:contain;" />` : "✕";
+    btn.innerHTML = isOpen ? "💬" : "✕";
   };
 
   document.body.appendChild(btn);
