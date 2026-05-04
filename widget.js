@@ -1,15 +1,15 @@
 (function () {
-  // Create floating button
+
   const btn = document.createElement("div");
   btn.id = "thyaga-chat-btn";
-  btn.innerHTML = "💬";
+  btn.innerHTML = "🎁";
   btn.style.cssText = `
     position: fixed;
     bottom: 24px;
     right: 24px;
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, #6610f2, #9b59b6);
+    background: linear-gradient(135deg, #895eec, #2c1781);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -24,7 +24,6 @@
   btn.onmouseover = () => btn.style.transform = "scale(1.1)";
   btn.onmouseout = () => btn.style.transform = "scale(1)";
 
-  // Create iframe container
   const container = document.createElement("div");
   container.id = "thyaga-chat-container";
   const isMobile = window.innerWidth <= 480;
@@ -41,7 +40,6 @@
     overflow: hidden;
   `;
 
-  // Refresh button
   const refreshBtn = document.createElement("button");
   refreshBtn.innerHTML = "⟳";
   refreshBtn.style.cssText = `
@@ -79,17 +77,16 @@
   };
   container.appendChild(refreshBtn);
 
-  // Load your chatbot inside an iframe
   const iframe = document.createElement("iframe");
   iframe.src = "https://tgcbrwtest-production.up.railway.app";
   iframe.style.cssText = "width: 100%; height: 100%; border: none;";
   container.appendChild(iframe);
 
-  // Toggle open/close
+
   btn.onclick = () => {
     const isOpen = container.style.display === "block";
     container.style.display = isOpen ? "none" : "block";
-    btn.innerHTML = isOpen ? "💬" : "✕";
+    btn.innerHTML = isOpen ? "🎁" : "✕";
   };
 
   document.body.appendChild(btn);
