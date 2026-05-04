@@ -6,7 +6,6 @@ import faiss
 from dotenv import load_dotenv
 import pickle
 from google import genai
-from google.genai import types
 
 load_dotenv()
 _google_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
@@ -224,9 +223,8 @@ def build_index(chunks):
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i:i + batch_size]
         response = _google_client.models.embed_content(
-            model="models/text-embedding-004",
+            model="text-embedding-004",
             contents=batch,
-            config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
         )
         all_embeddings.extend([e.values for e in response.embeddings])
 
@@ -242,9 +240,8 @@ def build_index(chunks):
 
 def retrieve(query, index, chunks, top_k=8):
     response = _google_client.models.embed_content(
-        model="models/text-embedding-004",
+        model="text-embedding-004",
         contents=[query],
-        config=types.EmbedContentConfig(task_type="RETRIEVAL_QUERY")
     )
 
     query_vec = np.array([response.embeddings[0].values], dtype="float32")
