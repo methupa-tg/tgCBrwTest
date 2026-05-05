@@ -5,7 +5,7 @@ const userInput = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
 
 let history = [];
-let sessionId = null;
+let sessionId = localStorage.getItem("thyaga_session_id") || null;
 
 userInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
@@ -36,7 +36,10 @@ function sendMessage() {
     .then((res) => res.json())
     .then((data) => {
       typingEl.remove();
-      if (data.session_id) sessionId = data.session_id;
+      if (data.session_id) {
+        sessionId = data.session_id;
+        localStorage.setItem("thyaga_session_id", data.session_id);
+      }
       const reply = data.reply || "Sorry, something went wrong.";
       appendMessage("bot", reply, data.images || [], data.links || [], data.page_links || [], data.show_browse || false, data.show_merchant_btns || false, data.show_contact_btns || false);
       history.push({ role: "assistant", content: reply });
@@ -180,7 +183,7 @@ function formatMessage(text) {
     .replace(/>/g, "&gt;")
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.*?)\*/g, "<em>$1</em>")
-    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_top" rel="noopener noreferrer">$1</a>')
     .replace(/\n(\d+\.)( )/g, '<br><br><strong>$1</strong>$2')
     .replace(/\n/g, "<br>");
 }

@@ -6,7 +6,6 @@ import numpy as np
 import faiss
 from dotenv import load_dotenv
 import pickle
-import time
 
 load_dotenv()
 co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
@@ -223,24 +222,13 @@ def build_index(chunks):
     batch_size = 90
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i:i + batch_size]
-        for attempt in range(5):
-            try:
-                response = co.embed(
-                    texts=batch,
-                    model="embed-v4.0",
-                    input_type="search_document",
-                    embedding_types=["float"]
-                )
-                all_embeddings.extend(response.embeddings.float)
-                break
-            except Exception as e:
-                if attempt < 4:
-                    wait = 2 ** attempt
-                    print(f"Embed batch {i // batch_size + 1} failed (attempt {attempt + 1}): {e}. Retrying in {wait}s...")
-                    time.sleep(wait)
-                else:
-                    raise
-        time.sleep(1)
+        response = co.embed(
+            texts=batch,
+            model="embed-v4.0",
+            input_type="search_document",
+            embedding_types=["float"]
+        )
+        all_embeddings.extend(response.embeddings.float)
 
     embeddings = np.array(all_embeddings, dtype="float32")
     dimension = embeddings.shape[1]
