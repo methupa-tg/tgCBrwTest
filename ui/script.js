@@ -5,7 +5,8 @@ const userInput = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
 
 let history = [];
-let sessionId = localStorage.getItem("thyaga_session_id") || null;
+const _urlParams = new URLSearchParams(window.location.search);
+let sessionId = _urlParams.get("session_id") || localStorage.getItem("thyaga_session_id") || null;
 
 userInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
@@ -38,7 +39,8 @@ function sendMessage() {
       typingEl.remove();
       if (data.session_id) {
         sessionId = data.session_id;
-        localStorage.setItem("thyaga_session_id", data.session_id);
+        window.parent.postMessage({ thyaga_session_id: data.session_id }, "*");
+        try { localStorage.setItem("thyaga_session_id", data.session_id); } catch(e) {}
       }
       const reply = data.reply || "Sorry, something went wrong.";
       appendMessage("bot", reply, data.images || [], data.links || [], data.page_links || [], data.show_browse || false, data.show_merchant_btns || false, data.show_contact_btns || false);
@@ -82,7 +84,7 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
       const card = document.createElement("a");
       card.classList.add("voucher-card");
       card.href = voucherLinks[index] || "#";
-      card.target = "_blank";
+      card.target = "_top";
       card.rel = "noopener noreferrer";
       card.innerHTML = `<img src="${url}" alt="voucher" class="voucher-img" onerror="this.parentElement.style.display='none'"/>`;
       cardRow.appendChild(card);
@@ -96,7 +98,7 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
     const browseBtn = document.createElement("a");
     browseBtn.classList.add("page-link-btn");
     browseBtn.href = "https://thyaga.lk/buy-voucher";
-    browseBtn.target = "_blank";
+    browseBtn.target = "_top";
     browseBtn.rel = "noopener noreferrer";
     browseBtn.textContent = "Browse Vouchers";
     browseRow.appendChild(browseBtn);
@@ -111,7 +113,7 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
       const btn = document.createElement("a");
       btn.classList.add("page-link-btn");
       btn.href = url;
-      btn.target = "_blank";
+      btn.target = "_top";
       btn.rel = "noopener noreferrer";
       btn.textContent = label;
       merchantRow.appendChild(btn);
@@ -140,7 +142,7 @@ function appendMessage(role, text, images = [], voucherLinks = [], pageLinks = [
       const btn = document.createElement("a");
       btn.classList.add("page-link-btn");
       btn.href = url;
-      btn.target = "_blank";
+      btn.target = "_top";
       btn.rel = "noopener noreferrer";
       btn.textContent = title;
       linkRow.appendChild(btn);

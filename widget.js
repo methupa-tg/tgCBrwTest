@@ -1,4 +1,11 @@
 (function () {
+  const STORAGE_KEY = "thyaga_session_id";
+  const BASE_URL = "https://tgcbrwtest-production.up.railway.app";
+
+  function getIframeSrc() {
+    const sid = localStorage.getItem(STORAGE_KEY);
+    return sid ? BASE_URL + "?session_id=" + encodeURIComponent(sid) : BASE_URL;
+  }
 
   const btn = document.createElement("div");
   btn.id = "thyaga-chat-btn";
@@ -69,7 +76,7 @@
   refreshBtn.onmouseup = () => {
     refreshBtn.style.transform = "scale(1)";
     refreshBtn.style.background = "rgba(255,255,255,0.15)";
-    iframe.src = iframe.src;
+    iframe.src = getIframeSrc();
   };
   refreshBtn.onmouseleave = () => {
     refreshBtn.style.transform = "scale(1)";
@@ -78,10 +85,16 @@
   container.appendChild(refreshBtn);
 
   const iframe = document.createElement("iframe");
-  iframe.src = "https://tgcbrwtest-production.up.railway.app";
+  iframe.src = getIframeSrc();
   iframe.style.cssText = "width: 100%; height: 100%; border: none;";
   container.appendChild(iframe);
 
+  window.addEventListener("message", (e) => {
+    if (e.origin !== BASE_URL) return;
+    if (e.data && e.data.thyaga_session_id) {
+      localStorage.setItem(STORAGE_KEY, e.data.thyaga_session_id);
+    }
+  });
 
   btn.onclick = () => {
     const isOpen = container.style.display === "block";
